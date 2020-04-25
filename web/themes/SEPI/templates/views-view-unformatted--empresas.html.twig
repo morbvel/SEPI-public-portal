@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+  	<div class="module module-empresas">
+      {% set contador = 0 %}
+      {% for item in rows %}
+        {% set contador = contador + 1 %}
+      {% endfor %}
+      <div class="encabezado">
+        <div class="col-sm-2 col-md-1 hidden-xs alinear-derecha">
+  				<a href="" id="vista_lista" class="iconos_cambio"> <span class="sr-only">{% trans %}LISTA{% endtrans %}</span></a>
+  				<a href="" id="vista_mosaico" class="iconos_cambio active"> <span class="sr-only">{% trans %}MOSAICO{% endtrans %}</span> </a>
+  			</div>
+  		</div>
+
+      <div class="resultados-bloque">
+        <div class="row">
+          {% for item in rows %}
+            <div class="resultado-item col-md-3 col-sm-4 col-xs-12 text-center">
+              {{item.content}}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

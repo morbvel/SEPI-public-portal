@@ -1,0 +1,10 @@
+
+<a href="{% if fields.field_enlace_a_contenido.content %}{{fields.field_enlace_a_contenido.content}}{% else %}{{fields.path.content}}{% endif %}" title="" class="card col-sm-4 col" >
+  <div class="image-resizer zoom">
+    <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}">
+  </div>
+  <h3 class="module-subtitle">{{fields.title.content}}</h3>
+  <p class="default-text">
+    {{fields.field_resumen.content}}
+  </p>
+</a>

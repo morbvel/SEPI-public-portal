@@ -1,0 +1,130 @@
+<div class="row">
+  <nav class="navbar navbar-default">
+    <div class="menu-desktop hidden-xs">
+      <h1 style="display:none;" aria-hidden="true">{% trans %}Idiomas y enlaces superiores{% endtrans %}</h1>
+      <div class="first-row">
+        <div class="container">
+          <div class="row">
+            <div class="menu-idiomas col-sm-4 col-md-3">
+						  <ul class="nav navbar-nav navbar-left idiomas"  role="menubar">
+  							<li role="menuitem" class="" title="Bienvenidos"><a href="/es{{ curr_path }}" class="language_menu_link">ES</a></li>
+  							<li role="menuitem" class="" title="Benvinguts"><a href="/ca{{ curr_path }}" class="language_menu_link">CA</a></li>
+  							<li role="menuitem" class="" title="Ongi etorri"><a href="/eu{{ curr_path }}" class="language_menu_link">EU</a></li>
+  							<li role="menuitem" class="" title="Benvidos"><a href="/gl{{ curr_path }}" class="language_menu_link">GL</a></li>
+                <li role="menuitem" class="" title="Benvinguts"><a href="/va{{ curr_path }}" class="language_menu_link">VA</a></li>
+  							<li role="menuitem" class="" title="Welcome"><a href="/en{{ curr_path }}" class="language_menu_link">EN</a></li>
+						  </ul>
+						</div>
+            <div class="menu-otros col-sm-offset-2 col-md-offset-3 col-sm-6">
+							{{elements.enlacessuperiores}}
+              {{elements.enlacessuperioresingles}}
+						</div>
+          </div>
+        </div>
+      </div>
+
+      <header class="second-row">
+        <div class="container">
+          <div class="row">
+            <h1 style="display:none;" aria-hidden="true"> {% trans %}Sociedad Estatal de Participaciones estatales{% endtrans %}</h1>
+              <a class="navbar-brand navbar-left"  href="/{{idioma}}">
+                <img src="/sites/default/files/2017-08/header_logo_0.png" alt="{% trans %}Sociedad Estatal de Participaciones Industriales{% endtrans %}" class="">
+              </a>
+              <a class="pull-right link-ministerio" href="http://www.minhafp.gob.es/es-ES/Paginas/Home.aspx" target="_blank">
+                <img src="/sites/default/files/2017-08/header_logo_ministerio.png" alt="{% trans %}Logo Ministerio{% endtrans %}" class="">
+              </a>
+           </div>
+         </div>
+      </header>
+
+      <div class="third-row col-sm-12">
+        <div class="container">
+          <div class="row">
+            <div class="menu-principal  col-sm-12 col-md-8">
+              {{elements.menuprincipal}}
+            </div>
+            <div class="col-md-4 col-sm-12">
+              {{elements.sepi_search}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="container-fluid visible-xs" aria-hidden="true">
+      <div class="row">
+        <div class="menu-mobil ">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="modal" data-target="#submenu-sepi" aria-expanded="false">
+                <span class="hidden" aria-hidden="true">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 class="hidden" aria-hidden="true">{% trans %}Sociedad Estatal de Participaciones estatales{% endtrans %}</h1>
+            <a class="navbar-brand" href="/">
+              <img src="/sites/default/files/2017-08/header_logo_0.png" alt="{% trans %}Sociedad Estatal de Participaciones Industriales{% endtrans %}" class="">
+            </a>
+          </div>
+
+          <div class="modal fade" id="submenu-sepi">
+            <div class="modal-dialog" role="document" tabindex="-1" >
+              <div class="modal-nav-content">
+
+                <div class="modal-nav-body">
+                  <div class="boton-cerrar col-xs-12">
+                    <button type="button" class="close pull-left" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                </div>
+
+                <form action="/general/busqueda" method="get" id="search_block_form_mobile" class="navbar-form buscador-mobile-lupa col-xs-12 pull-right" role="search">
+                  <div class="input-group custom-input-group">
+                    <label class="hidden" aria-hidden="true" for="form_id">Hidden Form id</label><input type="hidden" name="form_id" id="edit-search-theme-form-mobile" value="search_form"/>
+                    <label class="hidden" aria-hidden="true" for="f[0]">Hidden términos</label><input type="hidden" name="f[0]" id="edit-search-theme-form-mobile-2" value="language:{{idioma}}"/>
+                    <label class="hidden" aria-hidden="true" for="edit-keys-mobile">Hidden keys</label><input data-drupal-selector="edit-keys-mobile" title="" type="text" id="edit-keys-mobile" name="keys" class="form-control" placeholder="{% trans %}Buscar...{% endtrans %}">
+                    <span class="input-group-addon">
+                      <button type="submit" class="boton-buscar-lupa">
+                        <span class="glyphicon glyphicon-search"></span>
+                      </button>
+                    </span>
+                  </div>
+                </form>
+
+                <div class="menu-principal col-xs-12">
+                  {{elements.menuprincipalmobile}}
+                </div>
+
+                <div class="menu-otros  col-xs-12 ">
+                  {{elements.enlacessuperioresmobile}}
+                  {{elements.enlacessuperioresinglesmobile}}
+                </div>
+
+                <div class="menu-idiomas col-xs-12">
+                  <ul class="nav navbar-nav navbar-left idiomas"  role="menubar">
+                  <li role="menuitem" class="col-xs-2"><a class="language_menu_link" href="/es{{ curr_path }}">ES</a></li>
+                  <li role="menuitem" class="col-xs-2"><a class="language_menu_link" href="/ca{{ curr_path }}">CA</a></li>
+                  <li role="menuitem" class="col-xs-2"><a class="language_menu_link" href="/eu{{ curr_path }}">EU</a></li>
+                  <li role="menuitem" class="col-xs-2"><a class="language_menu_link" href="/gl{{ curr_path }}">GL</a></li>
+                  <li role="menuitem" class="col-xs-2"><a class="language_menu_link" href="/va{{ curr_path }}">VA</a></li>
+                  <li role="menuitem" class="col-xs-2"><a class="language_menu_link" href="/en{{ curr_path }}">EN</a></li>
+                  </ul>
+                </div>
+
+                <div class="logo-ministerio ">
+                   <a class="" href="http://www.minhafp.gob.es/en-GB/Paginas/Home.aspx" target="_blank">
+                     <img src="/sites/default/files/2017-08/header_logo_ministerio.png" alt="{% trans %}Logo Ministerio{% endtrans %}" class="">
+                   </a>
+                 </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </nav>
+</div>

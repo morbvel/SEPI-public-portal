@@ -1,0 +1,131 @@
+<?php
+
+use Drupal\Core\Menu;
+
+function sepi_form_search_form_alter(&$form, &$form_state) {
+  $manager = \Drupal::languageManager();
+
+  $form['language'] = [
+    '#value' => $manager->getCurrentLanguage()->getId(),
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sepi_form_search_block_form_alter(&$form, &$form_state) {
+  $manager = \Drupal::languageManager();
+  $form['language'] = [
+    '#value' => $manager->getCurrentLanguage()->getId(),
+  ];
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function sepi_preprocess_menu(&$variables, $hook) {
+  if ($hook == 'main') { // If it is not working replace "main__menu" with "menu"
+
+    // Get the current path.
+    $current_path = \Drupal::request()->getRequestUri();
+    $items = $variables['items'];
+    foreach ($items as $key => $item) {
+      // If path is current_path, set active to li.
+      if(strpos($item['url']->toString(), $current_path) !== false) {
+      	// Add active link.
+      	$variables['items'][$key]['attributes']['class'] = 'active';
+      }
+    }
+  }
+
+}
+
+function sepi_preprocess_node(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+
+  $current_path = \Drupal::service('path.current')->getPath();
+  $alias_ruta = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+
+  $variables['curr_path'] = $current_path;
+  $variables['alias_ruta'] = $alias_ruta;
+
+  if( strpos($variables['alias_ruta'], 'personal-sepi') !== false ){
+    $url = "/conozca-sepi/sobre-sepi/organos-de-direccion#panel-3";
+    header('Location: ' . $url, true, 301);
+    die();
+  }
+
+}
+
+function sepi_preprocess_page(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+}
+
+function sepi_preprocess_views_view(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+}
+function sepi_preprocess_views_view_unformatted(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+}
+function sepi_preprocess_views_view_fields(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+}
+
+function sepi_preprocess_block(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+
+}
+
+function sepi_preprocess_region(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $current_path = \Drupal::service('path.current')->getPath();
+  $alias_ruta = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+
+  $variables['idioma'] = $language;
+
+  $variables['curr_path'] = $current_path;
+  $variables['alias_ruta'] = $alias_ruta;
+
+  if( strpos($alias_ruta, '/node') !== false ){
+    $url = "/".$language."/pagina-no-existente";
+    header('Location: ' . $url, true, 301);
+    die();
+  }
+  else if( strpos($alias_ruta, '/empleo-publico') !== false && $language === 'en'){
+    $url = "/".$language."/pagina-no-existente";
+    header('Location: ' . $url, true, 301);
+    die();
+  }
+
+}
+
+
+function sepi_preprocess_form(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+}
+
+function sepi_preprocess_webform(&$variables) {
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['idioma'] = $language;
+}
+
+
+function sepi_preprocess_item_list(&$variables) {
+
+    $total = null;
+    // get the total number of results from the $GLOBALS
+    if(isset($GLOBALS['pager_total_items'])){
+      $total = $GLOBALS['pager_total_items'][0];
+    }
+
+    $variables['count_items'] = $total;
+}
+
+?>

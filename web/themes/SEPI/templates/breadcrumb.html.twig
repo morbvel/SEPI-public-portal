@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-12 hidden-xs">
+      <ol class="breadcrumb" aria-label="breadcrumbs">
+        {% for link in links %}
+          {% if loop.last %}
+            <li class="breadcrumb-item active" title="{{link.text}}">{{link.text|slice(0,50)}} {% if link.text|length >50 %}...{% endif%}</li>
+          {% else %}
+            <li class="breadcrumb-item" rel="up" title="{{link.text}}"><a href="{{link.url}}">{{link.text|slice(0,50)}}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </nav>
+  </div>
+</div>

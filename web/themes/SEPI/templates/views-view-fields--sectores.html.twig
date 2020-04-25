@@ -1,0 +1,20 @@
+<a href="/{{idioma}}/sectores/empresas?title=All&tid={{fields.tid.content}}&field_participacion_target_id=All" title="{{fields.name.content}}" class="hidden-xs hidden-sm">
+    <span class="sr-only">{% trans %}Sector{% endtrans %}: {{fields.name.content}}</span>
+    <div class="card-{{fields.counter.content}} width-{{fields.field_width.content}}" aria-hidden="true">
+      <div class="child height-{{fields.field_height.content}}">
+        <img src="{{fields.field_icono.content}}" {% if fields.field_icono_hover.content %}class="icono_sectores"{% endif %} alt="{{fields.field_icono_1.content}}">
+        {% if fields.field_icono_hover.content %}
+          <img src="{{fields.field_icono_hover.content}}" class="icono_sectores_hover" alt="{{fields.field_icono_hover_1.content}}">
+        {% endif %}
+        <p>{{fields.name.content}}</p>
+      </div>
+    </div>
+</a>
+
+<div class="cuadrado {{fields.field_background.content}} visible-sm visible-xs{% if fields.tid.content == '14'%} borde-blanco-cuadrado{% endif %}">
+  <a href="/{{idioma}}/sectores/empresas?title=All&tid={{fields.tid.content}}&field_participacion_target_id=All">
+    <img src="{{fields.field_icono.content}}" alt="{{fields.field_icono_1.content}}">
+    <span>{{fields.name.content}}</span>
+  </a>
+
+</div>

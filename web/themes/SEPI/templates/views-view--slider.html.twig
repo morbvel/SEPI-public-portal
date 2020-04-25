@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+  	<div class="module-carrusel">
+      <div class="slick">
+        {% for item in rows['#build']['items'] %}
+        <div class="relative">
+          <div class="text-center capa-resize-slider">
+            <img src="{{item['caption']['data']['field_imagen_slider']}}" alt="{{item['caption']['data']['field_imagen_slider_1']}}" class="">
+          </div>
+          <div class="capa-aux-slider">
+            <div class="image-text">
+              <a class="enlace-slider-a" href="{{item['caption']['data']['field_enlace']}}"><p class="text-carrusel">{{item['caption']['data']['field_resumen']}}</p></a>
+            </div>
+          </div>
+          {% if item['caption']['data']['field_texto_slider'] is not empty %}
+          <div class="intro-sepi">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <p class="default-text">{{item['caption']['data']['field_texto_slider']}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>

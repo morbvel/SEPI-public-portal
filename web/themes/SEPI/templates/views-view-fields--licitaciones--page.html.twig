@@ -1,0 +1,34 @@
+<div class="module-licitaciones-descargas">
+  <div class="module-licitaciones">
+    <div class="container">
+        <div class="row">
+          <h2 class="lead-text blue col-sm-7">{{fields.title.content}}<span class="year">{% trans %}Año{% endtrans %} {{fields.field_fecha_resolucion.content}}</span></h2>
+          {% set descripcion_aux = fields.field_descripcion %}
+          {% set body = {
+            '#type':   'processed_text',
+            '#text':    descripcion_aux.content,
+            '#format':  descripcion_aux.format,
+          } %}
+          <div class="default-text col-xs-12">{{body}}</div>
+        </div>
+      </div>
+  </div>
+
+  {% if fields.field_documentos_empresa.content is not empty %}
+  <div class="container container-documentos">
+    <div class="row">
+    	<div class="module-descargas">
+    			<div class="background-grey">
+              <div class="row documentos-mobile">
+      					<p class="descargas-title col-xs-12 lead-text">
+      						{% trans %}Documentación y descargas{% endtrans %}
+      					</p>
+                {{fields.field_documentos_empresa.content}}
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</div>

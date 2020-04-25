@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="row">
+		<div class="module module-news list files ">
+	    <div class="col-xs-12">
+				{% set aux = 1 %}
+	      {% for item in rows %}
+	        {{item.content}}
+					{% set aux = aux + 1 %}
+	      {% endfor %}
+				<span id="informes-listado-total" style="display:none;">{{aux}}</span>
+	    </div>
+	  </div>
+	</div>
+</div>

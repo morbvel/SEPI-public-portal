@@ -1,0 +1,32 @@
+<div class="container-fluid module-carrusel">
+  <div class="row">
+
+    <a href="{{content['#block_content'].field_enlace.value}}" target="_blank">
+      <div class="module-destacado-especial">
+        <div class="relative">
+
+          <div class="image-resizer cabecera-2">
+            <img class="" src="{{file_url(content.field_imagen_cabecera_home.0['#item'].entity.uri.value)}}" />
+
+            <div class="image-text  col-md-offset-2 col-md-3">
+              <p class="text-carrusel">{{content['#block_content'].field_texto_imagen.value}}</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="intro-sepi">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <p class="default-text">{{content['#block_content'].field_texto_resumen.value}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>

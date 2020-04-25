@@ -1,0 +1,73 @@
+{% set contador = fields.counter.content|replace({' ':''}) %}
+
+{% if contador == 1 %}
+  <a href="{{fields.path.content}}" title="" class="news new-big col-xs-12 col-md-6 col-sm-4 col ">
+    {% if fields.field_imagen_distributiva.content is not empty %}
+    <div class="image-resizer image-background zoom">
+      <div class="degradado">
+
+      </div>
+      <img src="{{fields.field_imagen_distributiva.content}}" alt="{{fields.field_imagen_distributiva_1.content}}" style="z-index: -1">
+    </div>
+    {% endif %}
+    <div class="image-text ">
+      <h3 class="new-headline">{{fields.title.content}}</h3>
+      {% if idioma != 'en' %}
+        <p class="new-date">{{fields.created.content|date('d')}} {% trans %}DE{% endtrans %} {{fields.created.content|date("F")|replace({
+'January'  : 'Enero',
+'February'  : 'Febrero',
+'March'  : 'Marzo',
+'April'  : 'Abril',
+'May'  : 'Mayo',
+'June'  : 'Junio',
+'July'  : 'Julio',
+'August'  : 'Agosto',
+'September'  : 'Septiembre',
+'October'   : 'Octubre',
+'November'  : 'Noviembre',
+'December' : 'Diciembre',
+})}} {% trans %}DE{% endtrans %} {{fields.created.content|date("Y")}}</p>
+      {% else %}
+        <p class="new-date">{{fields.created.content|date('d')}} {{fields.created.content|date("F")}} {{fields.created.content|date("Y")}}</p>
+      {% endif %}
+    </div>
+  </a>
+
+{% else %}
+  <a href="{{fields.path.content}}" title="" class="new new-little col-xs-12 col-md-3 col-sm-4 col noticia_sin_url">
+    {% if fields.field_imagen_distributiva.content is not empty %}
+    <div class="image-resizer zoom">
+      <img src="{{fields.field_imagen_distributiva.content}}" alt="{{fields.field_imagen_distributiva_1.content}}">
+    </div>
+    {% endif %}
+    <h3 class="new-headline titulo-noticia-destacada">{{fields.title.content}}</h3>
+	{% if fields.field_resumen.content is not empty %}
+    {% set descripcion_aux = fields.field_resumen %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.content,
+          '#format':  descripcion_aux.format,
+        } %}
+
+    <div class="new-excerpt visible-md-inline-block visible-lg-inline-block cuerpo-noticia-destacada">{{body}}</div>
+	{% endif %}
+    {% if idioma != 'en' %}
+    <p class="new-date fecha-noticia-destacadas">{{fields.created.content|date('d')}} {% trans %}DE{% endtrans %} {{fields.created.content|date("F")|replace({
+'January'  : 'Enero',
+'February'  : 'Febrero',
+'March'  : 'Marzo',
+'April'  : 'Abril',
+'May'  : 'Mayo',
+'June'  : 'Junio',
+'July'  : 'Julio',
+'August'  : 'Agosto',
+'September'  : 'Septiembre',
+'October'   : 'Octubre',
+'November'  : 'Noviembre',
+'December' : 'Diciembre',
+})}} {% trans %}DE{% endtrans %} {{fields.created.content|date("Y")}}</p>
+    {% else %}
+      <p class="new-date">{{fields.created.content|date('d')}} {{fields.created.content|date("F")}} {{fields.created.content|date("Y")}}</p>
+    {% endif %}
+  </a>
+{% endif %}

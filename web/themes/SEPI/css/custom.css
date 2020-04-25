@@ -1,0 +1,4240 @@
+@charset "UTF-8";
+/* CSS Document */
+.new-rrss .redessociales{
+  display: inherit !important;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+.enlace-slider-a{
+  color: inherit;
+  text-decoration: inherit;
+}
+.enlace-slider-a:hover{
+  color: inherit;
+  text-decoration: underline;
+}
+
+.slick-slide img{
+  width: 100%;
+  max-height: 340px;
+}
+
+.footer{
+  margin-top: 0px;
+}
+
+.module-carrusel .image-text, .module-carrusel .slick-dots{
+  bottom: 159px;
+}
+
+@media screen and (max-width: 1023px){
+  .module-carrusel .image-text, .module-carrusel .slick-dots{
+    bottom: 156px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .module-carrusel .image-text, .module-carrusel .slick-dots{
+    bottom: 150px;
+  }
+
+  .module-contacto .btn-alt{
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .module-contacto .campos_obligatorios_texto{
+    text-align: left;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 708px){
+  .module-carrusel .image-text, .module-carrusel .slick-dots{
+    bottom: 167px;
+  }
+}
+
+@media screen and (max-width: 502px){
+  .module-carrusel .image-text, .module-carrusel .slick-dots{
+    bottom: 184px;
+  }
+}
+
+@media (min-width: 1024px){
+  .module-news {
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  .sectores li .card-3 .child{
+    background-image: url(../images/sector-3.png);
+    background-size: contain;
+  }
+
+  .sectores li .card-7 .child{
+    background-image: url(../images/sector-7.png);
+    background-size: cover;
+  }
+  .sectores li .card-7 .child:hover p{
+    margin-top: 3px;
+  }
+  .sectores li .card-7 .child:hover .icono_sectores_hover{
+    margin-bottom: 0px !important;
+    padding-top: 20px !important;
+  }
+
+  .sectores li .card-10 .child {
+    background-image: url(../images/sector-10.png);
+    background-size: cover;
+  }
+
+}
+
+.otros .enlaces-superiores:hover{
+  color: #a4010d !important;
+}
+
+.third-row{
+  height: 50px;
+}
+
+.module-news a h3:hover{
+  color: #004588;
+  text-decoration: none;
+}
+
+a:hover, .module .relative .ver-mas span:hover{
+  text-decoration: none !important;
+}
+
+.module .relative .ver-mas span:hover{
+  font-size: 16px;
+}
+
+.module-footer .footer-links li a:hover{
+  font-weight: bold;
+}
+
+.btn-primary{
+  border: 1px solid transparent;
+}
+.btn-primary:hover{
+  background-color: #eeeeee;
+  border: 1px solid #ffcc00;
+  color: #000000;
+}
+
+
+
+
+
+/*Estilos para los sectores*/
+.sectores li .card-1 .child{
+  background-image: url('../images/sectores-bg-postal.png');
+}
+.sectores li .card-2 .child{
+  background-image: inherit;
+  background-color: #f1f2f1;
+}
+.sectores li .card-3 .child{
+  background-image: inherit;
+  background-color: #FFFFFF;
+  border: 1px solid #ffcc00;
+}
+.sectores li .card-4 .child{
+  background-image: url('../images/sectores-bg-nuclear.png');
+  background-size: cover;
+}
+.sectores li .card-5 .child{
+  background-image: inherit;
+  background-color: #ffcc00;
+}
+.sectores li .card-6 .child{
+  background-image: inherit;
+  background-color: #ffcc00;
+}
+.sectores li .card-7 .child{
+  background-image: inherit;
+  background-color: #FFFFFF;
+  border: 1px solid #ffcc00;
+}
+.sectores li .card-8 .child{
+  background-image: url('../images/sectores-bg-promocion.png');
+  background-size: cover;
+  border: none;
+}
+.sectores li .card-8 .child:hover{
+  border: none !important;
+}
+
+.sectores li .card-9 .child{
+  background-image: inherit;
+  background-color: #ffcc00;
+  border: 1px solid #ffcc00;
+}
+.sectores li .card-10 .child{
+  background-image: inherit;
+  background-color: white;
+  border: 1px solid #ffcc00;
+}
+
+.sectores li .card-1 .child img{
+  margin: 20px 35%;
+}
+.sectores li .card-2 .child img{
+  margin-top: 95px;
+  margin-left: 28%;
+}
+.sectores li .card-3 .child img{
+  margin-top: 17px;
+  margin-left: 40%;
+}
+.sectores li .card-4 .child img{
+  margin-left: 35%;
+  margin-top: 110px;
+}
+.sectores li .card-5 .child img{
+  margin-left: 28%;
+  margin-top: 20px;
+	margin-bottom: 1px;
+}
+.sectores li .card-6 .child img{
+  margin-top: 14px;
+  margin-left: 35%;
+	margin-bottom: 2px;
+}
+.sectores li .card-7 .child img{
+  margin-top: 19px;
+  margin-left: 28%;
+	margin-bottom: 1px;
+}
+.sectores li .card-8 .child img{
+  margin-top: 22px;
+  margin-left: 31%;
+}
+.sectores li .card-9 .child img{
+  margin-left: 28%;
+  margin-top: 21px;
+	    margin-top: 23px;
+    margin-bottom: 1px;
+}
+.sectores li .card-10 .child img{
+  margin-left: 36%;
+  margin-top: 15px;
+	margin-bottom: 2px;
+}
+
+.sectores li .child p{
+  font-size: 16px;
+  text-transform: lowercase;
+  font-family: "Open Sans";
+  color: black;
+  width: 90%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.sectores li .child .icono_sectores_hover{
+  display: none;
+}
+.sectores li .child:hover > .icono_sectores{
+  display: none;
+}
+
+.sectores li .card-1 .child:hover{
+  background-image: inherit;
+  border: 1px solid #ffcc00;
+}
+.sectores li .card-2 .child:hover,
+.sectores li .card-4 .child:hover {
+  background-image: inherit;
+  background-color: #ffcc00;
+  border: 1px solid #ffcc00;
+}
+.sectores li .card-9 .child:hover {
+	background-color: #fff;
+	border: 1px solid #ffcc00;
+}
+
+.sectores li .card-4 .child:hover > img,
+.sectores li .card-2 .child:hover > img{
+  filter: brightness(0) invert(1);
+}
+.sectores li .card-3 .child:hover{
+  background-color: #f1f2f1;
+  border: 1px solid transparent;
+}
+.sectores li .card-3 .child:hover > .icono_sectores_hover{
+  display: inherit;
+  margin-top: 0px;
+  padding-top: 17px;
+  margin-bottom: 2px;
+}
+.sectores li .card-5 .child:hover, .sectores li .card-7 .child:hover, .sectores li .card-8 .child:hover{
+  background-image: inherit;
+  background-color: #f1f2f1;
+  border: 1px solid #f1f2f1;
+
+}
+.sectores li .card-7 .child:hover{
+  border: 2px;
+}
+
+.sectores li .card-5 .child:hover > .icono_sectores_hover{
+  display: inherit;
+  margin-bottom: 3px;
+}
+.sectores li .card-6 .child:hover{
+  background-color: #f1f2f1;
+  border: 2px solid transparent;
+}
+.sectores li .card-6 .child:hover > .icono_sectores_hover{
+  display: inherit;
+  margin-top: 0px;
+  padding-top: 15px;
+  margin-bottom: 2px;
+}
+.sectores li .card-7 .child:hover > .icono_sectores_hover{
+  display: inherit;
+  margin-top: 0px;
+  padding-top: 19px;
+  margin-bottom: 2px;
+}
+.sectores li .card-9 .child:hover > .icono_sectores_hover{
+  display: inherit;
+  margin-top: 0px;
+  padding-top: 23px;
+  margin-bottom: 3px;
+}
+.sectores li .card-10 .child:hover{
+  background-color: #f1f2f1;
+  border: 1px solid transparent;
+}
+.sectores li .card-10 .child:hover > .icono_sectores_hover{
+  display: inherit;
+  margin-top: 0px;
+  padding-top: 15px;
+  margin-bottom: 4px;
+}
+
+.cabecera-imagen-sectores{
+  padding-top: 0px !important;
+}
+
+/*Fin estilos Sectores*/
+
+
+/*PestaÃ±as*/
+@media (min-width: 1200px){
+  .tabs li.item_tabs_centradas:first-child {
+      margin-left: auto;
+  }
+}
+
+.tres-tabs li.item_tabs_centradas {
+    width: 345px;
+}
+
+
+/*Para los select*/
+select {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: â€œâ€;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+/*Para el Sitemap*/
+.module-mapaweb .first{
+  display: none;
+}
+
+.module-mapaweb .module-mapaweb .first{
+  display: inherit;
+}
+
+.content > .module-mapaweb > li{
+  width: 33%;
+  float: left;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 1024px){
+  .content > .module-mapaweb > li{
+    width: 100%;
+    float: left;
+  }
+}
+
+.module-mapaweb li a:first-of-type{
+  font-size: 20px;
+font-weight: 600;
+display: inline-block;
+padding-bottom: 15px;
+padding-top: 15px;
+color: #333333;
+font-family: "Open Sans";
+}
+
+.module-mapaweb li .module-mapaweb li .module-mapaweb{
+  border-left: 2px solid #0055b4;
+  /*margin-left: 30px;
+  margin-bottom: 15px;*/
+}
+
+.module-mapaweb li .module-mapaweb li .module-mapaweb li .module-mapaweb{
+  border-left: 0px;
+}
+
+
+
+.module-mapaweb li ul li.extended .module-mapaweb li a::before{
+content: "—";
+		  font-size: 12px;
+		}
+
+		.module-mapaweb li ul li.extended .module-mapaweb .extended ul li a::before{
+		  content: "———";
+		  letter-spacing: -0.1em;
+		}
+
+		.module-mapaweb li ul li.extended .module-mapaweb .extended ul li a::before{
+		  content: "————";
+		  letter-spacing: -0.1em;
+		}
+
+		.module-mapaweb li ul li.extended .module-mapaweb .extended ul li ul li a::before{
+		  content: "—————";
+		  letter-spacing: -0.1em;
+		}
+
+.sitemap .sitemap-box ul li ul li.extended a{margin-left: 0px;padding-top: 10px;}
+.sitemap .sitemap-box ul li .module-mapaweb{padding-left:0px;}
+
+.sitemap .sitemap-box ul li ul li ul li a{font-size:14px;margin-left: 15px;font-weight: 400;}
+
+.module-mapaweb .module-mapaweb li{
+  text-indent: 0px;
+}
+.module-mapaweb .module-mapaweb li a{
+  font-size: 16px;
+font-weight: 600;
+display: inline-block;
+padding-bottom: 15px;
+padding-top: 0px;
+/*padding-left: 15px;*/
+color: #333333;
+font-family: "Open Sans";
+}
+
+.module-mapaweb .module-mapaweb li a:only-child{
+  font-size: 14px;
+  font-weight: 600;
+  /*padding-bottom: 21px;
+  padding-left: 15px;*/
+  padding-top: 0px;
+  font-weight: 400;
+}
+
+
+.main_menu_link.active, .menu-principal li a:active, .menu-principal li a:hover{
+  font-weight: 400 !important;
+  border-bottom: 2px #a4010d solid;
+  color: #000000;
+}
+
+.navbar .menu-desktop .menu-principal li a{
+  color: #333333;
+}
+
+.menu-idiomas .idiomas .active{
+  font-weight: 600 !important;
+}
+
+.navbar .menu-desktop .menu-idiomas a{
+  letter-spacing: 0.05px;
+}
+.navbar .menu-desktop .menu-idiomas a:hover, .navbar .menu-desktop .menu-idiomas a:focus {
+  font-weight: bold;
+  letter-spacing: 0px;
+}
+.navbar .menu-desktop .menu-idiomas a:after{
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+@media (min-width: 1200px){
+  .module-carrusel .slick-dots{
+    right: 17.5%;
+  }
+}
+
+@media (min-width: 1024px){
+  .module-carrusel .slick-dots{
+
+  }
+}
+
+@media (max-width: 768px){
+  .module-carrusel .slick-dots{
+    right: 15px;
+  }
+}
+
+
+.module-footer .form-check-input{
+  vertical-align: super;
+}
+
+.module-footer .checked{
+  font-weight: 600;
+}
+
+.intro-sepi .default-text{
+  text-align: center;
+}
+
+
+.zoom img{
+  -webkit-transition: all 100ms ease-in;
+  -ms-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+
+.zoom:hover > img{
+      -webkit-transition: all 100ms ease-in;
+      -webkit-transform: scale(1.05) translateX(-50%) translateY(-50%);
+      -ms-transition: all 100ms ease-in;
+      -ms-transform: scale(1.05) translateX(-50%) translateY(-50%);
+      -moz-transition: all 100ms ease-in;
+      -moz-transform: scale(1.05) translateX(-50%) translateY(-50%);
+      transition: all 100ms ease-in;
+      transform: scale(1.05) translateX(-50%) translateY(-50%);
+}
+
+.ui-datepicker .ui-datepicker-title span {
+	font-size: 1.4em;
+}
+
+.module-cards .card:hover > .module-subtitle, .module-historia .historia-links li a:hover{
+  font-weight: 600;
+}
+
+.module-cards .card:hover > .module-subtitle{
+  color: #004588;
+}
+.module .row button,
+.module-contacto-newsletter .row button,
+.module-contacto-newsletter .row a,
+.module-descargas .descargar .btn-container a{
+  border: 1px solid transparent;
+}
+
+.module .row button:hover,
+.module-contacto-newsletter .row button:hover,
+.module-contacto-newsletter .row a:hover,
+.module-descargas .descargar .btn-container a:hover{
+  border: 1px solid #a4010d;
+  background: #FFFFFF;
+  font-weight: 600;
+}
+
+.navbar .menu-desktop .menu-principal li{
+  padding-right: 4%;
+}
+
+.navbar .menu-desktop .navbar-form{
+  width: 100%;
+}
+
+.abrir_search_form{
+  font-size: 18px;
+  padding-top: 18px;
+  float: right;
+  color: #a4010d;
+}
+
+#abrir_form_search{
+  margin-left: 0px;
+}
+
+#abrir_form_search .input_form_search{
+  border: none;
+  border-bottom: 1px solid #a4010d;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  line-height: inherit;
+  transition: none;
+}
+
+#abrir_form_search .search_form_button{
+  border: none;
+  background: none;
+  float: right;
+  margin-top: -30px;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 1024px){
+  .module-comite .member-card:first-of-type{
+    width: 60% !important;
+    margin-left: 180px !important;
+  }
+}
+
+.module-buscador.module-filter.informes .btn:hover, .module-buscador.module-filter .btn:hover{
+  border: 1px solid #ffcc00;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.module-footer .footer-links li a:hover {
+	color: #000000;
+	font-weight: normal!important;
+}
+.intro-sepi .default-text {
+	text-align: left;
+}
+.sectores li{
+	margin-right: 1px;
+}
+.module-contacto-newsletter .newsletter img {
+	height: auto!important;
+	padding-bottom: 8px;
+}
+
+.multimedia  .view-multimedia a:after{
+  content: â€˜â€™;
+  position:absolute;
+  right: 30px;
+  top: 105px;
+  height: 47px;
+  width:47px;
+ background: url(../images/icon-video.png);
+ background-repeat:no-repeat;
+}
+    @media (min-width: 768px) {
+      .elemento-agenda:before {
+        content: "";
+        position: absolute;
+        left: -5%;
+        bottom: -37px;
+        height: 93%;
+        width: 1px;
+        border-left: 1px solid #e1e0e0; }
+      .item-list.container{padding: 0px;}
+      }
+
+
+.sectores .child {
+  border: 1px solid transparent;
+}
+.sectores .child:hover {
+  border: 1px solid transparent;
+}
+@media (min-width: 1024px) {
+	.sectores li:nth-child(10) {
+    top: 131px;
+    left: 804px;
+}
+}
+
+@media (min-width: 1024px){
+.module-cabecera.sectores .tercer-nivel {
+    right: 0%;
+    top: 55px;
+}
+
+.module-cabecera.sectores .segundo-nivel {
+  right: 0%;
+  top: 40px;
+}
+.module-cabecera.sectores .primer-nivel {
+  right: 0px;
+  top: 25px;
+}
+.contenedor-sectores{
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-right: auto;
+  margin-left: -40px;
+  top: 100px;
+  width: 940px;
+  transform: translate(-50%,-50%);
+}
+.module-cabecera.sectores .text{
+  position: relative;
+  left: 0px;
+}
+}
+
+.fundacion1, .footer-links, .footer-logos{
+  padding-left: 0px;
+}
+.fundacion2{
+  padding-right: 0px;
+}
+
+.module-text, .module-cards.interesar{
+  padding-bottom: 50px;
+}
+
+.container > .module-descargas{
+  margin-top: 50px;
+}
+
+.module-cards .card{
+  min-height: 280px;
+}
+
+.imagen-listado-empresas img{
+  min-width: inherit;
+  min-height: inherit;
+}
+
+
+#search-block-form .input-group{
+  margin-top: 15px;
+  position: absolute;
+  right: 0px;
+  -webkit-margin-top: 15px;
+  -webkit-position: absolute;
+  -webkit-right: 0px;
+}
+
+.custom-input-group button{
+  position: absolute;
+  right: 0px;
+  z-index: 10;
+}
+
+.open-search-form{
+  font-size: 20px;
+  position: absolute;
+  right: 0px;
+  margin-top: 15px;
+  color: #a4010d;
+}
+
+
+.navbar .menu-desktop .collapse .input-group .form-control{
+  height: 30px;
+}
+
+.module-footer .form-check-input{
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
+.module-cards{
+  padding-bottom: 30px;
+}
+
+.module-historia{
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 1024px){
+
+  .intro-sepi{
+    margin-bottom: 0px !important;
+  }
+
+  .module-carrusel .slick-dots, .module-carrusel .image-text{
+    bottom: 100px !important;
+  }
+  .module-carrusel .image-text{
+    bottom: 0px !important;
+    right: -60px;
+  }
+}
+
+
+.distanciabloques{
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
+}
+
+.pagina-web-empresa p{
+  font-size: 14px !important;
+  color: #004588 !important;
+}
+
+.module-footer .footer-links li a:hover, .pagina-web-empresa:hover{
+  text-decoration: underline !important;
+}
+
+.module-footer .footer-checkbox{
+  font-size: 1.4em;
+  border: 1px solid transparent;
+}
+
+
+.barra_separadora{
+  border-bottom: 1px solid #e1e0e0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-weight: 600 !important;
+}
+
+.titulo-organismo-sepi{
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: #004588;
+  font-weight: normal;
+}
+
+.module-organismos .panel-heading{
+  padding: 10px 0px 30px;
+}
+
+.module-organismos .panel:nth-of-type(1){
+  margin-top: 30px;
+}
+
+.module-text div > div p:nth-child(1){
+  padding-bottom: 0px;
+}
+
+.module-descargas{
+  margin: 0px;
+  padding: 0px;
+}
+
+.module-descargas .default-text .descargas-icon-img{
+  text-align: left;
+}
+
+.module-descargas .default-text{
+  padding: 0px;
+}
+
+.module-text h3{
+  font-family: "Open Sans";
+  color: #333333;
+  font-size: 1.6em;
+  font-weight: 600;
+  line-height: 1.25em;
+}
+
+.module-text h3{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.module-text h2{
+  font-family: "Open Sans";
+  color: #333333;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.25em;
+}
+.pad_top h2{
+  padding-top: 0px;
+}
+
+.imagen-presidenta-sidebar img{
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .module-fundacion {
+      padding-bottom: 76px;
+    }
+    .view-fundacion-sepi > div.container-fluid > div > div > div > div > div > div > div > div:nth-child(1) > div {
+          padding-left: 0px;
+    padding-right: 10px;
+    }
+   .view-fundacion-sepi > div.container-fluid > div > div > div > div > div > div > div > div:nth-child(2) > div {
+       padding-left: 10px;
+    padding-right: 0px;
+    }
+}
+
+@media screen and (min-width: 280px){
+  .sidebar{
+    padding: 40px 0px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .sidebar{
+    padding: 0px;
+  }
+}
+
+.organismos-icon, .pagina-web-empresa img{
+  width: 100%;
+}
+
+.module-empresas .empresa{
+  min-height: 345px;
+}
+
+.contratante .sidebar{
+  margin-top: 10px;
+}
+
+.degradado{
+
+  width: 100%;
+  height: 333px;
+  position: relative;
+  top: 0px;
+  opacity: 1;
+
+
+background: rgba(0,0,0,0);
+background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.7)));
+background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+background: -ms-linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+
+}
+
+.autor-fotografia{
+  font-style: normal;
+}
+
+
+.module-news.news-detailed .caption-text{
+  padding: 10px 0px 5px;
+}
+.new-date-container{
+  padding: 10px 0px 0px;
+}
+.module-news .module-text{
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.module-empresas .empresa .web-empresa, .module-empresas .empresa .porcentaje-empresa{
+  padding-top: 17px;
+  font-family: "Open Sans";
+  color: #000000;
+  font-size: 12px;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.module-empresas .empresa .web-empresa::before {
+  content: url("../images/webpage.png");
+  padding-right: 10px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+.module-empresas .empresa .porcentaje-empresa::before {
+  content: url("../images/porcentaje.png");
+  padding-right: 10px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tabs li.item_tabs_centradas{
+  max-width: 150px;
+  height: 85px;
+  width: 17%;
+}
+
+.tabs li.item_tabs_centradas:hover{
+  height: 95px;
+}
+
+
+
+@media screen and (min-width: 1024px)
+	.module-fundacion .views-row > div:nth-of-type(1) {
+	  padding-left:0px;
+	  padding-right:10px;
+	}
+	.module-fundacion .views-row > div:nth-of-type(2) {
+	  padding-right:0px;
+	  padding-left:10px;
+	}
+	.module.module-cards {
+		 padding-top:30px;
+	}
+	.footer {
+		margin-top: 30px;
+	}
+	.module-cabecera {
+		padding-top:30px;
+	}
+	.module-historia {
+		 margin-bottom:0px;
+	}
+  .module-carrusel{
+    margin-bottom: 30px;
+  }
+  .view-display-id-block_2 {
+    padding-bottom: 30px;
+  }
+  .module-sectores .module-text {
+    padding-bottom: 0px;
+  }
+  .module-sectores + .container > .module-news {
+    padding-bottom: 60px;
+  }
+  .container .row{
+    padding: 0px;
+    margin: 0px;
+  }
+  .module-buscador-privatizaciones{
+    padding-bottom: 0px;
+    margin-bottom: -30px;
+  }
+  .module-table .table-headers{
+    font-size: 1.4em;
+    padding-left: 24px;
+  }
+  .width-2-height-1{
+    width: 28.5%;
+    padding: auto 0px;
+  }
+  .width-1-height-2, .width-1-height-1{
+    width: 14.2%;
+    padding: auto 0px;
+  }
+
+  .sectores .width-2, .sectores .width-1{
+    width: 100%;
+  }
+  .sectores li:nth-child(7){
+    left: 129px;
+  }
+  .sectores li:nth-child(8){
+    left: 387px;
+  }
+  .sectores li:nth-child(9){
+    left: 515px;
+  }
+  .sectores li:nth-child(10){
+    left: 773px;
+  }
+
+
+  .sectores-2{
+    padding-left: 10px !important;
+  }
+  .sectores-2 .width-2-height-1{
+    width: 28.5%;
+    padding: auto 0px;
+  }
+  .sectores-2 .width-1-height-2, .width-1-height-1{
+    width: 14.1%;
+    padding: auto 0px;
+  }
+  .sectores-2 li:nth-child(6){
+    left: 10px;
+  }
+  .sectores-2 li:nth-child(7){
+    left: 139px;
+  }
+  .sectores-2 li:nth-child(8){
+    left: 395px;
+  }
+  .sectores-2 li:nth-child(9){
+    left: 524px;
+  }
+  .sectores-2 li:nth-child(10){
+    left: 781px;
+  }
+
+  .cuadrado a img{
+    width: 50px;
+  }
+
+  .module-presidenta h2{
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+
+  .module-presidenta .sidebar-quote-red p{
+    padding: 40px 0px 0px !important;
+  }
+
+  .cabecera-presidenta .name{
+    padding-top: 65px;
+    padding-bottom: 10px;
+  }
+
+  .tabs li.item_tabs_centradas a{
+    text-align: center;
+  }
+
+}
+
+.module-fundacion .views-row > div:nth-of-type(1) {
+  padding-left:0px;
+  padding-right:10px;
+}
+.module-fundacion .views-row > div:nth-of-type(2) {
+  padding-right:0px;
+  padding-left:10px;
+}
+
+.module.module-cards {
+     padding-top:30px;
+  }
+
+.module-historia {
+    margin-bottom: 0px;
+    padding-bottom: 60px;
+}
+.module-fundacion{
+  margin-bottom: -30px;
+}
+
+.module-carrusel{
+  margin-bottom: 30px;
+}
+
+.module-agenda {
+   margin-bottom: 30px;
+}
+
+.module-buscador { margin-top: 30px;}
+
+.barra_separadora{
+  min-height: 30px;
+}
+.footer{
+  margin-top: 0px;
+}
+.module-text-progress{
+  padding-top: 0px;
+}
+
+.licitaciones-resueltas{
+  position: inherit;
+  margin-top: 0px !important;
+}
+
+@media (min-width: 768px) {
+
+  .center-content-vertical {
+  display: flex;
+  align-items: center;
+  }
+
+  .container .interesar{
+    padding-top: 0px;
+    margin-top: 15px !important;
+  }
+
+  .module-descargas{
+    margin: 15px 0px 30px;
+  }
+  .module-descargas .background-grey{
+    min-height: 150px;
+    height: auto;
+  }
+
+  .module-licitaciones-descargas .module-descargas{
+    margin: 15px 0px 50px;
+  }
+
+  .descargas-noticias{
+    margin: 15px 10px 30px;
+  }
+
+  .noticias-empresa .card{
+    padding-left: 0px;
+    padding-right: 20px;
+  }
+
+  .contratante{
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+
+  .module-licitaciones{
+    padding-top: 0px;
+  }
+  .contenedor-licitaciones{
+    padding-bottom: 30px;
+  }
+
+  .tabs li.item_tabs_centradas:first-child{
+    margin-left: 6%;
+  }
+
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .module-presidenta .sidebar{
+    padding: 0px;
+    margin: 0px;
+  }
+  .open-search-form{
+    margin-top: 0px;
+  }
+  #abrir-buscador-desktop{
+    margin-top: -22px;
+  }
+  #abrir-buscador-desktop div{
+    width: 98.7%;
+  }
+
+  #abrir-buscador-desktop div input{
+    width: 100%;
+  }
+
+  .module-carrusel{
+    margin-bottom: 0px;
+    height: 400px;
+  }
+
+  .module-news .news, .module-news .new{
+    padding: 0px;
+  }
+
+  .module-news .new{
+    padding: 5px;
+  }
+
+  .module-news .new-big .new-headline{
+    margin-bottom: 70px;
+  }
+
+  #imagen-multimedia-modal{
+    width: 100%;
+  }
+
+  #webform_submission_contact_node_67_add_form{
+    padding: 0px;
+  }
+
+  .formulario_errores, .formulario_contacto_medio, .compania_form_contact, .formulario_contacto_etiqueta, .formulario_checkbox, .formulario_informacion_obligatorios, .formulario_informacion_obligatorios{
+    padding: 0px;
+  }
+
+  .formulario_contacto_medio:first-of-type{
+    padding-right: 15px;
+  }
+
+  .col-izquierda-pestanas, .tabs .scroll-lateral{
+
+    height: 74px !important;
+  }
+
+  .navbar .menu-desktop .menu-idiomas a{
+    font-weight: 300;
+  }
+
+  .texto-resultados-busqueda{
+    width: 680px !important;
+    font-weight: 600;
+  }
+
+  .texto-resultados-busqueda h2{
+    padding: 0px;
+  }
+
+  .buscador-inferior{
+    padding: 0px;
+    padding-right: 10px;
+  }
+
+  .module-presidenta .sidebar-quote-red p{
+    padding: 15px 0px 0px !important;
+  }
+
+  .module-presidenta{
+    padding: 0px;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+
+  .view-multimedia .card{
+    padding-left: 10px !important;
+  }
+
+  .module-cards.multimedia .image-resizer{
+    min-height: 222px;
+    max-height: 222px;
+  }
+
+  .module-contacto-newsletter .newsletter{
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  .card.elementos-bloque-informes{
+    padding: 0px 10px !important;
+  }
+
+  .module-text .default-text + .default-text, .module-text p + p{
+    padding-top: 20px;
+  }
+
+  .descripcion-ficha-empresa{
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+
+    .module-carrusel{
+      margin-bottom: 0px;
+      max-height: 400px;
+    }
+
+    .module-news .news, .module-news .new{
+      padding: 0px;
+    }
+
+    .module-news .new-big .new-headline{
+      margin-bottom: 70px;
+    }
+
+    .module-fundacion .fundacion2{
+      padding: 0px;
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
+
+    .capa-aux-slider .image-text{
+      bottom: 0px;
+      top: 65px;
+      text-align: left;
+    }
+
+    .center-content-vertical{
+      height: 70px;
+    }
+    .center-content-vertical .datos-abiertos{
+      position: absolute;
+      bottom: -40px;
+      left: 0px;
+      padding: 0px;
+    }
+
+    .slick-dots{
+      display: block;
+      position: absolute;
+      top: 225px;
+      bottom: 0px;
+    }
+
+    .navbar-brand{
+      width: 75%;
+    }
+
+    .formulario_errores, .formulario_contacto_medio, .compania_form_contact, .formulario_contacto_etiqueta, .formulario_checkbox, .formulario_informacion_obligatorios, .formulario_informacion_obligatorios{
+      padding: 0px;
+    }
+
+    .imagen-cabecera-mobile{
+      padding: 0px;
+    }
+
+    .bloque-carta-mobile{
+      position: relative;
+      z-index: 15;
+    }
+
+    .module-cabecera.cabecera-imagen-grande .background-grey{
+      left: inherit;
+      right: 0px;
+    }
+
+    .logo-gobierno-footer{
+      margin: 15px auto;
+      width: 50%;
+    }
+
+    .module-cabecera.cabecera-imagen-grande{
+      padding-bottom: 0px;
+    }
+
+    .empresas{
+      padding-top: 0px;
+    }
+
+    .module-text .sidebar.bg-white{
+      border: none;
+    }
+
+    .documentos-mobile{
+      padding: 20px 30px !important;
+      margin: 0px;
+    }
+    .documentos-mobile .descargas-title{
+      padding: 0px;
+    }
+
+    .module-cards .card{
+      padding: 0px;
+    }
+
+    .module-agenda .card-list .elemento-agenda{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .modal-body img{
+      width: 100%;
+    }
+
+    .bloque-empleo{
+      padding: 0px 0px 40px;
+    }
+
+    .module-cabecera.sectores .visible-xs{
+      top: 160px;
+      bottom: 0px;
+    }
+
+    #myTablegislacion{
+      margin-top: 30px;
+    }
+
+    .new-big2 .image-text{
+      margin-top: 0px;
+      text-align: left;
+    }
+}
+
+.sidebar-icon-text img{
+  width: 100%;
+}
+.module-licitaciones .licitaciones-logo img{
+  width: 100%;
+}
+
+.cabecera-presidenta{
+  margin-top: 30px;
+  padding-top: 0px;
+  background: none;
+}
+.cabecera-presidenta .imagen{
+  padding: 0px;
+  position: absolute;
+}
+
+#abrir-buscador-desktop .btn-default:hover{
+  background: none;
+}
+
+.module-licitaciones .licitaciones-logo img{
+  width: 100%;
+  height: auto;
+}
+
+.module-licitaciones .info-text{
+  margin-top: 10px;
+}
+
+.fuera-border::before{
+  border: none !important;
+}
+
+@media screen and (min-width: 1382px){
+  .tabs li.item_tabs_centradas:first-child{
+    margin-left: 17%;
+  }
+
+  .tres-tabs li.item_tabs_centradas:first-child{
+    margin-left: 115px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1221px){
+    .tabs li.item_tabs_centradas:first-child{
+      margin-left: 0px;
+    }
+}
+
+.module-historia .image-resizer{
+  min-height: 245px;
+}
+
+.sidebar-quote{
+  font-size: 1.2em !important;
+}
+
+.descargar{
+  padding: 30px;
+}
+.descargar .btn-container{
+  margin-top: 50px;
+}
+
+.descargar .btn-container a:hover{
+  color: #000000;
+}
+
+.module-descargas .descargas p{
+  font-size: 1em;
+}
+
+.module-descargas .default-text{
+  min-height: 100px;
+}
+
+
+  .module-text .sidebar .bg-red .sidebar-quote p{
+    font-family: "Zilla Slab";
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+.file-text p{
+  margin-top: 15px;
+}
+
+.module-organismos .module-descargas p{
+  font-weight: inherit;
+}
+.module-organismos .module-descargas .descargas-title{
+  font-family: "Open Sans";
+  color: #333333;
+  font-size: 1.6em;
+  font-weight: 600;
+  line-height: 1.25em;
+  padding-bottom: 0px;
+}
+
+.module-organismos .module-descargas .descarga-name{
+  padding-bottom: 0px;
+  color: #a4010d;
+}
+
+.enlaces-superiores.active{
+  color: #a4010d !important;
+  font-weight: 600;
+}
+
+.empresas{
+  padding-bottom: 15px;
+}
+
+.module-cards.interesar{
+  border-color: #dfdfdf;
+}
+
+.module h2.module-title.te-puede-interesar{
+  margin-top: 30px;
+}
+
+
+.contenedor-ballon, .contenedor-imagen-ballon{
+  min-height: 150px;
+  padding: 0px;
+  margin: 0px;
+  padding-right: 10px;
+}
+.imagen-balloon{
+  margin-top: 35px;
+}
+.contenedor-datos-balloon{
+  background-color: #f1f2f1;
+  padding: 15px;
+}
+.imagen-empresa-balloon{
+  width: 100%;
+  margin-top: 10%;
+}
+.nombre-empresa-balloon{
+  font-family: "Zilla Slab";
+  color: #a4010d;font-size: 1.6em;
+}
+.sector-empresa-balloon{
+  font-size: 1.3em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contenedor-datos-balloon .mail-empresa::before{
+  content: url("../images/buscador-icon-mail.png");
+  padding-right: 10px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+.contenedor-datos-balloon .telefono-empresa::before{
+  content: url(../images/buscador-icon-phone.png);
+  padding-right: 10px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+.contenedor-datos-balloon .web-empresa::before{
+  content: url("../images/webpage.png");
+  padding-right: 10px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+.contenedor-datos-balloon .porcentaje-empresa::before{
+  content: url("../images/porcentaje.png");
+  padding-right: 10px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contenedor-datos-balloon .mail-empresa, .contenedor-datos-balloon .telefono-empresa, .contenedor-datos-balloon .web-empresa, .contenedor-datos-balloon .porcentaje-empresa{
+  color: darkgrey;
+}
+
+.c100 > span{
+  top: -4px;
+}
+
+.elemento-agenda::before{
+  min-height: 150px;
+  top: 33px;
+  max-height: 170px;
+}
+
+.module-licitaciones{
+  background: none;
+}
+
+#multimedia-modal .imagen-multimedia-modal{
+  width: 100%;
+  height: auto;
+}
+
+.module-sectores .module-text h3, .module-sectores .module-text h2{
+  padding-top: 0px;
+}
+
+.embedded-entity .descargas{
+  margin: 15px 0px;
+}
+.embedded-entity .descargas .descarga-name{
+  font-size: 14px;
+  padding: 0px;
+  text-align: left;
+  float: left;
+  color: #337ab7;
+}
+.embedded-entity .descargas .descarga-weight{
+  display: none;
+}
+
+.encabezado .alinear-derecha{
+  float: right;
+}
+.no-active-botones{
+  background-color: white;
+  border: 1px solid grey;
+  color: grey !important;
+}
+.module-buscador.module-filter .btn{
+  font-family: "Zilla Slab";
+}
+
+.module-text .sidebar .bg-red .sidebar-title{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.module-text .sidebar .bg-red .sidebar-quote p{
+  font-family: "Zilla Slab";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.image-resizer img{
+  min-width: inherit;
+}
+
+.descargar-organigrama{
+  margin-bottom: 30px;
+}
+
+.field--name-field-cabecera-sectores .field--label{
+  display: none;
+}
+
+.select-formulario .form-item{
+  width: 100%;
+}
+
+.container .form-inline{
+  padding-right: 0px;
+}
+
+.altura-listado{
+  max-height: 150px;
+  margin-botton: 30px;
+}
+
+.module-cabecera.cabecera-imagen-grande{
+  padding-bottom: 30px;
+}
+
+.image-resizer img, .image-resizer video{
+  max-height: inherit;
+  min-height: inherit;
+  display: block;
+  margin: 0px auto;
+}
+.image-resizer video{
+  max-width: 100%;
+}
+
+.news-detailed .new-header .new-headline{
+  padding-left: 0px;
+}
+
+.module-contacto .btn-alt{
+  border: 1px solid transparent;
+}
+.module-contacto .btn-alt:hover{
+  background-color: #FFFFFF;
+  border: 1px solid #a4010d;
+}
+
+.cabecera-imagen-grande.contratante{
+  margin-top: 30px;
+}
+
+.module-news .new .image-resizer{
+  min-height: 160px;
+  max-height: 160px;
+}
+
+.alert{
+  font-size: 1.5em;
+  font-family: "Open Sans";
+  width: 900px;
+}
+
+.alert-success{
+  color: #3c763d;
+  background-color: #FFFFFF;
+  border-color: #3c763d;
+}
+.alert-danger{
+  color: #a94442;
+  background-color: #FFFFFF;
+  border-color: #a94442;
+}
+
+.embedded-entity .descargas-icon-img{
+  display: none;
+}
+
+.module-comite .member-card:first-of-type{
+  margin-top: 0px !important;
+}
+
+.module-news .new-excerpt{
+  margin-top: 0px;
+}
+
+.imagen-multimedia{
+  cursor: pointer;
+}
+
+.mas-symbol{
+  padding: 0px 10px;
+}
+
+
+.li-embebed-entity{
+  float: left;
+  width: 100%;
+}
+.li-embebed-entity:nth-last-child(){
+  padding-bottom: 10px;
+}
+.li-embebed-entity .embedded-entity p{
+  margin-top: -13px;
+  padding: 0px;
+  width: 100%;
+}
+
+.texto-perfil-contratante .li-embebed-entity .embedded-entity p{
+  margin-top: 0px;
+}
+
+.last-embebed-entity{
+  padding-bottom: 10px;
+}
+
+.paginador{
+  margin: 30px auto;
+  padding-left: 25px;
+  padding-right: 10px;
+}
+.boton-paginador{
+  background-color: #a4010d !important;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 10px !important;
+  border: 1px solid transparent !important;
+  border-radius: 0px !important;
+}
+.pagination .pager__item .boton-paginador{
+  margin-left: 10px;
+  color: #FFFFFF !important;
+  margin-bottom: 10px;
+}
+.boton-paginador:hover, .pagination .active .boton-paginador, .pagination .pager__item .boton-paginador:hover{
+  border: 1px solid #a4010d !important;
+  background-color: #FFFFFF !important;
+  color: black !important;
+  font-weight: 600;
+}
+.pagination .active .boton-paginador:first-of-type{margin-left: 0px;}
+
+.footer-checkbox:hover{
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  font-weight: inherit !important;
+  color: #23527c;
+}
+
+.module-news.news-detailed .caption-text{
+  width: 100%;
+}
+
+.module-cards.informes .module-subtitle{
+  width: 98%;
+}
+
+.form-inline .form-date{
+  font-size: 1.3em;
+}
+.module-news.news-detailed .enlace_noticias_importacion, .cuerpo-contenido-noticia a{
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.module-news.news-detailed .enlace_noticias_importacion:hover, .cuerpo-contenido-noticia a:hover{
+  color: #23527c;
+  text-decoration: none;
+}
+.imagen-cabecera-noticias{
+  padding: 0px;
+  /*min-height: 300px;*/
+  max-height: 300px;
+  overflow: hidden;
+}
+.imagen-cabecera-noticias img{
+  max-height: inherit;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1024px){
+.titulo-noticia-destacada{
+  padding-bottom: 0px !important;
+}
+}
+
+.cuerpo-noticia-destacada{
+  padding-top: 15px !important;
+}
+
+
+.module-news .new-date
+{ position: static;}
+
+.module-news.news-detailed .caption-text{
+  padding: 5px 0px 0px;
+}
+
+
+.privatizaciones-image.image-resizer .imagen-privatizaciones{
+  width: 100%;
+
+}
+
+.privatizaciones-image.imagen{
+  margin-top: 40px;
+  max-height: 95px;
+  margin-bottom: 15px;
+}
+
+.privatizaciones-image.imagen img{
+  max-height: inherit;
+  min-height: inherit;
+  display: block;
+  margin: 0px auto;
+}
+
+.sectores-carrusel.unslicked{
+  margin: 0px;
+}
+
+.module-buscador .fila-buscador-noticias-englobe{
+  padding: 0px 10px;
+}
+
+.row-sin-margenes{
+  margin: 0px;
+}
+
+.fecha-desde-privatizacion{
+  padding: 0px;
+  padding-right: 10px;
+}
+.fecha-hasta-privatizacion{
+  margin: 0px !important;
+  padding: 0px;
+}
+.fecha-desde-privatizacion div, .fecha-hasta-privatizacion div{
+  width: 100%;
+}
+
+
+.view-privatizaciones .view-empty{
+  padding-top: 25px;
+}
+
+
+.nombre-sector.empresa-resultados{
+  border-bottom: 1px solid #b6b7b7;
+  min-height: 45px;
+}
+.module-empresas .empresa .sector-empresa, .altura-listado .nombre-sector.empresa-resultados{
+  border: none;
+}
+
+.card.elementos-bloque-informes{
+  min-height: 0px;
+}
+
+.mostrar-texto{
+  display: inherit !important;
+}
+
+
+.li-embebed-entity .descargas{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.texto-perfil-contratante h2{
+  padding-top: 10px;
+}
+
+
+  .module-licitaciones .lead-text.blue{
+    padding-bottom: 10px;
+  }
+
+.formulario_contacto_agree input{
+  margin-top: 0px;
+}
+
+.contenedor-informes:last-of-type{
+  margin-bottom: 30px;
+}
+
+.fechas-noticas-buscador .form-group.segunda-fecha{
+  margin-left: 15px;
+}
+
+.module-text.privatizacion .module-text{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.row.row-pestanas{
+  margin: 0px;
+}
+
+.tabs li.item_tabs_centradas.active a{
+  font-weight: 600;
+}
+
+
+.row-pestanas .tabs.col-xs-12{
+		  padding: 0px;
+		}
+
+		.background-grey.gris-fundacion-sepi .row{
+		  padding: 0px;
+		  margin: 0px;
+		}
+
+		.module-news.news-detailed{
+		  padding-top: 20px;
+		}
+
+		.module-text.cuerpo-contenido-noticia{
+		  padding-top: 0px;
+		}
+		.module-text.cuerpo-contenido-noticia p:first-of-type{
+		  padding-top: 20px;
+		}
+
+		.module-text.module-presidenta{
+		  padding-top: 0px;
+		  padding-bottom: 30px;
+		}
+		.module-presidenta .texto-largo p, .module-text.module-presidenta, .module-presidenta .texto-largo{
+		  position: inherit;
+		}
+		.module-presidenta .texto-largo p:first-of-type{
+		  padding-top: 20px;
+		}
+		.module-presidenta .texto-largo .ladillo-carta-presidenta{
+		  font-family: "Zilla Slab";
+		  color: #a4010d;
+		  font-size: 20px;
+		  font-weight: 300;
+		  float: right;
+		  width: 450px;
+		  padding: 20px 25px;
+		  padding-right: 0px;
+		}
+
+		.module-text.pie-de-foto-autor-noticia{
+		  padding: 0px;
+		  padding-top: 5px;
+		}
+
+		.module-text.pie-de-foto-autor-noticia p{
+		  font-size: 1.2em;
+		  padding-top: 0px;
+		  line-height: 1.5em;
+		}
+		.module-text.pie-de-foto-autor-noticia p em{
+		  font-style: italic;
+		}
+		.module-text.pie-de-foto-autor-noticia p strong{
+		  font-weight: bold;
+		}
+		.module-text.pie-de-foto-autor-noticia p a{
+		  color: #337ab7;
+		  text-decoration: none;
+		}
+		.module-text.pie-de-foto-autor-noticia p a:hover{
+		  color: #23527c;
+	.tabs li.item_tabs_centradas a	}
+
+
+.module-footer #email{
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px){
+
+  .contenedor-licitaciones{
+    padding-bottom: 0px;
+  }
+
+  .empresas-lateral .image-resizer .imagen-empresa-enlace{
+    width: 100%;
+  }
+  .col-izquierda-pestanas{
+    width: 50%;
+    background-color: #f1f2f2;
+    position: absolute;
+    top: 279px;
+    height: 85px;
+  }
+
+  .tres-tabs li.item_tabs_centradas:hover{
+    height: 95px;
+  }
+
+  .cuadrar-pestanas-centro{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0px;
+    padding-left: 10px;
+  }
+
+  .tres-tabs li.item_tabs_centradas:first-child{
+    margin-left: 0px;
+  }
+
+  #myTab, #myTab2{
+    position: relative;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #myTab2{
+    top: 0px;
+  }
+
+  #myTab ul, #myTab2 ul{
+    max-width: 916px;
+    left: 0;
+    position: relative;
+    margin: 0px auto;
+    right: 0px;
+    margin-right: 0px;
+  }
+  .tres-tabs li.item_tabs_centradas{
+    width: 33.3%;
+    max-width: 305px !important;
+    float: left;
+  }
+
+  .tabs li.item_tabs_centradas:first-child{
+    margin-left: 0px;
+  }
+
+  .contendor-legislacion{
+    position: relative;
+    top: 55px;
+    padding-bottom: 40px !important;
+  }
+  .contendor-legislacion .col-izquierda-pestanas{
+    top: -43px;
+  }
+
+  .dos-tabs li.item_tabs_centradas{
+    width: 50%;
+    max-width: 465px;
+    float: left;
+  }
+  .dos-tabs li.item_tabs_centradas:hover{
+    height: 95px;
+  }
+  .dos-tabs li.item_tabs_centradas .text_titulo_tabs{
+    max-width: inherit;
+  }
+
+  .capa-aux-slider{
+    position: relative;
+    bottom: 0;
+    height: 0;
+    width: 940px;
+    margin: 0px auto;
+  }
+
+  .module-carrusel .slick-dots{
+    width: 90px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    bottom: 0;
+    top: -150px;
+    right: 0px;
+    left: 53.5%;
+  }
+
+  .tab_contenido .container{
+    padding-left: 25px;
+  }
+
+  .table tr td, .module-table .table-headers{
+    line-height: 150% !important;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .tabs li.item_tabs_centradas.active{
+    height: 95px;
+  }
+
+  .fechas-noticas-buscador .form-group{
+    width: auto;
+    padding: 0px;
+  }
+
+  .module-news.news-detailed .image-resizer{
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .new-rrss{
+    margin-top: 25px;
+    right: -65px;
+    float: right;
+  }
+
+  .module-news.list.multimedia .image-resizer{
+    min-height: 169px;
+    max-height: 169px;
+  }
+
+  .module-footer .footer-newsletter .newsletter-title{
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+
+  .margenes-bloque.module-sectores{
+    padding-top: 0px;
+  }
+
+  .primera-pantalla-informes .image-resizer{
+    min-height: 221px;
+    max-height: 221px;
+  }
+
+  .new-little .new-date{
+    /*margin-left: -7px;*/
+    margin-top: 15px;
+  }
+
+  .module-contacto{
+    padding-left: 10px;
+  }
+
+  #webform_submission_contact_node_67_add_form, .formulario_errores, .compania_form_contact, .formulario_contacto_grupo, .compania_form_contact, .formulario_checkbox, .formulario_informacion_obligatorios{
+    padding: 0px;
+  }
+
+  .formulario_checkbox{
+    height: 30px;
+  }
+
+  .izquierda{
+    padding-left: 0px;
+  }
+
+  .derecha{
+    padding-right: 0px;
+  }
+
+  .campos_obligatorios_texto{
+    width: 30%;
+    float: right;
+    margin-top: 13px;
+  }
+
+  .module-contacto .btn-alt{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+  }
+
+  .enlaces-perfil-contratante{
+    padding-left: 7px !important;
+  }
+
+  .buscador-inferior{
+    padding-left: 15px;
+  }
+
+  .boton-busqueda-inferior{
+    margin-top: 0px !important;
+  }
+
+  .input-buscador-inferior{
+    width: 100% !important;
+    height: 40px;
+    font-size: 1.5em;
+    padding-left: 15px;
+  }
+
+  .texto-resultados-busqueda, .view-empty{
+    font-size: 1.6em;
+    font-family: "Open Sans";
+    width: 895px;
+    margin: 30px auto;
+  }
+
+  #myTabContent .module-text{
+    margin-top: -30px;
+  }
+
+  .module-news.list .image-resizer{
+    min-height: 221px;
+    max-height: 221px;
+  }
+
+  .empresa-selector .form-item-field-empresa-target-id, .buscador-noticias-palabra-clave .form-item-keys{
+    width: 100%;
+  }
+
+  .cuatro-tabs li.item_tabs_centradas{
+    height: 85px;
+    width: 25%;
+    max-width: 226px;
+  }
+
+  .cuatro-tabs li.active.item_tabs_centradas a, .cuatro-tabs li.item_tabs_centradas a{
+    width: 100%;
+    max-width: 226px;
+  }
+
+  .module-text .sidebar.bg-white .image-resizer{
+	  margin-top: 0px;
+    min-height: 85px;
+    max-height: 85px;
+  }
+  .sidebar-icon-text img{
+	   width: auto;
+  }
+
+  .module-footer .footer-newsletter, .capa-input-newsletter-footer{
+    padding-right: 0px;
+  }
+
+  .module-licitaciones .info-text{
+    float: right;
+  }
+
+  .tabs li.item_tabs_centradas.active a, .tabs li.item_tabs_centradas:hover a{
+    padding-top: 35px;
+  }
+  .tabs li.item_tabs_centradas a{
+    padding-top: 25px;
+  }
+
+  .cuerpo-contenido-noticia.module-text{
+
+		    padding-top: 0px;
+		  }
+		  .cuerpo-contenido-noticia.module-text p:first-of-type{
+		    padding-top: 20px;
+		  }
+
+		  .tabs .module-comite .member-card:nth-of-type(odd), .tabs .module-comite .member-card:nth-of-type(even){
+		    width: 298px;
+		  }
+		  .tabs .module-comite .member-card:nth-of-type(odd){
+		    margin: 0px;
+		    margin-top: 60px;
+		  }
+		  .tabs .module-comite .member-card:nth-of-type(even){
+		    margin-left: 30px;
+		    margin-right: 25px;
+		  }
+
+		  .module-comite > div:nth-child(2){
+		    width: 458px !important;
+		    margin: 60px auto -15px !important;
+		  }
+
+		  .tab_contenido .container-documentos .descargar-organigrama{
+		    margin-top: 15px;
+		  }
+		  .module-news.list.files .file-item:last-of-type{
+		    border-bottom: none;
+		    margin-bottom: 30px;
+		  }
+		  .module-news.list.files .file-title{
+		    margin-bottom: 20px;
+		  }
+		  .module-news.list.files .file-icon{
+		    padding-top: 0px;
+		  }
+
+    .capa-input-newsletter-footer{
+      margin-bottom: 15px;
+      padding-left: 0px;
+    }
+    .module-footer .btn-subscribirse{padding-left: 0px;}
+
+    .image-resizer.cabecera-2{
+      height: 335px;
+    }
+    .cabecera-2 .image-text{
+      background-color: transparent;
+      position: inherit;
+      margin-top: 85px;
+      margin-left: 23%;
+      transform: translate(-36%,0%);
+    }
+
+    .container-fluid.cabecera-3{
+      margin-bottom: 60px;
+    }
+
+    .module-destacado-fijo .text-carrusel{
+      max-width: 350px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+
+  .content > .module-mapaweb > li.extended, .content > .module-mapaweb > li{
+		    width: 30%;
+		    float: left;
+		    margin: 0px 10px;
+		    padding: 0px;
+		  }
+		  .content > .module-mapaweb > .extended:first-of-type{
+		    margin-left: 0px;
+		  }
+
+  .tiene-sidebar-contratante .sidebar{
+    margin-top: 0px !important;
+  }
+
+  .contenedor-licitaciones .container.container-documentos .module-descargas{
+    margin-bottom: 0px;
+  }
+
+  .module-licitaciones-descargas .module-descargas .default-text:first-of-type{
+    min-height: 105px;
+  }
+
+  .module-descargas .default-text .descargas-text{
+    padding-right: 10px;
+  }
+
+  .module-footer .footer-newsletter{
+    padding-right: 0px;
+  }
+
+  .module-footer .btn-subscribirse{
+    padding: 0px;
+  }
+
+  .col-izquierda-pestanas{
+    width: 50%;
+    background-color: #f1f2f2;
+    position: absolute;
+    top: 279px;
+    height: 84px;
+  }
+
+  .cuadrar-pestanas-centro{
+    position: relative;
+    top: -78px;
+    height: 60px;
+  }
+
+  .tabs li.item_tabs_centradas:first-child{
+    margin-left: 0px;
+  }
+
+  .contendor-legislacion{
+    position: relative;
+    top: 55px;
+    padding-bottom: 40px !important;
+  }
+  .contendor-legislacion .col-izquierda-pestanas{
+    top: -43px;
+  }
+
+  .dos-tabs li.item_tabs_centradas{
+    max-width: none;
+    position: relative;
+    width: 48%;
+  }
+  .dos-tabs li.item_tabs_centradas .text_titulo_tabs{
+    max-width: inherit;
+    width: auto;
+  }
+
+  .module-sectores{
+    margin-top: 60px;
+  }
+
+  .contenedor-de-paginas{
+    margin-top: 60px;
+  }
+
+  #search-block-form .input-group{
+    top: 0px;
+    width: 98.5%;
+  }
+
+  .capa-input-newsletter-footer{
+    padding: 0px;
+  }
+  #edit-mail-0-value{
+    height: 47px;
+  }
+
+  .encabezado .alinear-derecha{
+    margin-right: -45px;
+  }
+
+  .empresas h2{
+    padding-top: 0px;
+  }
+
+  .module-text .sidebar.bg-white{
+    border: none;
+  }
+
+  .participacion-texto-sepi{
+    margin-top: 165px;
+  }
+  .c100{
+    top: 100px;
+    left: 100px;
+  }
+
+  .contratante .sidebar{
+    margin-top: 30px;
+    padding-bottom: 0px;
+    padding-top: 30px;
+    margin-left: 10px;
+  }
+
+  .module-descargas{
+    margin-left: -5px;
+    margin-bottom: 50px;
+  }
+
+  .module-licitaciones{
+    padding-bottom: 0px;
+  }
+
+  .module-buscador .date .form-group{
+    width: 150px;
+  }
+
+  .module-news.resultados-privatizaciones{
+    padding-left: 15px;
+  }
+
+  .buscador-noticias-palabra-clave .form-item-keys{
+    width: 100%;
+  }
+  .buscador-noticias-palabra-clave .form-item-keys #edit-keys{
+    width: 100%;
+  }
+
+  .module-news.list .new-text{
+    min-height: 150px;
+  }
+
+  .new-rrss{
+    margin-top: 20px;
+    float: right;
+    right: -65px;
+  }
+
+  .module-news.news-detailed .image-resizer{
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .module-news.list.multimedia .image-resizer{
+    min-height: 145px;
+    max-height: 145px;
+  }
+
+  .module-text .sidebar .bg-red{
+    min-height: 327px;
+  }
+
+  #myTab, #myTab2{
+    position: relative;
+    top: 43px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  #myTab2{
+    top: 72px;
+  }
+
+  #myTabContent{
+    margin-top: -30px;
+  }
+
+  .module-cabecera .img-responsive{
+    min-height: 291px;
+  }
+  .module-cabecera.sectores .primer-nivel {
+    top: 25px;
+    right: 40px;
+  }
+
+  .module-cabecera.sectores .segundo-nivel {
+    top: 112px;
+    right: 45px;
+  }
+
+  .module-cabecera.sectores .tercer-nivel{
+    top: 195px;
+    right: 51px;
+  }
+
+  .texto-cabecera-sectores{
+    margin-top: 0px;
+  }
+
+  .table tr td, .module-table .table-headers{
+    line-height: 150% !important;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+
+  .primera-pantalla-informes .image-resizer{
+    min-height: 145px;
+    max-height: 145px;
+  }
+
+  .texto-resultados-busqueda, .view-empty{
+    font-size: 1.6em;
+    font-family: "Open Sans";
+    width: 675px;
+    margin: 30px auto;
+  }
+
+  .module-buscador .btn-alt{
+    margin-top: 0px;
+  }
+  .input-buscador-inferior{
+    width: 100% !important;
+    height: 45px;
+    font-size: 1.5em;
+    padding-left: 15px;
+  }
+
+  .tres-tabs li.item_tabs_centradas{
+    max-width: 229px !important;
+    width: 37%;
+  }
+  .tabs li.item_tabs_centradas, .tabs li.item_tabs_centradas:hover{
+    height: 74px;
+    margin-top: 0px;
+  }
+
+  .tabs li.item_tabs_centradas.active a, .tabs li.item_tabs_centradas:hover a{
+    padding: 0px;
+    height: 84px;
+    padding-top: 28px;
+  }
+
+  .dos-tabs li.item_tabs_centradas{
+    max-width: 460px !important;
+  }
+
+  .varias-pestanas li.item_tabs_centradas{
+    max-width: 150px !important;
+  }
+
+  .dos-tabs li.item_tabs_centradas .text_titulo_tabs{
+    padding: 0px;
+    padding-top: 28px;
+  }
+
+  .tabs li.item_tabs_centradas{
+    width: 22%;
+    height: 74px;
+  }
+  .tres-tabs li.item_tabs_centradas{
+    width: 35%;
+  }
+  .dos-tabs li.item_tabs_centradas{
+    width: 49%;
+  }
+  .tabs li.item_tabs_centradas a{
+    padding: 0px;
+    padding-top: 28px;
+  }
+
+  .tabs li.item_tabs_centradas a, .tabs li.active.item_tabs_centradas a{
+    margin-top: -10px;
+  }
+
+  .module-news.list .image-resizer{
+    min-height: 145px;
+    max-height: 145px;
+  }
+
+  .cuatro-tabs li.item_tabs_centradas{
+    width: 30%;
+    height: 74px;
+    max-width: 171px;
+  }
+
+  .cuatro-tabs li.item_tabs_centradas a, .cuatro-tabs li.active.item_tabs_centradas a{
+    width: 100%;
+  }
+
+  .module-news .new-big .image-text .new-headline{
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+  }
+
+  .new .new-date{
+    left: 7px;
+  }
+
+  .margenes-bloque.module-sectores{
+    margin-top: 30px;
+  }
+
+  .capa-aux-slider .image-text{
+    bottom: 0px;
+    top: 124px;
+  }
+
+  .module-carrusel .slick-dots{
+    right: 155px;
+    width: 30%;
+    top: 300px;
+  }
+
+  .new.new-little{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .module-fundacion .fundacion2{
+    margin-top: 0px;
+  }
+
+  .capa-input-newsletter-footer{
+    padding-right: 10px !important;
+  }
+
+  .module-footer .footer-logos a{
+    padding-bottom: 0px;
+  }
+
+  .center-content-vertical .datos-abiertos{
+    position: inherit;
+    bottom: 0px;
+  }
+
+  .contratante .sidebar{
+    margin-top: 0px !important;
+  }
+
+  .contratante .sidebar .icon-text{
+    padding-left: 0px;
+  }
+  .contratante .sidebar .icon-link .enlaces-perfil-contratante{
+    padding-left: 10px;
+  }
+
+  .module-cards .card{
+    padding: 0px 10px;
+  }
+
+  .module-news-form.module-buscador .btn{
+    padding: 10px;
+    margin-top: 0px;
+  }
+
+  .module-buscador-privatizaciones{
+    height: 225px;
+  }
+
+  .licitaciones-resueltas .btn{
+    margin-top: 20px;
+  }
+
+  .search-form .module-buscador .btn{
+    margin-top: 0px;
+  }
+
+  .module-news .new-big .image-resizer, .degradado{
+    min-height: 500px;
+  }
+
+  .li-embebed-entity .embedded-entity p{
+    margin-top: -5px;
+  }
+
+  .last-embebed-entity{
+    padding-bottom: 20px;
+  }
+
+  .cuadrado{
+    height: 140px;
+  }
+
+  .cuadrado.borde-blanco-cuadrado{
+    border-right: 1px solid #FFFFFF;
+  }
+
+  .cuadrado a img{
+    width: auto;
+  }
+
+  .tabs li.active.item_tabs_centradas a{
+	color: #000000;
+  }
+
+  .module-text .sidebar.bg-white .sidebar-icon-text + .sidebar-icon-text{
+	margin-top: 0px;
+  }
+
+  .capa-imagen-presidente-empresa .image-resizer, .pagina-web-empresa.image-resizer{
+	min-height: 95px !important;
+    max-height: 95px;
+  }
+
+  .sidebar-icon-text img{
+	width: auto;
+  }
+
+  .capa-imagen-presidente-empresa .image-text{
+	margin-top: 30px;
+    text-align: center;
+  }
+
+  .c100{
+	top: 0px;
+    left: 45px;
+  }
+
+  .participacion-texto-sepi{
+	margin-top: 6px;
+    text-align: center;
+  }
+
+  .module-licitaciones .info-text{
+    float: right;
+  }
+
+  .empresa-selector .form-item{
+    width: 100%;
+  }
+
+  .fila-buscador-noticias-englobe .btn{
+    margin-top: 20px !important;
+  }
+
+
+  .resultados-noticias .new-item .new-item-no-image{
+    min-height: 90px !important;
+  }
+
+  .module-buscador.module-buscador-privatizaciones .date{
+    padding: 0px;
+    padding-left: 10px;
+  }
+
+  .module-buscador.module-buscador-privatizaciones button{
+    margin-top: 20px !important;
+  }
+
+  .select-formulario.select-sector-empresa{
+		    padding: 0px;
+		  }
+
+		  .module-comite > div:nth-child(3),
+		  .module-comite > div:nth-child(4) {
+		    width: 237px; }
+		  .module-comite > div:nth-child(odd){
+		    margin-left: 15px;
+		  }
+		  .module-comite > div:nth-child(1){
+		    margin-left: auto;
+		  }
+		  .module-news.list.files .file-title{
+		    margin-bottom: 20px;
+		  }
+		  .module-news.list.files .file-icon{
+		    padding-top: 0px;
+		  }
+		  .module-news.list.files .file-item:last-of-type{
+		    border-bottom: none;
+		    margin-bottom: 30px;
+		  }
+
+		  .module-news.list.files .bloque-legislacion-contenidos{
+        margin-top: 30px;
+		  }
+
+		  .module-news-form.module-buscador .boton-buscador-empresas{
+		    margin-top: 20px;
+		  }
+		  .sectores-little.row{
+		    margin: 0px;
+		  }
+		  .module-presidenta .texto-largo .ladillo-carta-presidenta{
+		    width: 100%;
+		    clear: both;
+		    font-family: "Zilla Slab";
+		    color: #a4010d;
+		    font-size: 20px;
+		    font-weight: 300;
+		    padding: 20px 0px;
+		  }
+
+      .image-resizer.cabecera-2{
+        height: 290px;
+      }
+      .cabecera-2 .image-text{
+        background-color: transparent;
+        position: inherit;
+        margin-top: 250px;
+        margin-left: 23%;
+        transform: translate(-36%,0%);
+      }
+
+      #block-views-block-slider-block-1{
+        margin-bottom: 52px;
+      }
+
+      .container-fluid.cabecera-3 .intro-sepi{
+        margin-bottom: 0px;
+      }
+
+      .capa-contenedora-form-newsletter{
+        padding: 0px;
+      }
+  .module-footer .footer-links{margin-left: 10px;margin-top: 30px;}
+  .module-footer .footer-links li:first-of-type{padding-left: 0px;}
+  .module-footer .footer-logos{padding-top: 0px;}
+}
+
+
+@media screen and (min-width: 768px){
+
+  .collapse-organismos-ejercicios .container-documentos.container{
+    margin: 0px;
+    padding: 0px;
+    padding-right: 50px;
+  }
+
+  .collapse-organismos-ejercicios .module-text{
+    padding-bottom: 0px;
+  }
+
+  .altura-listado .empresa .nombre-sector{
+    margin-top: 20px;
+  }
+
+  .altura-listado .empresa .mail-empresa, .altura-listado .empresa .telefono-empresa, .altura-listado .empresa .web-empresa, .altura-listado .empresa .porcentaje-empresa{
+    padding-top: 55px;
+  }
+
+  .formulario-buscador{
+    margin-top: 12px !important;
+    right: 0px !important;
+  }
+  .slick-slide img{
+    width: auto;
+    height: auto;
+    max-height: inherit;
+  }
+
+  .intro-sepi{
+    position: relative;
+    top: 16px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .module-carrusel .capa-resize-slider{
+    min-height: 340px;
+  }
+
+  #edit-title, #edit-field-participacion-target-id, #edit-tid, .module-buscador .date .form-group input, #edit-field-procesos-en-curso-value, .empresa-selector .js-form-item-field-procesos-en-curso-value, #edit-field-empresa-target-id, #edit-field-fecha-resolucion-value, .licitaciones-resueltas .form-group .form-item-field-fecha-resolucion-value, #edit-keys{
+    width: 100%;
+  }
+
+  .module-news.list .new-headline{
+    padding-bottom: 0px;
+  }
+
+  .module-news.resultados-privatizaciones{
+    padding-left: 10px;
+  }
+
+  .elemento-agenda-pagina, .contendor-agenda-elemento{
+    padding-right: 0px;
+  }
+
+  .new-text.contenido-evento-agenda{
+    padding-left: 0px !important;
+  }
+
+  .contenido-evento-agenda .new-headline{
+    padding: 15px 0px !important;
+  }
+  .contenido-evento-agenda .descripcion-evento-agenda{
+    padding-bottom: 35px;
+  }
+  .module-news.list .new-item + .new-item{
+    padding-top: 30px;
+  }
+
+  .module-buscador-privatizaciones .container{
+    padding-left: 5px;
+  }
+
+  .module-cards .image-resizer{
+    min-height: 145px;
+    max-height: 145px;
+  }
+
+  .bloque-empleo{
+    padding-top: 15px;
+  }
+  .bloque-empleo .module.module-empleo{
+    padding-bottom: 0px;
+  }
+
+  .contenedor-resultados-busqueda{
+    min-height: auto;
+    margin: 15px auto;
+    padding-left: 25px;
+  }
+
+  .paginador{
+    padding-left: 25px;
+    padding-right: 15px;
+  }
+
+  .descripcion-resultado-busqueda{
+    font-size: 1.4em;
+    padding-top: 15px;
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 15px;
+  }
+
+  .texto-resultados-busqueda, .view-empty{
+    font-size: 1.6em;
+    font-family: "Open Sans";
+    width: 890px;
+    margin: 30px auto;
+    font-weight: 600;
+  }
+
+  .texto-resultados-busqueda h2{
+    padding: 0px;
+  }
+
+  h2.mostrar-texto.texto-resultados-busqueda{margin: 0px auto; margin-bottom: 10px;}
+
+  .bloque-empleo .module-descargas{
+    margin: 10px 0px 35px;
+  }
+
+  #resultados-noticias{
+    padding-left: 10px;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  .module-carrusel .capa-resize-slider{
+    min-height: 255px;
+    max-height: 255px;
+  }
+
+  .slick-slide img{
+    height: auto;
+    max-height: initial;
+  }
+  .contendor-legislacion{
+    margin: 30px 0px;
+  }
+  .dos-tabs li.item_tabs_centradas{
+    max-width: none;
+    position: relative;
+    width: 48%;
+  }
+  .dos-tabs li.item_tabs_centradas .text_titulo_tabs{
+    max-width: inherit;
+    width: auto;
+  }
+
+  .capa-resize-slider{
+    position: relative;
+    overflow: hidden;
+  }
+  .capa-resize-slider img{
+    position: absolute;
+    margin: auto;
+    width: inherit;
+    height: 255px;
+  }
+
+  .capa-contenedora-form-newsletter, .capa-input-newsletter-footer, .capa-contenedora-form-newsletter .btn-subscribirse{
+    padding: 0px;
+  }
+  #edit-mail-0-value{
+    height: 47px;
+  }
+
+  .tabs .panel-heading{
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .panel-body{
+    padding: 0px;
+  }
+
+  .module-empresas .encabezado{
+    max-height: 0px;
+  }
+
+  .contratante .sidebar{
+    margin-top: 0px;
+  }
+
+  .empresas h2{
+    padding-top: 0px;
+  }
+
+  .module-descargas{
+    margin-top: 30px;
+  }
+
+  .capa-imagen-presidente-empresa, .capa-porcentaje-empresa{
+    margin-top: 0px !important;
+  }
+
+  .module-buscador-privatizaciones .container{
+    padding-left: 0px;
+  }
+
+  .module-buscador-privatizaciones{
+    padding-bottom: 30px;
+  }
+
+  .date .form-group{
+    padding: 0px;
+  }
+
+  .module-buscador-privatizaciones .btn-alt{
+    width: 97%;
+  }
+
+  .module-news.list .new-text{
+    min-height: 115px;
+  }
+
+  .new-rrss{
+    padding-left: 0px;
+  }
+
+  .module-news.news-detailed .image-resizer{
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .module-buscador #videos, .module-buscador #informes{
+    margin-bottom: 25px;
+  }
+
+  .module-news.list.multimedia .image-resizer{
+    min-height: 145px;
+    max-height: 145px;
+  }
+
+  .module-cards.multimedia .image-resizer{
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  .module-news-form .btn.btn-alt{
+    width: 96.5%;
+  }
+
+  .module-news.list.files .file-icon img{
+    height: auto;
+    min-height: inherit;
+    max-height: inherit;
+    min-width: inherit;
+  }
+
+  #myTab-accordion{
+    margin-top: -30px;
+  }
+
+  .tabs .tab_contenido{
+    padding-top: 15px;
+    padding-left: 10px;
+  }
+
+  .tabs .module-comite .member-card{
+    max-width: 100%;
+  }
+  .module-comite > div:nth-child(1){
+    margin-top: 15px;
+  }
+
+  .dos-tabs li.item_tabs_centradas .text_titulo_tabs{
+    padding-top: 15px !important;
+  }
+
+  .module-carrusel{
+    margin-top: 30px;
+  }
+
+  .module-cabecera.cabecera-imagen-grande .image-resizer{
+    max-height: 300px;
+    min-height: 300px;
+  }
+
+  .cabecera-imagen-sectores .image-resizer .img-responsive{
+    position: relative;
+    top: 167px;
+  }
+
+  .contenedor-sectores .caja-negra-responsive{
+    padding-bottom: 0px;
+    height: 125px;
+    top: 176px !important;
+  }
+
+  .capa-mobile-imagen{
+    top: -48px !important;
+    background: none !important;
+  }
+
+  .texto-cabecera-sectores{
+    padding-top: 0px;
+  }
+
+  .texto-cabecera-sectores .module-title, .texto-cabecera-sectores .module-text{
+    padding-left: 0px;
+  }
+
+  .texto-cabecera-sectores .container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .resultados-bloque{
+    margin-top: -60px;
+  }
+
+  .container-empresas{
+    padding: 0px;
+  }
+
+  #contact-message-feedback-form{
+    padding: 30px 25px;
+  }
+  #edit-preview{
+    display: none;
+  }
+
+  #edit-submit{
+    border: 1px solid transparent;
+    background-color: #a4010d;
+    color: #FFFFFF;
+    width: 100%;
+  }
+  #edit-submit:hover{
+    background-color: #FFFFFF;
+    border: 1px solid #a4010d;
+    color: #000000;
+  }
+
+
+    .contenedor-resultados-busqueda{
+      min-height: auto;
+      margin: inherit;
+      padding: 10px 5px;
+      padding-right: 0px;
+    }
+
+    .descripcion-resultado-busqueda{
+      font-size: 1.2em;
+      padding-top: 15px;
+      border-bottom: 1px solid #dfdfdf;
+      padding-bottom: 15px;
+    }
+
+    .texto-resultados-busqueda, .view-empty{
+      font-size: 1.6em;
+      font-family: "Open Sans";
+      width: 100%;
+      margin: 0px;
+    }
+
+    .texto-resultados-busqueda{
+      padding: 20px;
+      padding-right: 20px;
+      font-weight: 600;
+    }
+
+    .input-buscador-inferior{
+      width: 100%;
+      height: 40px;
+      font-size: 1.5em;
+      padding-left: 15px;
+    }
+
+    .menu-mobil .menu-principal{
+      min-height: 165px !important;
+    }
+    .menu-mobil .menu-otros{
+      min-height: 182px !important;
+    }
+    .menu-mobil .menu-idiomas, .menu-mobil .logo-ministerio{
+      min-height: 65px !important;
+      padding-bottom: 20px;
+    }
+
+    .menu-mobil .modal-dialog{
+      height: auto;
+    }
+
+    .module-descargas{
+      margin: 15px 0px 30px;
+      margin-left: -5px;
+      margin-bottom: 0px;
+    }
+
+    .module-cards .card{
+      width: 100%;
+    }
+
+    .module-cards .image-resizer{
+      min-height: 145px;
+      max-height: 145px;
+    }
+
+    .module-presidenta .sidebar-quote-red p{
+      padding: 0px 0px 30px !important;
+    }
+    .tabs li.active.item_tabs_centradas a{
+      height: 90px;
+    }
+
+    .module-news.list .image-resizer{
+      min-height: 145px;
+      max-height: 145px;
+    }
+
+    .texto-perfil-contratante h2{
+      padding-top: 0px;
+    }
+
+    .contratante .sidebar{
+      margin-top: 125px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      padding-top: 0px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .enlaces-perfil-contratante{
+      padding-left: 10px !important;
+    }
+
+    .contratante{
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+
+    .contratante .lead-text{
+      padding-top: 10px;
+    }
+
+    .module-licitaciones.licitacion{
+      padding-bottom: 0px;
+    }
+
+    .module-descargas .default-text{
+      height: auto;
+      min-height: 0px;
+    }
+    .module-descargas .default-text .descargas-icon-img{
+      min-height: 0px;
+    }
+
+    .contenedor-licitaciones{
+      margin-bottom: 30px;
+    }
+
+    .contratante .ver-mas{
+      right: 10px;
+    }
+
+    .module-news .new-big .image-text .new-headline{
+      padding-bottom: 0px;
+      margin-bottom: 20px;
+    }
+    .new .new-date{
+      left: 0px;
+    }
+
+    .module-news .new{
+      padding-top: 15px;
+    }
+
+    .row-pestanas{
+      margin: 0px;
+    }
+
+    .alert{
+      width: 100%;
+    }
+
+    .module-licitaciones-descargas .module-descargas{
+      margin: 0px 0px 50px !important;
+    }
+
+    .module-presidenta .sidebar{
+      padding: 0px;
+    }
+
+    .contratante .sidebar{
+      margin-top: 0px !important;
+    }
+
+    .module-descargas.descargas-empresa{
+      margin-left: 5px;
+      margin-bottom: 30px;
+    }
+
+    .gris-fundacion-sepi{
+      bottom: 0px !important;
+    }
+
+    .li-embebed-entity .embedded-entity p{
+      margin-top: -25px;
+      width: 100%;
+      padding-left: 13px;
+    }
+
+    .texto-perfil-contratante .li-embebed-entity .embedded-entity p{
+      margin-top: -20px;
+    }
+
+    .cuadrado{
+      height: 140px;
+    }
+
+    .cuadrado.borde-blanco-cuadrado{
+      border-right: 1px solid #FFFFFF;
+      border-bottom: 1px solid #FFFFFF;
+    }
+
+    .cuadrado a img{
+      width: auto;
+    }
+
+    .module.module-cards.que-hacemos{
+      padding-top: 0px !important;
+    }
+
+    .view-empty{
+      width: 100%;
+    }
+
+    .contratante .ver-mas{
+      position: inherit;
+      bottom: 0px;
+      left: 0px;
+      margin-bottom: 15px;
+    }
+    .contratante .ver-mas span{
+      margin-bottom: 15px;
+    }
+
+	.capa-imagen-presidente-empresa .image-resizer, .pagina-web-empresa.image-resizer{
+	min-height: 95px !important;
+    max-height: 95px;
+  }
+
+  .sidebar-icon-text img{
+	width: auto;
+  }
+
+  .empresas-lateral .sidebar-icon-text{
+	margin: 30px auto;
+  }
+
+  .c100{
+	clear: both;
+    position: inherit;
+    margin: 0px auto;
+	float: none;
+  }
+
+  .image-text{
+	margin-top: 30px;
+    text-align: center;
+  }
+
+  .privatizaciones-image.image-resizer{
+    margin-top: 0px;
+    min-height: 95px;
+    max-height: 95px;
+    margin-bottom: 35px;
+  }
+
+  .privatizaciones-image.image-resizer .imagen-privatizaciones{
+    width: auto;
+  }
+
+  .privatizacion{
+    padding-top: 0px;
+  }
+
+  .buscador-inferior{
+    padding: 0px;
+  }
+  .module-news-form .btn.btn-alt{
+    margin: 0px;
+    width: 100%;
+  }
+
+  .texto-resultados-busqueda h2{
+    padding-left: 15px;
+  }
+
+  .tabs .panel-title > a {padding-top: 18px; padding-bottom: 18px; width: 100%; display:block;}
+  .tabs .panel-heading {padding-top: 0px; padding-bottom: 0px;min-height:55px;}
+  .panel-title {padding-top: 0px; padding-bottom: 0px;}
+
+  .paginador{
+    padding-left: 10px;
+  }
+
+  .new-date-container{
+    padding: 55px 0px 0px;
+    line-height: 2em;
+    z-index: -1;
+  }
+
+  .module-news-form.module-buscador .empresa-selector, .module-news-form.module-buscador .fechas-noticas-buscador, .module-news-form.module-buscador .buscador-noticias-palabra-clave, .module-news-form.module-buscador .date{
+    padding: 0px;
+  }
+
+  .paginador{
+    padding-left: 25px;
+    padding-right: 15px;
+  }
+
+  .form-inline .form-date{
+    font-size: 1.4em;
+    padding-bottom: 10px;
+  }
+
+  .footer{
+    padding-bottom: 65px;
+  }
+
+  .tabs .module-text ul + p{
+    padding-top: 15px;
+  }
+
+  .menu-principal li a{
+    border-bottom: 1px solid transparent;
+  }
+  .main_menu_link.active, .menu-principal li a:active, .menu-principal li a:hover{
+    font-weight: 300 !important;
+    border-bottom: 1px #a4010d solid;
+    color: #000000;
+  }
+
+  .menu-mobil .menu-principal li a{
+    padding-left: 0px;
+  }
+
+  .menu-mobil .menu-principal .navbar-nav{
+    padding-left: 15px;
+  }
+
+  .menu-principal .main_menu_link{
+    max-width: 122px;
+  }
+
+  .buscador-mobile-lupa .boton-buscar-lupa{
+    font-size: 1.3em;
+    top: 10px;
+    right: -5px;
+    color: rgba(102, 107, 109, 1);
+  }
+
+  .enlaces-superiores.active{
+
+    font-weight: 400;
+  }
+
+  .imagen-rrss-empleo{
+    width: 35px;
+  }
+
+  .bloque-empleo .module.module-empleo, .bloque-empleo .module.module-empleo .module-licitaciones{
+    padding-bottom: 0px;
+  }
+
+  .module-descargas .default-text .descargas-text{
+    padding: 0px 10px;
+  }
+
+  .imagen.privatizaciones-image{
+    margin-top: 0px;
+    max-height: 95px;
+    margin-bottom: 35px;
+  }
+
+  .imagen.privatizaciones-image .imagen-privatizaciones{
+    max-height: inherit;
+    min-height: inherit;
+    display: block;
+    margin: 0px;
+  }
+
+  .module-licitaciones .info-text{
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+
+  .module-organismos .panel .collapse-organismos-ejercicios{
+    padding: 0px;
+    margin: 0px -15px;
+  }
+  .collapse-organismos-ejercicios .module-text{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 0px;
+  }
+  .collapse-organismos-ejercicios .container-documentos.container-fluid{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .collapse-organismos-ejercicios .container-documentos.container-fluid .background-grey{
+    padding: 25px 35px;
+  }
+
+  .collapse-organismos-ejercicios .container-documentos.container-fluid{
+    margin-bottom: 35px;
+  }
+
+  .formulario-busqueda-licitaciones-resueltas{
+    padding: 0px;
+  }
+
+  .formulario-busqueda-licitaciones-resueltas #edit-field-fecha-resolucion-value{
+    appearance: none;
+    -webkit-appearance: none;
+    overflow: hidden;
+    background: url(../images/flecha-abajo.png) 98% center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+
+  .boton-formulario-busqueda-licitaciones{
+    width: 100% !important;
+    margin: 0px !important;
+  }
+
+  .tiene-sidebar-contratante .sidebar{
+    margin-top: 125px !important;
+  }
+
+  .li-embebed-entity .descargas-text{
+    padding-left: 13px;
+  }
+
+  .contratante .ver-mas span{
+    margin-top: 2px;
+  }
+
+  .module-licitaciones-descargas .module-descargas .default-text:first-of-type{
+    min-height: 155px;
+  }
+
+  .module-licitaciones .info-text{
+    background-image: url(../images/icon-convocatoria-alarm-sm.png);
+    float: right;
+  }
+
+  .form-group-filtrar{
+    padding: 0px;
+  }
+
+  .fechas-noticas-buscador .form-group.segunda-fecha{
+    margin-left: 0px;
+  }
+
+  .module-cards.multimedia .image-resizer{
+    min-height: 169px !important;
+    max-height: 169px !important;
+  }
+
+  .module-buscador-privatizaciones{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .module-text.pad_top{
+    padding-top: 25px;
+  }
+
+  .cuadrar-pestanas-centro.container{
+
+		    padding: 0px;
+		    padding-right: 10px;
+		  }
+		  .tabs .dos-tabs li.item_tabs_centradas.active{
+		    height: 95px;
+		  }
+		  .module-news.list.files .file-title{
+		    margin-bottom: 20px;
+		  }
+		  .module-news.list.files .file-icon{
+		    padding-top: 0px;
+		  }
+		  .module-news.list.files .file-item:last-of-type{
+		    border-bottom: none;
+		    margin-bottom: 30px;
+		  }
+
+		  .module-news.list.files .bloque-legislacion-contenidos{
+		    margin-top: 30px;
+		  }
+
+		  .module-comite .member-card{
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+
+		  .tabs .module-comite .member-card:nth-of-type(odd), .tabs .module-comite .member-card:nth-of-type(even){
+		    width: 298px;
+		    margin: auto;
+		    margin-top: 60px;
+		  }
+
+		  .module-comite > div:nth-child(1), .module-comite > div:nth-child(2){
+		    width: 458px !important;
+		    margin: 60px auto -15px !important;
+		  }
+
+		  .module-comite{
+		    margin-top: 30px;
+		  }
+
+		  .tab_contenido .module-descargas.descargar-organigrama{
+		    margin-bottom: 30px;
+		  }
+
+		  .module-news-form.module-buscador .select-formulario{
+		    padding: 0px;
+		  }
+		  .resultado-item{
+		    padding-right: 0px;
+		  }
+
+		  .module-presidenta .texto-largo .ladillo-carta-presidenta{
+		    width: 100%;
+		    clear: both;
+		    font-family: "Zilla Slab";
+		    color: #a4010d;
+		    font-size: 20px;
+		    font-weight: 300;
+		    padding: 20px 0px;
+		  }
+
+      .image-resizer.cabecera-2{
+        height: 255px;
+      }
+      .cabecera-2 .image-text{
+        background-color: transparent;
+        position: inherit;
+        margin-top: 250px;
+        margin-left: 23%;
+        transform: translate(-36%,0%);
+      }
+
+      .container-fluid.cabecera-3 .intro-sepi{
+        margin-bottom: 0px;
+      }
+
+      .ver-mas.red{
+        right: 15px;
+      }
+
+  .capa-input-newsletter-footer .newsletter-form-elements{text-align: center;}
+  .module-footer .btn-subscribirse{margin-top: 15px;}
+  h2.mostrar-texto.texto-resultados-busqueda{padding: 0px; padding-bottom: 20px;}
+
+}
+
+
+
+@media screen and (min-width: 768px) (max-width: 1024px){
+
+  .module-news .new{
+ min-height: 333px; }
+
+}
+
+
+@media screen and (min-width: 1024px){
+.module-news .new-excerpt{
+  margin-top: 0px;
+  min-height: 65px;
+}
+}
+
+
+
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1024px){
+  .margenes-bloque.module-sectores{
+    padding-top: 30px;
+  }
+
+  .module-news .new{
+    padding: 0px;
+    padding-left: 5px;
+  }
+
+  .new.new-little h3, .new.new-little .new-excerpt{
+    padding-left: 3px;
+  }
+
+  .module-news .new-excerpt{
+    margin-top: 0px;
+  }
+
+  .module-news .new-big .image-text .new-headline{
+    padding-bottom: 0px;
+    margin-bottom: 30px;
+  }
+
+  #search-block-form .input-group{
+    margin-top: 33px !important;
+  }
+
+  #myTab{
+    top: -35px;
+  }
+  #myTab2{
+    top: -6px;
+  }
+  .tabs li.item_tabs_centradas.active{
+    height: 85px;
+  }
+  .tabs li.item_tabs_centradas{
+    height: 76px;
+  }
+  .varias-pestanas li.item_tabs_centradas a, .tabs li.item_tabs_centradas.active a{
+    padding-top: 17px;
+  }
+  .cuatro-tabs li.item_tabs_centradas.active{
+    height: 83px;
+  }
+
+  .primera-fecha{
+    margin-left: -10px;
+  }
+  .segunda-fecha{
+    margin-left: 10px;
+  }
+  .texto-resultados-busqueda{
+    margin-left: 160px !important;
+  }
+
+  .module-buscador-privatizaciones{
+    height: 125px;
+  }
+
+  #edit-field-fecha-de-privatizacion-value, #edit-field-fecha-de-privatizacion-value-1{
+    width: 140px !important;
+  }
+  .module-footer .footer-links{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+  }
+  .module-footer .btn-subscribirse{margin-top: 10px;margin-bottom: 0px;}
+  h2.mostrar-texto.texto-resultados-busqueda{margin-left: 0px !important;}
+  #search-block-form .input-group{margin-top: 17px !important; margin-bottom: 0px !important;}
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1023px){
+	.menu-idiomas{
+		padding: 0px;
+	}
+	.navbar .menu-desktop .menu-principal li{
+		padding-right: 2%;
+	}
+
+	#search-block-form .input-group{
+		left: 20px;
+	}
+
+	.width-2-height-1{
+		width: 29%;
+	}
+	.width-1-height-2, .width-1-height-1{
+		width: 14.5%;
+	}
+
+	.sectores .height-1{
+		height: 125px;
+	}
+	.sectores .height-2{
+		height: 250px;
+	}
+
+	.sectores li:nth-child(6){
+		top: 125px;
+	}
+
+	.sectores li:nth-child(7){
+		left: 99px;
+		top: 125px;
+	}
+
+	.sectores li:nth-child(8){
+		left: 300px;
+		top: 126px;
+	}
+
+	.sectores li:nth-child(9){
+		left: 399px;
+		top: 126px;
+	}
+
+	.sectores li:nth-child(10){
+		left: 599px;
+		top: 125px;
+	}
+
+	.sectores li .card-2 .child img, .sectores li .card-5 .child img{
+		margin-left: 20%;
+	}
+
+	.sectores li .card-3 .child img{
+		width: 36%;
+	}
+	.sectores li .card-6 .child img{
+		margin-left: 28%;
+	}
+	.sectores li .card-8 .child img{
+		margin-left: 25%;
+	}
+	.sectores li .card-9 .child img{
+		margin-left: 22%;
+	}
+	.sectores li .card-4 .child img{
+		margin-left: 30%;
+	}
+	.sectores li .child p{
+		font-size: 1.4em;
+	}
+
+	.sectores li .child img{
+		margin-bottom: 10px !important;
+	}
+
+	.new.new-little{
+		width: 33.3% !important;
+		padding: 0px;
+	}
+
+	.module-footer .footer-logos a{
+		width: 33% !important;
+	}
+	.module-footer .footer-logos a img{
+		width: 100%;
+	}
+
+	.footer-newsletter{
+		float: right;
+		border-left: 1px solid #FFFFFF;
+	}
+	.module-footer .footer-links{
+		border: none;
+	}
+	.contenedor-de-paginas{
+		margin-top: 0px;
+	}
+
+	.descargas-title{
+		padding-left: 0px;
+	}
+
+	.empresas .descripcion-ficha-empresa, .empresas-lateral{
+		width: 100% !important;
+	}
+
+	.empresas-lateral .sidebar-icon-text{
+		width: 33.3% !important;
+	}
+
+	.empresas-lateral .sidebar-icon-text .row div:first-child{
+		margin: 0px !important;
+	}
+
+	.empresas-lateral .sidebar-icon-text .row > div, .empresas-lateral .sidebar-icon-text .row > div > div{
+		width: 100% !important;
+	}
+
+	.empresas-lateral .sidebar-icon-text .row .c100{
+		width: 0px !important;
+	}
+}
+
+.user-login-form{
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.new-item-no-image{
+  min-height: 0px !important;
+}
+
+.redessociales{
+  visibility: hidden;
+  height: 0px;
+}
+
+.new-rrss .redessociales .social-media-sharing{
+  visibility: visible;
+}
+
+
+@media screen and (min-device-width: 991px) and (max-device-width: 1023px) {
+
+  /* oculta pÃ¡rrafo noticias */
+	.new-excerpt.visible-md-inline-block.visible-lg-inline-block.cuerpo-noticia-destacada {
+		display: none!important;
+	}
+    /* da mÃ¡s espacio a rrss de noticias */
+	.social-media-sharing li {
+		margin-right: 5px;
+	}
+  /* coloca buscador de empresas  */
+	.module-news-form.module-buscador .btn {
+		margin-left: 14px;
+		width: auto;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		margin-top: 28px;
+	}
+  /* coloca botones del buscador de empresas */
+	.encabezado .alinear-derecha {
+		margin-right: 19px;
+		width: 12%;
+	}
+	.iconos_cambio {
+		display: inline-block;
+		margin-right: 5px;
+	}
+	.module-empresas .mosaico .resultado-item {
+		width: 33%;
+	}
+}
+
+@media screen and (max-device-width: 767px) {
+
+.module.module-cards.multimedia .card{
+min-height: auto!important;
+}
+.module-cards.multimedia .image-resizer {
+min-height: 169px;
+max-height: 300px;
+}
+}
+
+@media screen and (min-width: 465px) and (max-width: 768px){
+  .center-content-vertical .datos-abiertos{
+    position: inherit;
+    bottom: inherit;
+    left: inherit;
+    padding: inherit;
+  }
+}
+
+
+@media screen and (width: 1024px){
+  .module-news .new-big .new-headline{
+    margin-bottom: 0px;
+  }
+
+  .module-news .new{
+    padding-top: 0px;
+  }
+
+  #myTab{
+    top: -35px;
+  }
+  #myTab2{
+		    top: -6px;
+		  }
+
+  .tabs li.item_tabs_centradas.active{
+    margin-top: -20px;
+  }
+
+  .tabs li.item_tabs_centradas a{
+    padding: 0px;
+    margin: 0px;
+    padding-top: 25px;
+  }
+
+  .tabs li.item_tabs_centradas.active a{
+    padding-top: 35px;
+    font-weight: 600;
+  }
+  .tabs li.item_tabs_centradas.active{
+    height: 84px;
+  }
+
+  .tabs .tres-tabs li.item_tabs_centradas.active{
+		    height: 94px;
+		  }
+
+		  .tabs .dos-tabs li.item_tabs_centradas.active{
+		    margin-top: -11px;
+		    height: 85px;
+		  }
+
+		  .tabs .dos-tabs li.item_tabs_centradas{
+		    height: 73px;
+		  }
+		  .module-news.list.files .file-item:last-of-type{
+		    border-bottom: none;
+		    margin-bottom: 30px;
+		  }
+
+		  .module-news.list.files .bloque-legislacion-contenidos{
+		    margin-top: 30px;
+		  }
+
+}
+
+.module-comite .member-card > .member {
+min-height: 130px;
+padding-bottom: 25px;
+}
+.module-comite .member-card .member .title {
+padding-bottom: 0px;
+}
+.module-comite .member-card .member {
+height: auto!important;
+}
+.module-comite .member-card .member .title {
+min-height: 54px;
+}
+.member-card{
+vertical-align: top;
+}
+
+article.embedded-entity {display:inline-block;}
+.li-embebed-entity .embedded-entity p{ margin-top: 0px;}
+.module-text.texto-fundacion-sepi ul .li-embebed-entity {padding-top: 5px; padding-bottom: 5px; float:none; vertical-align: text-bottom;}
+.descargas-text > br {display:none;}
+.li-embebed-entity + li { padding-top: 0px;}
+
+.module-carrusel .slick-dots li button:before{
+  color: #555555;
+}
+
+.module-title .small, .module h2.module-title .small {display:block;font-size:16px;}
+td.table-headers{
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd !important;
+  background: none;
+}
+
+.module-contacto input, .module-contacto textarea{margin-top: 16px;}
+.module-contacto .formulario_contacto_agree, #aceptar_condiciones, .module-contacto .campos_obligatorios_texto{padding: 0px;margin-top: 0px;}
+.module-contacto .formulario_contacto_agree{margin-left:20px}
+
+.newsletter-form-elements .formulario_contacto_agree{font-size: 13px;}
+.newsletter-form-elements .formulario_contacto_agree input{margin-top: 15px; margin-right: 5px;}
+
+
+.module-news .new-headline{padding-top: 0px;}
+.new-rrss{margin-top: 0px;}
+.antetitulo-noticias{
+  margin-left: 12px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: "Zilla Slab";
+  margin-bottom: 5px;
+  color: #a4010d;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 1023px){
+  .module-destacado-fijo .image-resizer{
+    min-height: 344px;
+    max-height: 344px;
+    width: 80%;
+  }
+
+  .cabecera-2 .image-text{
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-right: auto;
+    margin-left: -220px;
+    top: 100px;
+    transform: translate(-50%,-50%);
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px){
+  .module-destacado-fijo .image-resizer {
+    width: 70%;
+    min-height: 246px;
+    max-height: 246px;
+  }
+}
+
+@media screen and (max-width: 766px){
+  .module-destacado-fijo .image-resizer {
+    width: 100%;
+    min-height: 268px;
+    max-height: 268px;
+  }
+}

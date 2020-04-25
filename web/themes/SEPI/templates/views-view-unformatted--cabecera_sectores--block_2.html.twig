@@ -1,0 +1,5 @@
+{% set contador = 0 %}
+{% for item in rows %}
+  {% set contador = contador + 1 %}
+{% endfor %}
+<span id="participacion-mayoritaria" style="display: none;">{{contador}}</span>

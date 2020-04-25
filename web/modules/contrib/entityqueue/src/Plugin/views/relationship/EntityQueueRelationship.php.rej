@@ -1,0 +1,17 @@
+***************
+*** 56,62 ****
+  
+      // Add an extra condition to limit results based on the queue selection.
+      if ($this->options['limit_queue']) {
+-       $this->definition['join_extra'][] = [
+          'field' => 'bundle',
+          'value' => $this->options['limit_queue'],
+        ];
+--- 56,62 ----
+  
+      // Add an extra condition to limit results based on the queue selection.
+      if ($this->options['limit_queue']) {
++       $this->definition['extra'][] = [
+          'field' => 'bundle',
+          'value' => $this->options['limit_queue'],
+        ];

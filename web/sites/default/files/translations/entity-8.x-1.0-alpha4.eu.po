@@ -1,0 +1,26 @@
+# Basque translation of Entity API (8.x-1.0-alpha4)
+# Copyright (c) 2016 by the Basque translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Entity API (8.x-1.0-alpha4)\n"
+"POT-Creation-Date: 2016-12-08 11:43+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Basque\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Delete"
+msgstr "Ezabatu"
+msgid "Operations"
+msgstr "Eragiketak"
+msgid "Create new revision"
+msgstr "Sortu bertsio berria"
+msgid "Entity"
+msgstr "Entitatea"
+msgid "Revision"
+msgstr "Berrikuspena"
+msgid "Revision information"
+msgstr "Aldaketaren informazioa"

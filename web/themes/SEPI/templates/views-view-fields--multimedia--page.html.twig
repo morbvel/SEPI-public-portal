@@ -1,0 +1,24 @@
+<div class="new-item">
+  <div class="row">
+    <div class="image-resizer new-image col-xs-12 col-sm-4">
+      {% if fields.field_image.content is not empty %}
+        <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}" class="imagen-multimedia" />
+      {% elseif fields.field_video.content %}
+        <video controls style="width: 100%;" poster="{{fields.field_miniatura.content}}">
+          <source src="{{fields.field_video.content}}" type="video/mp4">
+        </video>
+      {% endif %}
+    </div>
+    <div class="new-text col-xs-12  col-sm-8">
+      <h3 class="new-headline">{{fields.title.content}}</h3>
+      {% set descripcion_aux = fields.field_descripcion %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.value,
+          '#format':  descripcion_aux.format,
+        } %}
+        {{body}}
+      <div class="new-excerpt">{{body}}</div>
+    </div>
+  </div>
+</div>

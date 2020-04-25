@@ -1,0 +1,13 @@
+name: Form Alter in Views
+description: Módulo Custom para añadir un select al formulario de las vistas
+package: Custom
+dependencies:
+- node
+- block
+
+type: module
+core: 8.x
+
+configure: form_alter.settings
+
+php: 5.6

@@ -1,0 +1,10 @@
+name: Site Information
+type: module
+description: 'Provides the users to have a quick glance over the site information.'
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2015-07-13
+version: '8.x-1.0'
+core: '8.x'
+project: 'siteinfo'
+datestamp: 1436784240

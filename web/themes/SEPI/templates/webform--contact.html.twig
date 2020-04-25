@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="module module-contacto">
+
+    <h2 class="module-title ">
+			{% trans %}Contacto{% endtrans %}
+		</h2>
+    <!-- intro formulario -->
+    <div class="formulario">
+        <p class="default-text">{% trans %}Si necesitas contactar con nosotros, puedes enviar tu mensaje a través del siguiente formulario:{% endtrans %}</p>
+    </div>
+
+    <form action="{{element['#action']}}" method="{{element['#method']}}" id="{{element['#form_id']}}" class="formulario_contacto form col-xs-12">
+            <div class="formulario_errores col-xs-12">
+
+              <label class="hidden" aria-hidden="true" for="form_id">Hidden form_id</label><input type="hidden" name="form_id" value="{{element['#form_id']}}" />
+
+              <div class=" formulario_contacto_grupo">
+                <div class="form-group col-sm-6 formulario_contacto_medio izquierda">
+                  <span class="formulario_contacto_etiqueta formulario_campo_obligatorio required">{% trans %}Nombre{% endtrans %} <span class="sr-only"> {% trans %}este es un campo obligatorio{% endtrans %}</span></span>
+                  <label class="hidden" aria-hidden="true" for="{{element.elements['name']['#id']}}">Hidden webform</label><input type="text" data-drupal-selector="{{element.elements['name']['#id']}}" class="form-control formulario_contacto_campo " id="{{element.elements['name']['#id']}}" placeholder="" name="{{element.elements['name']['#webform_key']}}" required="required" />
+                </div>
+                <div class="form-group col-sm-6 formulario_contacto_medio derecha">
+                  <span class="formulario_contacto_etiqueta formulario_campo_obligatorio required">{% trans %}Apellidos{% endtrans %} <span class="sr-only"> {% trans %}este es un campo obligatorio{% endtrans %}</span></span>
+                  <label class="hidden" aria-hidden="true" for="{{element.elements['surname']['#id']}}">Hidden webform</label><input type="text" data-drupal-selector="{{element.elements['surname']['#id']}}" class="form-control formulario_contacto_campo " id="{{element.elements['surname']['#id']}}" placeholder="" name="{{element.elements['surname']['#webform_key']}}" required="required" />
+  				</div>
+                <div>
+                    <div class="form-group col-sm-6 formulario_contacto_medio izquierda">
+                        <span class="formulario_contacto_etiqueta  formulario_campo_obligatorio required ">{% trans %}Correo electrónico{% endtrans %} <span class="sr-only"> {% trans %}este es un campo obligatorio{% endtrans %}</span></span>
+  									<label class="hidden" aria-hidden="true" for="{{element.elements['email']['#id']}}">Hidden webform</label><input type="email" data-drupal-selector="{{element.elements['email']['#id']}}" class="form-control formulario_contacto_campo " id="{{element.elements['email']['#id']}}" placeholder="" name="{{element.elements['email']['#webform_key']}}" required="required" />
+  								</div>
+  								<div class="form-group col-sm-6 formulario_contacto_medio derecha">
+  									<span class="formulario_contacto_etiqueta">{% trans %}Teléfono{% endtrans %}</span>
+  									<label class="hidden" aria-hidden="true" for="{{element.elements['phone']['#id']}}">Hidden webform</label><input type="number" data-drupal-selector="{{element.elements['phone']['#id']}}" class="form-control formulario_contacto_campo " id="{{element.elements['phone']['#id']}}" placeholder="" name="{{element.elements['phone']['#webform_key']}}" />
+  								</div>
+  							</div>
+  						</div>
+
+              <div class="form-group col-xs-12 compania_form_contact">
+  							<span class="formulario_contacto_etiqueta ">{% trans %}Compañía{% endtrans %}</span>
+  							<label class="hidden" aria-hidden="true" for="{{element.elements['company']['#id']}}">Hidden webform</label><input type="text" data-drupal-selector="{{element.elements['company']['#id']}}" class="form-control formulario_contacto_campo" id="{{element.elements['company']['#id']}}" placeholder="" name="{{element.elements['company']['#webform_key']}}" />
+  						</div>
+
+              <div class="form-group formulario_contacto_etiqueta formulario_contacto_grupo col-xs-12">
+                <id class="formulario_contacto_etiqueta">{% trans %}Asunto{% endtrans %}</id>
+                <label class="hidden" aria-hidden="true" for="{{element.elements['subject']['#id']}}">Hidden webform</label><input type="text" data-drupal-selector="{{element.elements['subject']['#id']}}" class="form-control formulario_contacto_campo " id="{{element.elements['subject']['#id']}}" placeholder="" name="{{element.elements['subject']['#webform_key']}}" />
+              </div>
+
+              <div class="form-group col-xs-12 compania_form_contact">
+  							<span class="formulario_contacto_etiqueta formulario_campo_obligatorio required">{% trans %}Consulta{% endtrans %}<span class="sr-only"> {% trans %}este es un campo obligatorio{% endtrans %}</span></span>
+                            <label class="hidden" aria-hidden="true" for="{{element.elements['message']['#id']}}">Hidden webform</label><textarea data-drupal-selector="{{element.elements['message']['#id']}}" class="form-control formulario_contacto_campo " rows="10" id="{{element.elements['message']['#id']}}" placeholder=" " name="{{element.elements['message']['#webform_key']}}"></textarea>
+  						</div>
+
+              <div class="checkbox form-group formulario_checkbox col-xs-12">
+                <span class="formulario_contacto_agree ">
+                  <label class="hidden" aria-hidden="true" for="aceptar_condiciones">Hidden webform</label><input type="checkbox" data-drupal-selector="aceptar_condiciones" id="aceptar_condiciones" name="agree1" value="agree" required="required">{% trans %}He leido y aceptado la{% endtrans %} <a href="/es/clausula-informativa" class="burdeos enlace">{% trans %}cláusula informativa{% endtrans %}</a>
+                </span>
+                <p class="campos_obligatorios_texto"><span class="burdeos">(*)</span>{% trans %}Campos obligatorios{% endtrans %}</p>
+  						</div>
+
+              <div class=" formulario_informacion_obligatorios col-xs-12">
+  						  {{element.elements['webform_1_contact']}}
+  						</div>
+
+              <div data-drupal-selector="{{element.elements['actions']['#id']}}" class="form-actions webform-actions form-group js-form-wrapper form-wrapper" id="{{element.elements['actions']['#id']}}">
+                <button type="submit" class="col-xs-12 col-sm-3 col-lg-2 btn btn-alt formulario_check_errores">{% trans %}Enviar consulta{% endtrans %}</button>
+              </div>
+
+            </div>
+    </form>
+
+  </div>
+</div>

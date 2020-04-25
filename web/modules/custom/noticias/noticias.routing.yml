@@ -1,0 +1,14 @@
+noticias.controller:
+  path: '/noticias'
+  defaults:
+    _controller: '\Drupal\noticias\Controller\NoticiasController::content'
+    _title: 'Importación de Noticias'
+  requirements:
+    _permission: 'administer content'
+noticias.setting:
+  path: '/admin/structure/noticias/settings'
+  defaults:
+    _form: '\Drupal\noticias\Form\NoticiasForm'
+    _title: 'Importación de Noticias'
+  requirements:
+    _permission: 'administer site configuration'

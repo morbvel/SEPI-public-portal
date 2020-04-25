@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="module module-cards informes">
+    <div class="relative">
+			<h2 class="module-title" style="padding-left: 10px; padding-right: 0px;">
+				{{elements['#configuration']['label']}}
+			</h2>
+			<a href="/{{idioma}}/sala-de-prensa/ultimos-informes" class="ver-mas">
+			<span>{% trans %}más{% endtrans %} <span class="hidden-xs">{% trans %}informes{% endtrans %}</span></span>
+			</a>
+		</div>
+
+    <div class="row">
+      {{content}}
+    </div>
+
+  </div>
+</div>

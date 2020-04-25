@@ -1,0 +1,64 @@
+{% set contador = fields.counter.content|replace({' ':''}) %}
+
+<div class="panel panel-default">
+  <div class="container">
+
+    <div class="panel-heading">
+       <div class="row">
+          <h3 class="panel-title col-xs-12"></h3>
+             <div class="row">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{contador}}" class="col-xs-12 accordion-link">
+                <p class="default-text bold barra_separadora">{{fields.field_fecha.content}}</p>
+                {% if fields.field_image.content %}
+                  <div class="icon col-sm-2">
+                    <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}" class="organismos-icon text-center">
+                  </div>
+                  <div class="text col-sm-10">
+                    <h2 class="module-subtitle titulo-organismo-sepi">{{fields.title.content}}</h2>
+                    <p class="default-text">{{fields.field_introduccion.content|raw}}</p>
+                  </div>
+                {% else %}
+                  <div class="text col-sm-12">
+                    <h2 class="module-subtitle titulo-organismo-sepi">{{fields.title.content}}</h2>
+                    <p class="default-text">{{fields.field_introduccion.content|raw}}</p>
+                  </div>
+                {% endif %}
+              </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="collapse{{contador}}" class="panel-collapse collapse collapse-organismos-ejercicios">
+      <div class="panel-body">
+          <div class="module-text">
+            {% set descripcion_aux = fields.field_descripcion %}
+            {% set body = {
+              '#type':   'processed_text',
+              '#text':    descripcion_aux.content,
+              '#format':  descripcion_aux.format,
+            } %}
+            <div class="new-excerpt">{{fields.field_descripcion.content}}</div>
+          </div>
+          {% if fields.field_documentos.content is not empty %}
+          <div class="container container-documentos">
+
+            <div class="row">
+              <div class="module-descargas">
+                  <div class="background-grey">
+                      <div class="row">
+                				<p class="descargas-title col-xs-12 lead-text">
+                					{% trans %}Documentación y descargas{% endtrans %}
+                				</p>
+                        {{fields.field_documentos.content}}
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+          {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>

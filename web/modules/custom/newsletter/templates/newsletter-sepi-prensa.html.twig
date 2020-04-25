@@ -1,0 +1,76 @@
+<div class="row" style="padding:0px; margin: 0px;">
+    <div class="module-contacto-newsletter">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-6 newsletter">
+
+                    <div class="icon-text">
+                        <img src="/sites/default/files/2017-09/sala-prensa-icon-mail.png" alt="">
+                        <h3 class="contact-subtitle">
+                            {% trans %}Newsletter{% endtrans %}
+                        </h3>
+                        <p class="default-text">
+                            {% trans %}Desde aquí puedes suscribirte o cancelar la suscripción de nuestros boletines{% endtrans %}
+                        </p>
+                    </div>
+
+                    <div class="form-newsletter">
+                        <div>
+                            <label class="hidden" aria-hidden="true" for="form_id">Hidden field</label>{{ form.field_hidden }}
+                            <label class="hidden" aria-hidden="true" for="name">Hidden field</label>{{ form.field_name }}
+                            <label class="hidden" aria-hidden="true" for="groups-3">Hidden field</label>{{ form.field_grupos }}
+                            <label class="hidden" aria-hidden="true" for="successUrl">Hidden field</label>{{ form.field_success }}
+                            <label class="hidden" aria-hidden="true" for="confirmationUrl">Hidden field</label>{{ form.field_confirmation }}
+                            <label class="hidden" aria-hidden="true" for="errorUrl">Hidden field</label>{{ form.field_error }}
+                            <label class="hidden" aria-hidden="true" for="unsubscribeUrl">Hidden field</label>{{ form.field_unsubscribe_url }}
+
+                            <div class="form-group">
+                                <label class="sr-only" for="email">{% trans %}Email{% endtrans %}</label>
+                                {{ form.field_email }}
+                            </div>
+
+                            <div class="form-group ">
+                                <div class="form-check">
+                                    <label class="hidden" aria-hidden="true" for="terminos">Hidden términos</label><input class="form-check-input centered-content " type="checkbox" name="terminos" id="terminos" required="required"> <a href="/aviso-legal" class="footer-checkbox" id="clausula-newsletter-block">{% trans %}Acepto los términos y condiciones de uso{% endtrans %}</a>
+                                </div>
+                            </div>
+
+                            <div class="btn-subscribirse">
+                                <div class="form-group">
+                                    <label class="hidden" aria-hidden="true" for="suscribe">Hidden field</label>{{ form.suscribe }}
+                                </div>
+                            </div>
+                            <div class="btn-subscribirse">
+                                <div class="form-group">
+                                    <label class="hidden" aria-hidden="true" for="unsuscribe">Hidden field</label>{{ form.unsuscribe }}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-6 contacto">
+                    <div class="icon-text">
+                        <img src="/sites/default/files/2017-09/sala-prensa-icon-chat.png" alt="">
+                        <h3 class="contact-subtitle">
+                            {% trans %}Contacto{% endtrans %}
+                        </h3>
+                        <p class="default-text">
+                            {% trans %}Puedes escribirnos un mail. Te contestaremos a la mayor brevedad posible.{% endtrans %}
+
+                        </p>
+                        <div class="btn-subscribirse">
+                            <div class="form-group">
+                                <a href="contacto" class="btn btn-alt" id="enlace-contacto-sala-de-prensa">{% trans %}Contactar{% endtrans %}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

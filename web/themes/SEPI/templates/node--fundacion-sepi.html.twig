@@ -1,0 +1,36 @@
+{% if node.field_imagen_cabecera is not empty %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="module module-cabecera cabecera-imagen-grande relative">
+  		<div class="image-resizer image-background">
+  			<img src="{{file_url(node.field_imagen_cabecera.entity.fileuri)}}" alt="{{node.field_imagen_cabecera.alt}}" title="{{node.field_imagen_cabecera.alt}}" >
+  		</div>
+      {% if node.title.value is not empty %}
+  		<div class="background-grey col-xs-11 col-sm-offset-0 col-sm-11 col-md-8 col-md-offset-4 gris-fundacion-sepi">
+    		<div class="row">
+    			<p class="module-subtitle col-xs-11 col-sm-12 col-md-10" >
+    			{{node.title.value|raw}}
+    			</p>
+    		</div>
+  		</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="container">
+  <div class="module module-text texto-fundacion-sepi">
+    <div class="row">
+      <div class=" col-sm-12 col-md-12 fundacion-sepi-text">
+        {% set descripcion_aux = node.body %}
+        {% set aux = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.value,
+          '#format':  descripcion_aux.format,
+        } %}
+        {{aux}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="new-item">
+  <a href="{{fields.path.content}}">
+    <div class="row">
+
+        <div class="file-icon col-xs-4 col-sm-2 col-xs-12">
+          <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}" style="width: 100%;">
+        </div>
+        <div class="file-text col-xs-8  col-sm-10">
+          <h3 class="new-headline">{{fields.title.content}}</h3>
+          <p class="new-excerpt">
+            {% trans %}Tipo de Operación:{% endtrans %}  {{fields.field_tipo_de_operacion.content}}
+          </p>
+          <p class="new-excerpt">
+            {% trans %}Fecha de operación{% endtrans %}: {{fields.field_fecha_de_privatizacion.content}}
+          </p>
+        </div>
+
+    </div>
+  </a>
+</div>

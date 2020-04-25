@@ -1,0 +1,12 @@
+  {% set aux = 0 %}
+  {% for item in rows %}
+    {% set aux = aux + 1 %}
+  {% endfor %}
+
+  <div class="container">
+  	<p class="result-text" style="padding-bottom: 15px; padding-left: 10px;">Se encontraron {{aux}} resultados</p>
+  </div>
+
+  {% for item in rows %}
+    {{item.content}}
+  {% endfor %}

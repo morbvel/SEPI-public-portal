@@ -1,0 +1,10 @@
+name: Form Themming in Views
+description: Módulo Custom para añadir templates a los formularios de vistas
+package: Custom
+
+type: module
+core: 8.x
+
+configure: form_themming.settings
+
+php: 5.6

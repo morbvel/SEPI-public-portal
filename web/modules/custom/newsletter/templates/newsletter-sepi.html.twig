@@ -1,0 +1,30 @@
+<h2 class="newsletter-title">{% trans %}Newsletter{% endtrans %}</h2>
+<div class="row">
+  <div class="capa-contenedora-form-newsletter col col-sm-12">
+    <label class="hidden" aria-hidden="true" for="form_id">Hidden label</label>{{form.field_hidden}}
+    <label class="hidden" aria-hidden="true" for="groups-3">Hidden label</label>{{form.field_grupos}}
+    <label class="hidden" aria-hidden="true" for="name">Hidden label</label>{{form.field_name}}
+    <label class="hidden" aria-hidden="true" for="successUrl">Hidden label</label>{{form.field_success}}
+    <label class="hidden" aria-hidden="true" for="confirmationUrl">Hidden label</label>{{form.field_confirmation}}
+    <label class="hidden" aria-hidden="true" for="errorUrl">Hidden label</label>{{form.field_error}}
+
+    <div class="col-xs-12 col-sm-10 col-md-12 capa-input-newsletter-footer">
+      <div class="form-group newsletter-form-elements">
+        <div class="form-check">
+          <label class="hidden" aria-hidden="true" for="email">Hidden label</label>{{form.field_email}}
+        </div>
+        <span class="formulario_contacto_agree ">
+          <label class="hidden" aria-hidden="true" for="aceptar_condiciones_newsletter">Hidden webform</label><input type="checkbox" data-drupal-selector="aceptar_condiciones" id="aceptar_condiciones_newsletter" name="agree1" value="agree" required="required">{% trans %}He leido y aceptado la{% endtrans %} <a href="/es/clausula-informativa" class="burdeos enlace">{% trans %}cláusula informativa{% endtrans %}</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-2 col-md-6 btn-subscribirse">
+      <div class="form-group">
+        <label class="hidden" aria-hidden="true" for="submit">Hidden label</label>{{form.submit_button}}
+      </div>
+    </div>
+
+
+  </div>
+</div>

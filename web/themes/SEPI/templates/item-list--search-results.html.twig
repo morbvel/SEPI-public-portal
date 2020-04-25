@@ -1,0 +1,10 @@
+{% if items is not empty %}
+  <div class="container-fluid">
+    <h2 class="texto-resultados-busqueda mostrar-texto">{% trans %}Se han encontrado {{ count_items }} resultados para la búsqueda{% endtrans %}</h2>
+        {% for item in items %}
+            {{item['value']}}
+        {% endfor %}
+  </div>
+{% else %}
+    <h2 class="mostrar-texto">{% trans %}No se han encontrado resultados para el criterio de búsqueda{% endtrans %}</h2>
+{% endif %}

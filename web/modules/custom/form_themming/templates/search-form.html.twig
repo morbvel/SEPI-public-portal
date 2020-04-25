@@ -1,0 +1,18 @@
+<div class="module module-news-form module-buscador">
+  <div class="container">
+    <div class="form-inline col-xs-12">
+      <div class="row">
+
+          <h2 class="mostrar-texto texto-resultados-busqueda">{% trans %}Has buscado por...{% endtrans %}</h2>
+
+          <div class="form-group col-xs-12 col-sm-10 buscador-inferior">
+            <label class="hidden" aria-hidden="true" for="form_id">Hidden Form Id</label><input type="hidden" name="form_id" value="{{form['#form_id']}}"/>
+            <label class="hidden" aria-hidden="true" for="edit-search-theme-form-3">Hidden language</label><input type="hidden" name="f[0]" id="edit-search-theme-form-3" value="language:{{form['language']['#value']}}"/>
+            <label class="hidden" aria-hidden="true" for="edit-keys-search">Hidden buscador inferior</label><input class="input-buscador-inferior form-control" data-drupal-selector="edit-keys-search" id="edit-keys-search" type="text" name="keys" />
+          </div>
+          <button type="submit" class="btn btn-alt col-xs-12 col-sm-2 boton-busqueda-inferior">{% trans %}Buscar{% endtrans %}</button>
+
+      </div>
+    </div>
+  </div>
+</div>

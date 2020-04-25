@@ -1,0 +1,21 @@
+{% set grid = ['width-2-height-1', 'width-1-height-2', 'width-2-height-1', 'width-1-height-2', 'width-1-height-1', 'width-1-height-2', 'width-1-height-1', 'width-1-height-1', 'width-1-height-1', 'width-1-height-1'] %}
+<ul class="sectores hidden-xs hidden-sm row" aria-hidden="true">
+  {% set aux = 0 %}
+  {% for item in rows %}
+    <li class="{{grid[aux]}}">
+      {{item.content}}
+    </li>
+    {% set aux = aux + 1 %}
+  {% endfor %}
+</ul>
+
+<!-- Tablet y mobile -->
+<div class="row visible-xs visible-sm sectores-little">
+  <ul class="sectores-carrusel slick-sectores">
+    {% for item in rows %}
+      <li class="">
+        {{item.content}}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

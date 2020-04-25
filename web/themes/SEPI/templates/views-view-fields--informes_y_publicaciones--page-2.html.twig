@@ -1,0 +1,25 @@
+{% set contador = fields.counter.content|replace({' ':''}) %}
+
+<div class="file-item">
+  <div class="row">
+    <span id="tamano-documento-oculto-{{contador}}" style="display:none;">{{fields.field_documento.content}}</span>
+    <a href="{{fields.field_documento_1.content}}" target="_blank" class="icon-url primera-pantalla-informes">
+      <span class="file-icon col-sm-2 col-xs-12 image-resizer">
+        <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}" />
+      </span>
+      <span class="file-text col-xs-12  col-sm-10">
+        <span class="file-title">{{fields.title.content}}</span>
+        <span id="tamano-documento-{{contador}}" class="file-size"></span>
+        <span class="default-text" >
+          {% set descripcion_aux = fields.field_descripcion %}
+          {% set body = {
+            '#type':   'processed_text',
+            '#text':    descripcion_aux.content,
+            '#format':  descripcion_aux.format
+          } %}
+          {{body}}
+        </span>
+      </span>
+    </a>
+  </div>
+</div>

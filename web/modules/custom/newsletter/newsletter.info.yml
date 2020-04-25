@@ -1,0 +1,13 @@
+name: Custom Form for SEPI Newsletter
+description: Custom module created form linking SEPI's Newsletter to new portal
+package: Custom
+dependencies:
+- node
+- block
+
+type: module
+core: 8.x
+
+configure: newsletter.settings
+
+php: 7.0

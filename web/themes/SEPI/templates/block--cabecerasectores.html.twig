@@ -1,0 +1,91 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="module module-cabecera cabecera-imagen-grande cabecera-imagen-sectores relative sectores">
+
+      <div class="image-resizer image-background">
+        <div class="shape-shadow-sectores">
+
+        </div>
+  			<div>
+          {{elements.content.field_cabecera_sectores}}
+        </div>
+  		</div>
+
+      <div class="contenedor-sectores">
+
+        <div class="hidden-xs col-xs-3 col-sm-6 col-sm-offset-5 col-md-6 col-md-offset-6 text primer-nivel">
+          <div class="row">
+            <div class="text-sectores-cabecera col-sm-11 col-md-12">
+              <a href="/{{idioma}}/sectores/empresas?title=All&tid=All&field_participacion_target_id=20">
+                <p class="text-sectores">
+                  <span class="half">{% trans %}empresas mayoritarias{% endtrans %}</span>
+                  <span class="big">{{elements.content.field_empresas_mayoritarias['0']}}</span>
+                </p>
+              </a>
+            </div>
+          </div>
+  			</div>
+
+        <div class="hidden-xs col-xs-3 col-sm-5 col-sm-offset-6 col-md-5 col-md-offset-7 text segundo-nivel">
+          <div class="row">
+  					<div class="text-sectores-cabecera col-sm-11 col-md-12">
+  						<a href="/{{idioma}}/sectores/empresas?title=All&tid=All&field_participacion_target_id=21">
+  							<p class="text-sectores">
+                  <span class="half">{% trans %}empresas minoritarias{% endtrans %}</span>
+                  <span class="big">{{elements.content.field_empresas_minoritarias['0']}}</span>
+                </p>
+  						</a>
+  					</div>
+  				</div>
+        </div>
+
+        <div class="hidden-xs col-sm-4 col-sm-offset-7 col-md-4 col-md-offset-8 text tercer-nivel">
+          <div class="row">
+            <div class="text-sectores-cabecera col-sm-11 col-md-12">
+              <a href="/{{idioma}}/sectores/empresas-indirectas">
+                <p class="text-sectores">
+                  <span class="half">{% trans %}empresas indirectas{% endtrans %}</span>
+                  <span class="big" style="margin-left: -30px;">{{elements.content.field_empresas_indirectas['0']}}</span>
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="visible-xs col-xs-12 caja-negra-responsive">
+  				<div class="row">
+  					<div class="col-xs-4 text-xs" >
+  						<a href="/{{idioma}}/sectores/empresas?title=All&tid=All&field_participacion_target_id=20">
+  							<p class="text-sectores"><span class="big">{{elements.content.field_empresas_mayoritarias['0']}}</span> <span class="half">{% trans %}empresas mayoritarias{% endtrans %}</span></p>
+  						</a>
+  					</div>
+  					<div class="col-xs-4 text-xs">
+  						<a href="/{{idioma}}/sectores/empresas?title=All&tid=All&field_participacion_target_id=21">
+  							<p class="text-sectores"><span class="big">{{elements.content.field_empresas_minoritarias['0']}}</span> <span class="half">{% trans %}empresas minoritarias{% endtrans %}</span></p>
+  						</a>
+  					</div>
+  					<div class="col-xs-4 text-xs">
+  						<a href="/{{idioma}}/sectores/empresas-indirectas">
+  							<p class="text-sectores"><span class="big">{{elements.content.field_empresas_indirectas['0']}}</span> <span class="half">{% trans %}empresas indirectas{% endtrans %}</span></p>
+  						</a>
+  					</div>
+  				</div>
+  			</div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="module module-sectores texto-cabecera-sectores">
+    <div class="container">
+      <div class="row">
+        <h2 class="module-title col-xs-12">{% trans %}Sectores{% endtrans %}</h2>
+        <div class="module-text col-xs-12">
+          {{elements.content.body['0']['#text']|raw}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

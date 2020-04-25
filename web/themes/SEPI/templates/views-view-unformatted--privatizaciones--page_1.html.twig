@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+  	<div class="module module-news list resultados-privatizaciones">
+      {% set aux = 0 %}
+      {% for item in rows %}
+        {% set aux = aux +  1 %}
+      {% endfor %}
+      <p class="default-text  col-xs-12">Se encontraron <span id="total-privatizaciones-resultado">{{aux}}</span> resultados</p>
+      {% for item in rows %}
+        {{item.content}}
+      {% endfor %}
+    </div>
+  </div>
+</div>

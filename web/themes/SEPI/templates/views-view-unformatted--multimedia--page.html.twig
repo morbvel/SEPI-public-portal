@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="module module-news list multimedia  col-xs-12">
+			{% for item in rows %}
+				{{item.content}}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<div id="multimedia-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="/sites/default/files/2017-09/2mzmcnt.jpg" id="imagen-multimedia-modal" alt="{% trans %}Imagen ampliada{% endtrans %}"/>
+      </div>
+    </div>
+
+  </div>
+</div>

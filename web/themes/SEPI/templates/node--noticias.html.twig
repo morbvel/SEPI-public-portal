@@ -1,0 +1,143 @@
+<!-- Contenido -->
+<div class="container" style="margin-bottom: 15px;">
+  <div class="row">
+    <div class="module module-news news-detailed">
+      <p class="antetitulo-noticias">{{ node.field_antetitulo.value }}</p>
+      <div class="new-header col-xs-12 ">
+        <div class="row">
+          <h2 class="new-headline col-xs-12 col-sm-8 col-md-9">{{elements['#title']}}</h2>
+          <div class="new-rrss col-xs-12 col-sm-4 col-md-3">{{ drupal_block('socialsharingblock') }}</div>
+          <div class="new-date-container col-xs-12">
+
+            {% if node.field_fecha_noticia.value is not empty %}
+              {% set fecha = node.field_fecha_noticia.value %}
+            {% else %}
+              {% set fecha = node.created.value %}
+            {% endif %}
+            {% if idioma != 'en' %}
+            <p class="new-date"><span>{{fecha|date("d")}} {% trans %}DE{% endtrans %} {{fecha|date("F")|replace({
+'January'  : 'Enero',
+'February'  : 'Febrero',
+'March'  : 'Marzo',
+'April'  : 'Abril',
+'May'  : 'Mayo',
+'June'  : 'Junio',
+'July'  : 'Julio',
+'August'  : 'Agosto',
+'September'  : 'Septiembre',
+'October'   : 'Octubre',
+'November'  : 'Noviembre',
+'December' : 'Diciembre',
+})}} {% trans %}DE{% endtrans %} {{fecha|date("Y")}}</span> | <span>{{elements.field_direccion['0']['#context']['value']}}</span></p>
+            {% else %}
+            <p class="new-date"><span>{{fecha|date("d")}} {{fecha|date("F")}} {{fecha|date("Y")}}</span> | <span>{{elements.field_direccion['0']['#context']['value']}}</span></p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      {% if 'jpg' in node.field_image.entity.fileuri or 'jpeg' in node.field_image.entity.fileuri or 'png' in node.field_image.entity.fileuri or 'gif' in node.field_image.entity.fileuri %}
+        <div class="new-image col-xs-12">
+          <div class="col-xs-12 imagen-cabecera-noticias" style="padding: 0px;">
+            <img src="{{file_url(node.field_image.entity.fileuri)}}" alt="{{node.title.value|raw}}" title="{{node.title.value|raw}}" >
+          </div>
+          {% if node.field_pie_de_foto_y_autor.value is not empty %}
+            <div class="module-text col-xs-12 pie-de-foto-autor-noticia">
+              {{node.field_pie_de_foto_y_autor.value|raw}}
+            </div>
+          {% else %}
+            {% if elements.field_pie_de_foto['0']['#context']['value'] %}
+            <div class="new-caption pie-de-foto-noticia">
+              <p class="caption-text col-xs-12 col-sm-9">{{elements.field_pie_de_foto['0']['#context']['value']}}</p>
+            </div>
+            {% endif %}
+            {% if node.field_autor_de_fotografia.value %}
+            <div class="new-caption">
+              <p class="caption-text autor-fotografia col-xs-12 col-sm-9">{% trans %}Autor de la fotografía:{% endtrans %} {{node.field_autor_de_fotografia.value}}</p>
+            </div>
+            {% endif %}
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+      <div class="module-text col-xs-12 cuerpo-contenido-noticia">
+        {{node.field_descripcion.value|raw}}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Documentos de Noticias -->
+{% if node.field_documento is not empty %}
+<div class="container container-documentos">
+  <div class="row">
+    <div class="module-descargas descargas-noticias">
+        <div class="background-grey">
+            <div class="row documentos-mobile">
+              <p class="descargas-title col-xs-12 lead-text">
+                {% trans %}Documentación y descargas{% endtrans %}
+              </p>
+              {% for key,value in elements.field_documento %}
+                {% if key matches '/^[-+]?[0-9]*\\.?[0-9]+$/' %}
+                  {{value}}
+                {% endif %}
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Te puede interesar -->
+{% if node.field_te_puede_interesar is not empty %}
+<div class="container">
+  <div class="module module-cards interesar news">
+
+    <div class="row">
+      <h2 class="module-title col-xs-12">
+        {% trans %}Te interesa{% endtrans %}
+      </h2>
+    </div>
+
+    <div class="row">
+      {% for item in node.field_te_puede_interesar %}
+        <a href="{{path('entity.node.canonical', {'node': item.entity.id})}}" title="{{node.title.value|raw}}" class="card col-sm-3  col">
+
+
+          <div class="image-resizer zoom">
+            <img src="{{file_url(item.entity.field_image.entity.uri.value)}}" alt="{{item.entity.title.value|raw}}">
+          </div>
+          <h3 class="module-subtitle">{{item.entity.title.value|raw}}</h3>
+          <p class="default-text">{{item.entity.field_resumen.value|raw}}</p>
+
+
+            {% set fecha = item.entity.created.value%}
+            {% if idioma != 'en' %}
+              <p class="date">{{fecha|date("d")}} {% trans %}de{% endtrans %} {{fecha|date("F")|replace({
+                      'January'  : 'Enero',
+                      'February'  : 'Febrero',
+                      'March'  : 'Marzo',
+                      'April'  : 'Abril',
+                      'May'  : 'Mayo',
+                      'June'  : 'Junio',
+                      'July'  : 'Julio',
+                      'August'  : 'Agosto',
+                      'September'  : 'Septiembre',
+                      'October'   : 'Octubre',
+                      'November'  : 'Noviembre',
+                      'December' : 'Diciembre',
+                  })}} {% trans %}de{% endtrans %} {{fecha|date("Y")}} |  {{item.entity.field_direccion.value}}</p>
+            {% else %}
+              <p class="date">{{fecha|date("d")}} {{fecha|date("F")}} {{fecha|date("Y")}} |  {{item.entity.field_direccion.value}}</p>
+
+            {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+{% endif %}

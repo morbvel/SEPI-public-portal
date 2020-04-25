@@ -1,0 +1,5 @@
+<ul>
+    {% for item in elements.content['#items'] %}
+      <li  class="col-xs-6 col-sm-2 default-text"><a href="{{item.url}}">{{item.title}}</a></li>
+    {% endfor %}
+</ul>

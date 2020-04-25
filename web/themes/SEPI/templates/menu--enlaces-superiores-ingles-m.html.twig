@@ -1,0 +1,5 @@
+<ul class="nav navbar-nav navbar-right otros"  role="menubar">
+  {% for item in items %}
+    <li role="menuitem"><a href="{{item.url}}" class="navbar-link enlaces-superiores">{{item.title}}</a></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+name: Importación de Noticias
+description: Módulo Custom para la creación de Noticias
+package: Custom
+
+type: module
+core: 8.x
+
+configure: noticias.settings
+
+php: 5.6

@@ -1,0 +1,13 @@
+diff --git a/src/Plugin/views/relationship/EntityQueueRelationship.php b/src/Plugin/views/relationship/EntityQueueRelationship.php
+index 9b8e86d..e3381d8 100644
+--- a/src/Plugin/views/relationship/EntityQueueRelationship.php
++++ b/src/Plugin/views/relationship/EntityQueueRelationship.php
+@@ -56,7 +56,7 @@ class EntityQueueRelationship extends EntityReverse implements CacheableDependen
+ 
+     // Add an extra condition to limit results based on the queue selection.
+     if ($this->options['limit_queue']) {
+-      $this->definition['extra'][] = [
++      $this->definition['join_extra'][] = [
+         'field' => 'bundle',
+         'value' => $this->options['limit_queue'],
+       ];

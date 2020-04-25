@@ -1,0 +1,167 @@
+{% if node.field_imagen_cabecera is not empty %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="module module-cabecera cabecera-imagen-grande relative">
+  		<div class="image-resizer image-background">
+  			<img src="{{file_url(node.field_imagen_cabecera.entity.fileuri)}}" alt="{{node.field_imagen_cabecera.alt}}" title="{{node.field_imagen_cabecera.alt}}">
+  		</div>
+      {% if node.field_resumen.value is not empty %}
+  		<div class="background-grey col-xs-11 col-sm-offset-0 col-sm-11 col-md-8 col-md-offset-4 gris-fundacion-sepi">
+    		<div class="row">
+    			<p class="module-subtitle col-xs-11 col-sm-12 col-md-10" >
+    			{{node.field_resumen.value|raw}}
+    			</p>
+    		</div>
+  		</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="container">
+  <div class="module module-text{% if node.field_sidebar_perfil_solicitante is not empty %} contratante tiene-sidebar-contratante{% endif %}">
+    <div class="row">
+
+      {% if node.field_sidebar is not empty %}
+        {% for item in node.field_sidebar %}
+          <div class="col-sm-12 col-md-4 sidebar pull-right">
+            <div class="row">
+              <div class="col-sm-6 col-md-12">
+                <div class="imagen-presidenta-sidebar">
+                  <img src="{{file_url(item.getFieldCollectionItem().field_imagen_sidebar.entity.uri.value)}}" alt="{{item.getFieldCollectionItem().field_imagen_sidebar.alt}}" title="{{item.getFieldCollectionItem().field_imagen_sidebar.alt}}">
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-12 bloque-carta-mobile">
+                <div class="bg-red white">
+                  <h2 class="sidebar-title">{{item.getFieldCollectionItem().field_autor.value}}</h2>
+                  <p class="sidebar-subtitle">{{item.getFieldCollectionItem().field_cargo_del_autor.value}}</p>
+
+                  {% set descripcion_aux = item.getFieldCollectionItem().field_descripcion %}
+                  {% set body = {
+                    '#type':   'processed_text',
+                    '#text':    descripcion_aux.value,
+                    '#format':  descripcion_aux.format,
+                  } %}
+                  <div class="sidebar-quote">{{body}}</div>
+                  <a href="/{{idioma}}/conozca-sepi/quienes-somos/carta-de-la-presidenta" class="sidebar-ver-mas text-right">{% trans %}Carta de la presidenta{% endtrans %}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if node.field_sidebar is not empty or node.field_sidebar_perfil_solicitante is not empty %}
+        <div class=" col-sm-12 col-md-8 texto-perfil-contratante">
+      {% else %}
+        <div class=" col-sm-12 col-md-12">
+      {% endif %}
+        {% set descripcion_aux = node.field_descripcion %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.value,
+          '#format':  descripcion_aux.format,
+        } %}
+        {{body}}
+      </div>
+
+
+      {% if node.field_sidebar_perfil_solicitante is not empty %}
+        {% for item in node.field_sidebar_perfil_solicitante %}
+          <div class="col-sm-12 col-md-4 sidebar">
+            <h3 class="lead-text">{% trans %}Más información{% endtrans %}</h3>
+            <div class="icon-link">
+              <div class="row">
+                <p class="icon-text col-xs-12 enlaces-perfil-contratante">
+                  <a href="/{{idioma}}/perfil-del-contratante/perfil-del-contratante-en-empresas"><span class="blue">{% trans %}Perfil de Contratante de Empresas de SEPI sin página Web{% endtrans %}</span></a>
+                </p>
+              </div>
+            </div>
+            <h3 class="lead-text">{% trans %}Datos de contacto{% endtrans %}</h3>
+              <ul>
+                <li>
+                  <a href="https://www.google.es/maps/place/{{item.getFieldCollectionItem().field_direccion.value|replace(" ","+")}}" target="_blank" class="icon-link">
+                    <div class="row">
+                      <div class="icon-img col-xs-1">
+                        <img src="/sites/default/files/2017-11/icon-location.png" alt="{% trans %}Icono localización{% endtrans %}" title="{% trans %}Icono localización{% endtrans %}">
+                      </div>
+                      <p class="icon-text col-xs-10">
+                        <span class="block">{{item.getFieldCollectionItem().field_direccion.value}}</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="icon-link">
+                    <div class="row">
+                      <div class="icon-img col-xs-1">
+                        <img src="/sites/default/files/2017-11/icon-mail.png" alt="{% trans %}Icono mail{% endtrans %}" title="{% trans %}Icono mail{% endtrans %}" >
+                      </div>
+                      <p class="icon-text col-xs-10">
+                        <span class="block">{{item.getFieldCollectionItem().field_telefono.value}}</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <div class="icon-link">
+                    <div class="row">
+                      <div class="icon-img col-xs-1">
+                        <img src="/sites/default/files/2017-11/icon-phone.png" alt="{% trans %}Icono teléfono{% endtrans %}" title="{% trans %}Icono teléfono{% endtrans %}">
+                      </div>
+                      <p class="icon-text col-xs-10">
+                        <a href="mailto:{{item.getFieldCollectionItem().field_email_contacto.value}}"><span class=" blue">{{item.getFieldCollectionItem().field_email_contacto.value}}</span></a>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        {% endfor %}
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+
+{% if node.field_te_puede_interesar is not empty %}
+<div class="container">
+  <div class="module module-cards interesar">
+    <div class="row">
+      <h2 class="module-title col-xs-12 te-puede-interesar">
+        {% trans %}Te puede interesar{% endtrans %}
+      </h2>
+    </div>
+    <div class="row">
+      {% set aux = 1 %}
+      {% for item in node.field_te_puede_interesar %}
+
+      {% if idioma == 'en' %}
+        {% set item2 = item.entity.translation('en') %}
+      {% elseif idioma == 'es' %}
+        {% set item2 = item.entity.translation('es') %}
+      {% elseif idioma == 'eu' %}
+        {% set item2 = item.entity.translation('eu') %}
+      {% elseif idioma == 'gl' %}
+        {% set item2 = item.entity.translation('gl') %}
+      {% elseif idioma == 'ca' %}
+        {% set item2 = item.entity.translation('ca') %}
+      {% elseif idioma == 'va' %}
+        {% set item2 = item.entity.translation('va') %}
+      {% endif %}
+
+        <a href="{{path('entity.node.canonical', {'node': item.entity.id})}}" title="" class="card col-sm-4  col">
+          <div class="image-resizer zoom">
+    				<img src="{{file_url(item2.field_image.entity.uri.value)}}" alt="{{item2.field_image.alt}}" title="{{item2.field_image.alt}}">
+    			</div>
+          <h3 class="module-subtitle">{{item2.title.value}}</h3>
+          <p class="default-text">{{item2.field_resumen.value}}</p>
+        </a>
+        {% set aux = aux + 1 %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

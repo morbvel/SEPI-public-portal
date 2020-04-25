@@ -1,0 +1,32 @@
+<h2 class="newsletter-title">{% trans %}Newsletter{% endtrans %}</h2>
+    <div class="row">
+      <div class="capa-contenedora-form-newsletter">
+        <label class="hidden" aria-hidden="true" for="form_id">Hidden formulario id</label><input type="hidden" name="form_id" value="{{form['#form_id']}}"/>
+        <div class="col-xs-12 col-sm-8 col-md-12 capa-input-newsletter-footer">
+          <div class="form-group">
+
+              <!-- <input data-drupal-selector="edit-mail-0-value" type="email" name="mail[0][value]" class="form-control" id="edit-mail-0-value" required> -->
+              {{form.field_hidden}}
+              {{form.field_grupos}}
+
+          </div>
+          <div class="form-group ">
+            <div class="form-check">
+              {{form.field_email}}
+                <!-- <label class="form-check-label  col-xs-12"> -->
+                  <!-- <input class="form-check-input centered-content " type="checkbox" required> <a href="/aviso-legal" class="footer-checkbox" id="clausula-newsletter-footer">{% trans %}Acepto los términos y condiciones de uso{% endtrans %}</a> -->
+
+                <!-- </label> -->
+              </div>
+
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-6 btn-subscribirse">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary col-xs-12" id="subs-footer">{% trans %}Suscribirse{% endtrans %}</button>
+          </div>
+        </div>
+
+      </div>
+    </div>

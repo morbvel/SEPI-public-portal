@@ -1,0 +1,74 @@
+<div class="row row-pestanas">
+  <div class="tabs col-xs-12 ">
+
+      <div class="module module-cabecera cabecera-imagen-grande relative">
+        <div class="image-resizer image-background">
+					<img src="{{file_url(node.field_imagen_cabecera.entity.fileuri)}}" alt="{{node.field_imagen_cabecera.content}}" />
+				</div>
+      </div>
+
+      {% set contador = 0 %}
+      {% for pestana in node.field_pestanas %}
+        {% set contador = contador + 1 %}
+      {% endfor %}
+      <div class="container-fluid" style="padding: 0px;">
+          <div class="col-izquierda-pestanas">
+
+          </div>
+
+          <div class="cuadrar-pestanas-centro container">
+            <div id="myTab" class="tabs_titulos">
+              <ul class="nav nav-tab nav-right scroll-lateral {% if contador == 3 %}tres-tabs{% elseif contador == 4 %}cuatro-tabs{% else %}varias-pestanas{% endif %}" role="tablist">
+                {% set contador = 1 %}
+                {% for pestana in node.field_pestanas %}
+                  <li aria-controls="tab-{{contador}}" class="{% if contador == 1 %}active {% endif %}item_tabs_centradas" id="panel-{{contador}}" role="tab">
+                    <a class="text_titulo_tabs " data-toggle="tab" href="#tab-{{contador}}">{{pestana.value|raw}}</a>
+                  </li>
+                  {% set contador = contador + 1 %}
+                {% endfor %}
+              </ul>
+            </div>
+
+          </div>
+
+      </div>
+
+
+
+      <div class="tab-content" id="myTabContent">
+        {% set contador2 = 1 %}
+        {% for contenido in node.field_contenido_pestanas %}
+
+          <div aria-labelledby="panel-{{contador2}}" class="tab-pane fade in {% if contador2 == 1 %}active content{% endif %}" id="tab-{{contador2}}" role="tabpanel">
+            <div class="tab_contenido col-xs-12">
+              <div class="container container-documentos">
+                {% set body = {
+                    '#type':   'processed_text',
+                    '#text':    contenido.value,
+                    '#format':  contenido.format,
+                } %}
+                {% if ('organigrama' in contenido.value) == 1 %}
+                    {{ drupal_view('personal_sepi', 'block_1') }}
+                  <div class="module-descargas col-xs-12 descargar-organigrama">
+                    <div class="descargar">
+                      <p class="lead-text">{% trans %}Descarga el organigrama{% endtrans %}</p>
+                      <div class="btn-container">
+                      <a href="{{file_url(node.field_documento.entity.fileuri)}}" class="btn-alt" target="_blank">{% trans %}Descargar{% endtrans %}</a>
+                      </div>
+                    </div>
+                  </div>
+                {% else %}
+                  <div class="module-text pad_top">
+                    {{body}}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+          {% set contador2 = contador2 + 1 %}
+        {% endfor %}
+      </div>
+
+  </div>
+</div>

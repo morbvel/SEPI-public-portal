@@ -1,0 +1,23 @@
+<div class="module module-cards interesar news">
+
+  <div class="relative">
+		<h2 class="module-title">
+			{% trans %}Noticias{% endtrans %}<span class="hidden-xs">{% trans %}sobre{% endtrans %}</span> <span class="hidden-xs" id="nombre-empresa-noticias"></span>
+		</h2>
+		<a href="#" class="ver-mas" id="ver-mas-noticias-empresa">
+		<span>{% trans %}Más{% endtrans %} <span class="hidden-xs">{% trans %}noticias de la empresa{% endtrans %}</span> </span>
+		</a>
+    {% set contador = 1 %}
+    {% for item in rows %}
+      {% set contador = contador + 1 %}
+    {% endfor %}
+    <span id="noticias-relacionadas-listado" style="display: none" aria-hidden="true">{{contador}}</span>
+	</div>
+
+  <div class="row">
+    {% for item in rows %}
+      {{item.content}}
+    {% endfor %}
+  </div>
+
+</div>

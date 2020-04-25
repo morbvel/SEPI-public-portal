@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="module-licitaciones licitacion">
+    <div class="row">
+      <h2 class="lead-text blue col-xs-8 col-sm-10 col-md-7">{{fields.title.content}}</h2>
+      {% if fields.field_descripcion is not empty %}
+        {% set descripcion_aux = fields.field_descripcion %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.value,
+          '#format':  descripcion_aux.format,
+        } %}
+        <div class="default-text col-xs-12">{{body}}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% if fields.field_documentos_empresa.content is not empty %}
+<div class="module-descargas">
+  <div class="container container-documentos background-grey">
+    <div class="background-grey">
+      <div class="background-grey">
+        <div class="">
+          <div class="row">
+  					<p class="descargas-title col-xs-12 lead-text">
+  						{% trans %}Documentación y descargas{% endtrans %}
+  					</p>
+            {{fields.field_documentos_empresa.content}}
+          </div>
+          <div class="row">
+  					<p class="descargas-title col-xs-12 lead-text">
+  						{% trans %}Enlace externo{% endtrans %}
+  					</p>
+            <a class="module-subtitle" href="{{fields.field_enlace.content}}">{{fields.field_enlace.content}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

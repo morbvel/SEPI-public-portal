@@ -1,0 +1,6 @@
+noticias.admin:
+  title: 'Importación de Noticias'
+  description: 'Ajustes del módulo Custom de Importación de Noticias'
+  parent: system.admin_config_development
+  route_name: noticias.setting
+  weight: 100

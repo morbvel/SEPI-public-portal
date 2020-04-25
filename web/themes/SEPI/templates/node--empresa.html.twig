@@ -1,0 +1,109 @@
+<span id="id-noticia" style="display: none;">{{node.nid.value}}</span>
+<!-- Cabecera Empresas -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="module module-cabecera cabecera-imagen-grande relative">
+      <div class="image-resizer image-background">
+        {% if node.field_imagen_cabecera_empresa.entity.fileuri %}
+          <img src="{{file_url(node.field_imagen_cabecera_empresa.entity.fileuri)}}" alt="{{node.field_imagen_cabecera_empresa.alt}}" title="{{node.field_imagen_cabecera_empresa.alt}}" />
+        {% else %}
+          <img src="/sites/default/files/2017-09/cabecera-imagen-grande-ficha-empresa.png" alt="{% trans %}Imagen cabecera ficha empresa{% endtrans %}" />
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Descripción Empresas -->
+<div class="container container-empresas">
+  <div class="module module-text contratante empresas ">
+    <div class="row">
+      <div class=" col-sm-12 col-md-8 descripcion-ficha-empresa">
+        <h2 class="module-title"><span id="nombre-empresa">{{node.title.value}}</span><span class="small">{{node.field_pequeno_texto.value|raw}}</span></h2>
+        {% set descripcion_aux = node.field_descripcion %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.value,
+          '#format':  descripcion_aux.format,
+        } %}
+        {{body}}
+      </div>
+
+
+      <div class="col-sm-12 col-md-4 sidebar bg-white empresas-lateral">
+        <div class="sidebar-icon-text col-sm-4 col-md-6 col-xs-12">
+          <div class="row">
+            <div class="col-sm-12 col-md-offset-1 col-md-12 pagina-web-empresa image-resizer">
+              <a class="" href="{{node.field_pagina_web.value|raw}}" target="_blank"><img class="imagen-empresa-enlace" src="{{file_url(node.field_image.entity.fileuri)}}" alt="{{node.field_image.alt}}" title="{{node.field_image.alt}}"/></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-icon-text col-sm-4 col-xs-12 col-md-12 capa-imagen-presidente-empresa">
+          <div class="row">
+            {% if node.field_imagen_presidente.entity.fileuri is not empty %}
+              <div class="col-sm-12 col-md-offset-1 col-md-5 image-resizer">
+                <img src="{{file_url(node.field_imagen_presidente.entity.fileuri)}}" alt="{{node.field_imagen_presidente.alt}}" title="{{node.field_imagen_presidente.alt}}"/>
+              </div>
+              <div class="col-sm-12 image-text col-md-6">
+                <p class="bold">{{node.field_sexo.entity.name.value}}</p>
+                <p class="light">{{node.field_presidente.value|raw}}</p>
+              </div>
+            {% else %}
+              <div class="col-sm-12 image-text col-md-12 col-md-offset-1">
+                <p class="bold">{{node.field_sexo.entity.name.value}}</p>
+                <p class="light">{{node.field_presidente.value|raw}}</p>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if node.field_participacion_sepi.value is not empty %}
+        <div class="sidebar-icon-text col-sm-4 col-xs-12 col-md-12 capa-porcentaje-empresa">
+          <div class="row">
+            <div class="col-md-offset-1 col-md-5">
+              {% set aux = node.field_participacion_sepi.value|split('.') %}
+              <div class="c100 p{{aux[0]}}">
+                  <span>{{aux[0]}}{% if aux[1] %}{% if  idioma == 'en' %}.{% else %},{% endif %}{{aux[1]}}{% endif %}<span>%</span></span>
+                  <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                  </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 image-text col-md-6 participacion-texto-sepi">
+              <p class="bold">{% trans %}Participación SEPI{% endtrans %}</p>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Descarga de Documentos -->
+{% if elements['field_documentos_empresa']['#items'] is not empty %}
+<div class="container container-documentos">
+  <div class="row">
+  	<div class="module-descargas descargas-empresa">
+  			<div class="background-grey">
+            <div class="row documentos-mobile">
+    					<p class="descargas-title col-xs-12 lead-text">
+    						{% trans %}Documentación y descargas{% endtrans %}
+    					</p>
+              {{elements['field_documentos_empresa']}}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Relacionados -->
+<div class="container noticias-empresa">
+  {{ drupal_view('noticias_relacionadas_empresas') }}
+</div>

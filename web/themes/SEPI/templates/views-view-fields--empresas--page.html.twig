@@ -1,0 +1,41 @@
+{% if fields.field_participacion.content == 'Mayoritaria' or fields.field_participacion.content == 'Majority' or fields.nid.content == '654' or fields.nid.content == '795'%}
+<a href="{{fields.path.content}}" class="col-md-12 empresa">
+  <div class="imagen-empresa image-resizer imagen-listado-empresas zoom">
+    <img src="{{fields.field_image.content}}" class="img-responsive" alt="{{fields.field_image_1.content}}">
+  </div>
+  <div class="nombre-sector empresa-resultados">
+    {% if fields.title.content is not empty %}
+      <p class="nombre-empresa">{{fields.title.content}}</p>
+    {% endif %}
+    {% if fields.field_categoria_empresa.content is not empty %}
+      <p class="sector-empresa">{{fields.field_categoria_empresa.content}}</p>
+    {% endif %}
+    <p class="direccion-empresa" style="display: none;" aria-hidden="true">{{fields.field_direccion.content}}</p>
+  </div>
+  {% if fields.field_correo_contacto.content is not empty %}
+    <p class="mail-empresa text-left">{{fields.field_correo_contacto.content}}</p>
+  {% endif %}
+  {% if fields.field_telefono_de_contacto.content is not empty %}
+    <p class="telefono-empresa text-left">{{fields.field_telefono_de_contacto.content}}</p>
+  {% endif %}
+</a>
+{% elseif fields.field_participacion.content == 'Minoritaria' or fields.field_participacion.content == 'Minority' %}
+<div class="col-md-12 empresa">
+  <div class="imagen-empresa image-resizer imagen-listado-empresas zoom">
+    <img src="{{fields.field_image.content}}" class="img-responsive" alt="{{fields.field_image_1.content}}">
+  </div>
+  <div class="nombre-sector empresa-resultados">
+    <p class="nombre-empresa">{{fields.title.content}}</p>
+    <p class="sector-empresa">{{fields.field_categoria_empresa.content}}</p>
+    <p class="direccion-empresa" style="display: none;" aria-hidden="true">{{fields.field_direccion.content}}</p>
+  </div>
+
+  {% if fields.field_pagina_web.content is not empty %}
+    <p class="web-empresa text-left"><a href="{{fields.field_pagina_web.content}}" target="_blank">{{fields.field_pagina_web.content}}</a></p>
+  {% endif %}
+  {% if fields.field_participacion_sepi.content is not empty %}
+    {% set aux = fields.field_participacion_sepi.content|split('.') %}
+    <p class="porcentaje-empresa text-left">{% trans %}Participación{% endtrans %}:{{aux[0]}}{% if aux[1] %}{% if language == 'en' %}.{% else %},{% endif %}{{aux[1]}}{% endif %}%</p>
+  {% endif %}
+</div>
+{% endif %}

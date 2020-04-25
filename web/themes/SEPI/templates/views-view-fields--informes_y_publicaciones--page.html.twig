@@ -1,0 +1,17 @@
+{% set contador = fields.counter.content|replace({' ':''}) %}
+
+<span id="informes-publicaciones-listado-oculto-{{contador}}" style="display:none;" aria-hidden=“true”>{{fields.view_node.content}}</span>
+<div class="file-item">
+  <div class="row">
+    <span id="tamano-documento-oculto-{{contador}}" style="display:none;" aria-hidden=“true”>{{fields.field_documento.content}}</span>
+    <a href="" class="icon-url" id="informes-publicaciones-listado-{{contador}}">
+      <div class="file-icon col-sm-1 hidden-xs">
+        <img src="/sites/default/files/2017-09/icon-pdf.png" alt="{% trans %}Icono pdf{% endtrans %}">
+      </div>
+      <div class="file-text col-xs-12  col-sm-11">
+        <h3 class="file-title">{{fields.title.content}}</h3>
+        <p id="tamano-documento-{{contador}}" class="file-size"></p>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+  <footer class="module-footer">
+    <div class="row">
+      <div class="footer" id="footer">
+        <div class="container">
+          <div class="footer-newsletter  col-xs-12 col-md-5 pull-right-md">
+            {{elements.newslettersepiformblock}}
+          </div>
+
+          <div class="footer-links col-xs-12 col-md-7 pull-left">
+            <div class="row">
+              {{elements.piedepagina}}
+            </div>
+          </div>
+
+          <div class="footer-logos col-md-7 pull-left">
+            <div class="row">
+              <div class="center-content-vertical">
+                <a href="http://transparencia.gob.es/" target="_blank" class="col-xs-6 col-sm-2">
+  								<img src="/sites/default/files/2017-08/footer-logo-1.png" alt="{% trans %}Portal de la transparencia{% endtrans %}">
+  							</a>
+                <a href="http://administracion.gob.es/pag_Home/index.html#.VNC1Ptocbct" target="_blank" class="col-xs-6 col-sm-2">
+  								<img src="/sites/default/files/2017-08/footer-logo-2.gif" alt="{% trans %}Administración, punto de acceso general{% endtrans %}">
+  							</a>
+                {% if idioma != 'en' %}
+                  <a href="/{{idioma}}/datos_abiertos"  class="col-xs-6 col-sm-2 datos-abiertos">
+    								<img src="/sites/default/files/2017-11/p_logo_escalagrises_0.png" alt="{% trans %}Datos abiertos{% endtrans %}" style="width: 100px;">
+    							</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="copyright" id="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="copyright-text text-center">
+              <p>{% trans %}© SEPI - Sociedad Estatal de participaciones industriales. Todos los derechos reservados.{% endtrans %}</p>
+              <img src="/sites/default/files/2017-08/header_logo_ministerio.png" class="visible-xs logo-gobierno-footer" alt="{% trans %}Sociedad Estatal de participaciones industriales{% endtrans %}" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>

@@ -1,0 +1,27 @@
+<div class="container-fluid cabecera-3">
+  <div class="row">
+
+    <div class="module-destacado-fijo">
+      <div class="relative">
+        <div class="image-resizer">
+          <img src="{{file_url(content.field_imagen_cabecera_home.0['#item'].entity.uri.value)}}"  />
+        </div>
+        <div class="image-text">
+          <p class="text-carrusel">{{content['#block_content'].field_texto_imagen.value}}</p>
+          <a href="{{content['#block_content'].field_enlace_ver_mas.value}}" class="ver-mas red"><span>{% trans %}ver más{% endtrans %}</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-sepi">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="default-text">{{content['#block_content'].field_texto_resumen.value}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

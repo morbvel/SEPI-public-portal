@@ -1,0 +1,29 @@
+{% if fields.field_enlace_a_contenido.content is not empty %}
+  <a class="card col-xs-12 col-sm-4 col" href="{{fields.field_enlace_a_contenido.content}}">
+    <div class="image-resizer zoom">
+      <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}" />
+    </div>
+    <p class="module-subtitle">{{fields.title.content}}</p>
+  </a>
+{% else %}
+  <div class="card col-xs-12 col-sm-4 col">
+    {% if fields.field_video.content is not empty %}
+      <div class="image-resizer zoom">
+        <video controls="true" poster="{{fields.field_miniatura.content}}">
+          <source src="{{fields.field_video.content}}" type="video/mp4">
+        </video>
+      </div>
+    {% else %}
+      <div class="image-resizer zoom">
+        {% set imagen = fields.field_image.content %}
+        {% set alt = fields.field_image_1.content %}
+        {% if fields.field_miniatura.content is not empty %}
+          {% set imagen = fields.field_miniatura.content %}
+          {% set alt = fields.field_miniatura_1.content %}
+        {% endif %}
+        <img src="{{imagen}}" alt="{{alt}}" />
+      </div>
+    {% endif %}
+    <p class="module-subtitle">{{fields.title.content}}</p>
+  </div>
+{% endif %}

@@ -1,0 +1,36 @@
+<div class="">
+  <div class="module module-news-form module-buscador module-buscador-privatizaciones">
+    <div class="container">
+      <div class="form-inline col-xs-12">
+			  <div class="row">
+
+          <div class="form-group col-xs-12 col-sm-6 col-md-3 empresa-selector">
+  					<label class="buscador_label" id="edit-title--description" for="edit-title">{% trans %}Empresa{% endtrans %}</label>
+            {{form.title}}
+
+          </div>
+
+          <div class="form-group col-xs-12 col-sm-6 col-md-5 date">
+  					<p class="buscador_label">{% trans %}Fecha de privatización{% endtrans %}</p>
+  					<div class="form-group col-md-6 fecha-desde-privatizacion">
+  						<label class="sr-only" for="edit-field-fecha-de-privatizacion-value">{% trans %}Desde{% endtrans %}</label>
+              {{form.field_fecha_de_privatizacion_value}}
+  					</div>
+  					<div class="form-group col-md-6 fecha-hasta-privatizacion">
+  						<label class="sr-only" for="edit-field-fecha-de-privatizacion-value-1">{% trans %}Hasta{% endtrans %}</label>
+  						{{form.field_fecha_de_privatizacion_value_1}}
+  					</div>
+  				</div>
+
+          <div class="form-group col-xs-12 col-sm-6 col-md-3 empresa-selector">
+  					<label class="buscador_label" id="edit-field-procesos-target-id--description" for="edit-field-procesos-en-curso-value">{% trans %}Procesos{% endtrans %}</label>
+            {{form.field_procesos_en_curso_value}}
+          </div>
+
+          <button type="submit" class="btn btn-alt col-xs-12 col-sm-offset-3 col-sm-3 col-md-offset-0 col-md-1">{% trans %}Buscar{% endtrans %}</button>
+
+        </div>
+			</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="fundacion{{fields.counter.content}} col col-sm-6">
+  <div class="image-resizer zoom">
+    <img src="{{fields.field_image.content}}" alt="{{fields.field_image_1.content}}" />
+  </div>
+  <h2 class="module-subtitle">{{fields.title.content}}</h2>
+  {% set descripcion_aux = fields.field_descripcion %}
+  {% set body = {
+    '#type':   'processed_text',
+    '#text':    descripcion_aux.content,
+    '#format':  descripcion_aux.format,
+  } %}
+  <div class="default-text">{{body}}</div>
+  {% if fields.field_imagen_secundaria.content %}
+  <div class="relative visible-md-inline-block visible-lg-inline-block">
+    <img src="{{fields.field_imagen_secundaria.content}}" alt="{{fields.field_imagen_secundaria_1.content}}" class="pull-right">
+  </div>
+  {% endif %}
+</div>

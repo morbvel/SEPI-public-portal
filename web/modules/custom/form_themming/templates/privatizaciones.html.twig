@@ -1,0 +1,36 @@
+<div class="">
+  <div class="module module-news-form module-buscador module-buscador-privatizaciones">
+    <div class="container">
+      <div class="form-inline col-xs-12">
+			  <div class="row">
+
+          <div class="form-group col-xs-12 col-sm-6 col-md-3 empresa-selector">
+  					<label class="buscador_label" id="edit-title--description">{% trans %}Empresa{% endtrans %}</label>
+            {{form.title}}
+
+          </div>
+
+          <div class="form-group col-xs-12 col-sm-6 col-md-5 date">
+  					<p class="buscador_label">{% trans %}Fecha de privatización{% endtrans %}</p>
+  					<div class="form-group col-md-5">
+  						<label class="sr-only">{% trans %}Desde{% endtrans %}</label>
+              {{form.field_fecha_de_privatizacion_value}}
+  					</div>
+  					<div class="form-group col-md-5">
+  						<label class="sr-only">{% trans %}Hasta{% endtrans %}</label>
+  						{{form.field_fecha_de_privatizacion_value_1}}
+  					</div>
+  				</div>
+
+          <div class="form-group col-xs-12 col-sm-6 col-md-2 empresa-selector">
+  					<label class="buscador_label" id="edit-field-procesos-target-id--description">{% trans %}Procesos{% endtrans %}</label>
+            {{form.field_procesos_en_curso_value}}
+          </div>
+
+          <button type="submit" class="btn btn-alt col-xs-12 col-sm-offset-3 col-sm-3 col-md-offset-1 col-md-1">{% trans %}Buscar{% endtrans %}</button>
+
+        </div>
+			</div>
+    </div>
+  </div>
+</div>

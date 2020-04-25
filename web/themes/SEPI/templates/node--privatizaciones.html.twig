@@ -1,0 +1,160 @@
+<!-- Cabecera Empresas -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="module module-cabecera cabecera-imagen-grande ficha-empresa">
+      <div class="image-resizer">
+        <img src="/sites/default/files/2017-09/cabecera-imagen-grande-ficha-empresa.png" alt="{% trans %}Imagen cabecera ficha empresa{% endtrans %}" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="module module-text privatizacion">
+    <!-- Titulo -->
+    <div class="module-text-title">
+      <div class="row">
+        {% if node.field_fecha_de_privatizacion.value is not empty %}
+        {% if idioma != 'en' %}
+        <h2 class="module-title col-sm-10">{{node.title.value}}<span class="small">{% trans %}Fecha de Privatización:{% endtrans %} {{node.field_fecha_de_privatizacion.value|date('d')}} {% trans %}de{% endtrans %} {{node.field_fecha_de_privatizacion.value|date('F')|replace({
+                                                                                                                                                                                                      'January'  : 'Enero',
+                                                                                                                                                                                                      'February'  : 'Febrero',
+                                                                                                                                                                                                      'March'  : 'Marzo',
+                                                                                                                                                                                                      'April'  : 'Abril',
+                                                                                                                                                                                                      'May'  : 'Mayo',
+                                                                                                                                                                                                      'June'  : 'Junio',
+                                                                                                                                                                                                      'July'  : 'Julio',
+                                                                                                                                                                                                      'August'  : 'Agosto',
+                                                                                                                                                                                                      'September'  : 'Septiembre',
+                                                                                                                                                                                                      'October' : 'Octubre',
+                                                                                                                                                                                                      'November'  : 'Noviembre',
+                                                                                                                                                                                                      'December' : 'Diciembre',})}} {% trans %}de{% endtrans %} {{node.field_fecha_de_privatizacion.value|date('Y')}}</span></h2>
+                                                                                                                                                                                                      {% else %}
+        <h2 class="module-title col-sm-10">{{node.title.value}}<span class="small">{% trans %}Fecha de Privatización:{% endtrans %} {{node.field_fecha_de_privatizacion.value|date('d')}} {{node.field_fecha_de_privatizacion.value|date('F')}} {{node.field_fecha_de_privatizacion.value|date('Y')}}</span></h2>
+                                                                                                                                                                                                      {% endif %}
+        {% endif %}
+        <div class="imagen privatizaciones-image col-xs-12 col-sm-2">
+          <img class="imagen-privatizaciones" src="{{file_url(node.field_image.entity.fileuri)}}" alt="{{node.field_image.alt}}" title="{{node.field_image.alt}}" />
+        </div>
+        <p class="default-text-light col-xs-12 texto-introcuccion-privatizaciones">{{node.field_introduccion_privatizacion.value|raw}}</p>
+      </div>
+    </div>
+
+    <!-- Capital -->
+    <div class="module-text-progress">
+      <div class="row">
+        <h3 class="lead-text-bold col-xs-12">{% trans %}Capital{% endtrans %}</h3>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+  				<h4 class="privatizacion-subtitle">{% trans %}Participación Inicial SEPI{% endtrans %}</h4>
+          {% if node.field_participacion_inicial.value is not empty %}
+          {% set aux = node.field_participacion_inicial.value|split('.') %}
+  				<p class="percentage text-right">{{aux[0]}}{% if aux[1] %}{% if language == 'en' %}.{% else %},{% endif %}{{aux[1]}}{% endif %}<span>%</span></p>
+  				<div class="progress">
+  					  <div class="progress-bar blue" role="progressbar" aria-valuenow="{{node.field_participacion_inicial.value}}"
+  						   aria-valuemin="0" aria-valuemax="100" style="width: {{node.field_participacion_inicial.value}}%;">
+  						<span class="sr-only">{{node.field_participacion_inicial.value}}% {% trans %}completado{% endtrans %}</span>
+  					  </div>
+  				</div>
+          {% endif %}
+  			</div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+  				<h4 class="privatizacion-subtitle">{% trans %}Participación Vendida SEPI{% endtrans %}</h4>
+          {% if node.field_participacion_vendida.value is not empty %}
+          {% set aux = node.field_participacion_vendida.value|split('.') %}
+  				<p class="percentage text-right">{{aux[0]}}{% if aux[1] %}{% if language == 'en' %}.{% else %},{% endif %}{{aux[1]}}{% endif %}<span>%</span></p>
+  				<div class="progress">
+  					  <div class="progress-bar green" role="progressbar" aria-valuenow="{{node.field_participacion_vendida.value}}"
+  						   aria-valuemin="0" aria-valuemax="100" style="width: {{node.field_participacion_vendida.value}}%;">
+  						<span class="sr-only">{{node.field_participacion_vendida.value}}% {% trans %}completado{% endtrans %}</span>
+  					  </div>
+  				</div>
+          {% endif %}
+  			</div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+  				<h4 class="privatizacion-subtitle">{% trans %}Capital Público Restante{% endtrans %}</h4>
+          {% if node.field_capital_publico.value is not empty %}
+          {% set aux = node.field_capital_publico.value|split('.') %}
+  				<p class="percentage text-right">{{aux[0]}}{% if aux[1] %}{% if language == 'en' %}.{% else %},{% endif %}{{aux[1]}}{% endif %}<span>%</span></p>
+  				<div class="progress">
+  					  <div class="progress-bar yellow" role="progressbar" aria-valuenow="{{node.field_capital_publico.value}}"
+  						   aria-valuemin="0" aria-valuemax="100" style="width: {{node.field_capital_publico.value}}%;">
+  						<span class="sr-only">{{node.field_capital_publico.value}}% {% trans %}completado{% endtrans %}</span>
+  					  </div>
+  				</div>
+          {% endif %}
+
+  			</div>
+
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="module-table">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="table-responsive ">
+            <table class="table">
+              <tr>
+    						<td class="table-headers" scope="col">{% trans %}OPERACIÓN{% endtrans %}</td>
+    						<td class="table-headers" scope="col">{% trans %}COMPRADORES{% endtrans %}</td>
+    						<td class="table-headers" scope="col">{% trans %}FECHA SEPI{% endtrans %}</td>
+    						<td class="table-headers" scope="col">{% trans %}FECHA CCP{% endtrans %}</td>
+    						<td class="table-headers" scope="col">{% trans %}FECHA APROBACIÓN GOBIERNO{% endtrans %}</td>
+  					  </tr>
+              {% for operacion in node.field_operaciones %}
+                <tr>
+                  <td class="row-headers">{{operacion.getFieldCollectionItem().field_operacion.value}}</td>
+                  <td class="texto-comprador-sepi">{{operacion.getFieldCollectionItem().field_comprador.value}}</td>
+                  <td>{% if operacion.getFieldCollectionItem().field_fecha_sepi.value is not empty %}{{operacion.getFieldCollectionItem().field_fecha_sepi.value|date("d/m/Y")}}{% endif %}</td>
+                  {% if idioma != 'en' %}
+                  <td>{% if operacion.getFieldCollectionItem().field_fecha_ccp.value is not empty %}{{operacion.getFieldCollectionItem().field_fecha_ccp.value|date("F Y")|replace({
+  'January'  : 'Enero',
+  'February'  : 'Febrero',
+  'March'  : 'Marzo',
+  'April'  : 'Abril',
+  'May'  : 'Mayo',
+  'June'  : 'Junio',
+  'July'  : 'Julio',
+  'August'  : 'Agosto',
+  'September'  : 'Septiembre',
+  'October'   : 'Octubre',
+  'November'  : 'Noviembre',
+  'December' : 'Diciembre',
+})}}{% endif %}</td>
+              {% else %}
+              <td>{% if operacion.getFieldCollectionItem().field_fecha_ccp.value is not empty %}{{operacion.getFieldCollectionItem().field_fecha_ccp.value|date("F Y")}}{% endif %}</td>
+              {% endif %}
+
+                  <td class="grey-cells">
+                  {% if operacion.getFieldCollectionItem().field_fecha_aprobacion_gobierno.value is not empty %}
+                    {{operacion.getFieldCollectionItem().field_fecha_aprobacion_gobierno.value|date("d/m/Y")}}
+                  {% endif %}
+                  </td>
+                </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Descripción -->
+    <div class="module-text">
+  		<div class="row">
+        <div class="col-xs-12">
+          {% set descripcion_aux = node.field_descripcion %}
+          {% set body = {
+            '#type':   'processed_text',
+            '#text':    descripcion_aux.value,
+            '#format':  descripcion_aux.format,
+          } %}
+          {{body}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

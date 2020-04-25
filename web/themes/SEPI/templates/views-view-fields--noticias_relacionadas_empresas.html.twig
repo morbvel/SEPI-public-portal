@@ -1,0 +1,16 @@
+<a href="{{fields.path.content}}" title="" class="card col-xs-12 col-sm-3  col">
+  <div class="image-resizer">
+    <img src="{{fields.field_imagen_distributiva.content}}" alt="{{fields.field_imagen_distributiva_1.content}}">
+  </div>
+  <h3 class="module-subtitle">{{fields.title.content}}</h3>
+  <p class="default-text">
+    {% set descripcion_aux = fields.field_descripcion %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.value,
+          '#format':  descripcion_aux.format,
+        } %}
+        {{body}}
+  </p>
+  <p class="date">{{fields.created.content}} |  {{fields.field_direccion.content}}</p>
+</a>

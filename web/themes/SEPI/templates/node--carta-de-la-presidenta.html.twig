@@ -1,0 +1,50 @@
+
+<div class="container-fluid">
+  <div class="row">
+  	<div class="cabecera-presidenta">
+      <div class="module module-cabecera cabecera-presidenta relative">
+        <div class="imagen col-xs-12">
+          <div class="image-resizer">
+            <img src="{{file_url(node.field_imagen_carta_presidenta.entity.fileuri)}}" alt="{{node.field_imagen_carta_presidenta.alt}}" title="{{node.field_imagen_carta_presidenta.alt}}">
+          </div>
+        </div>
+  		</div>
+  	</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="module module-text module-presidenta">
+    <div class="texto-largo">
+      {% set descripcion_aux = node.field_primer_parrafo_carta %}
+      {% set body = {
+        '#type':   'processed_text',
+        '#text':    descripcion_aux.value,
+        '#format':  descripcion_aux.format,
+      } %}
+      {{body}}
+      <p class="ladillo-carta-presidenta">{{node.field_frase_superior.value}}</p>
+    </div>
+
+    <div class="texto-largo">
+      {% set descripcion_aux = node.field_segundo_parrafo_carta %}
+      {% set body = {
+        '#type':   'processed_text',
+        '#text':    descripcion_aux.value,
+        '#format':  descripcion_aux.format,
+      } %}
+      {{body}}
+      <p class="ladillo-carta-presidenta">{{node.field_frase_inferior.value}}</p>
+    </div>
+
+    <div class="texto-largo">
+      {% set descripcion_aux = node.field_tercer_parrafo_carta %}
+      {% set body = {
+        '#type':   'processed_text',
+        '#text':    descripcion_aux.value,
+        '#format':  descripcion_aux.format,
+      } %}
+      {{body}}
+    </div>
+  </div>
+</div>

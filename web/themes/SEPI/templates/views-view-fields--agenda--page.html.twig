@@ -1,0 +1,24 @@
+<div class="new-item elemento-agenda-pagina">
+  <div class="row">
+
+    <div class="new-text col-xs-12  col-sm-12 contenido-evento-agenda">
+      <div class="module-text ">
+        {{fields.field_lugar_evento.content}}
+
+        <h3 class="new-headline">{{fields.title.content}}</h3>
+        {% set descripcion_aux = fields.field_descripcion %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.content,
+          '#format':  descripcion_aux.format,
+        } %}
+        <div class="descripcion-evento-agenda">
+          {{body}}
+        </div>
+
+        <p class="new-date">{{fields.field_fecha_inicio_evento.content}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>

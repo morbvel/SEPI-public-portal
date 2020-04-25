@@ -1,0 +1,24 @@
+<div class="col-xs-12 col-sm-3 col-md-3 elemento-agenda">
+  <div class="agenda-card">
+    <p class="date">{{fields.field_fecha_inicio_evento_1.content}}</p>
+    <div class="description">{{fields.title.content}}</div>
+  </div>
+  <div class="agenda-links">
+    <div class="calendar">
+      <img src="/sites/default/files/2017-09/agenda-calendar-icon.png" alt="{% trans %}Icono calendario{% endtrans %}" class="calendar-icon">
+    </div>
+    <div class="calendar-text">
+
+      {% set url = 'http://www.google.com/calendar/event?action=TEMPLATE&text='~fields.title.content|replace({' ':'+'})~'&dates='~fields.field_fecha_inicio_evento.content~'/'~fields.field_fecha_fin_evento.content~'&details='~fields.field_descripcion.content|replace({' ':'+'})~'&location='~fields.field_lugar_evento.content|replace({' ':'+'})~'&trp=false&sprop=&sprop=name' %}
+      <a href="{{url}}" target="_blank" rel="nofollow"><p class="link-text yellow">Añadir a calendario</p></a>
+    </div>
+  </div>
+  <div class="agenda-links">
+    <div class="location">
+      <img src="/sites/default/files/2017-09/agenda-location-icon.png" alt="{% trans %}Icono localización{% endtrans %}" class="location-icon">
+    </div>
+    <div class="location-text">
+      <a href="https://www.google.es/maps/search/{{fields.field_lugar_evento.content|replace({' ':'+'})}}" target="_blank"><p class="link-text yellow">{{fields.field_lugar_evento.content}}</p></a>
+    </div>
+  </div>
+</div>

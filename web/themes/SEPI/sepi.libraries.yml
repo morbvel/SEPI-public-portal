@@ -1,0 +1,23 @@
+global-styling:
+   version: VERSION
+   css:
+     theme:
+       css/styles.css: {}
+       css/vendor/jquery-ui.min.css: {}
+       css/vendor/slick.css: {}
+       css/vendor/formValidation.min.css: {}
+       css/custom.css: {}
+       'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700': { type: external }
+       'https://fonts.googleapis.com/css?family=Zilla+Slab:300': { type: external }
+
+global-scripts:
+    version: VERSION
+    js:
+      js/_tabtoaccordion.js: {}
+      js/vendor/responsive-tabs/jquery.bootstrap-responsive-tabs.min.js: {}
+      js/bootstrap-tabcollapse.js: {}
+      js/main.js: {}
+      js/scripts.js: {}
+      js/vendor/slick.min.js: {}
+    dependencies:
+      - core/jquery

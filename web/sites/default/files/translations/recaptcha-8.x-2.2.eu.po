@@ -1,0 +1,26 @@
+# Basque translation of reCAPTCHA (8.x-2.2)
+# Copyright (c) 2016 by the Basque translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: reCAPTCHA (8.x-2.2)\n"
+"POT-Creation-Date: 2016-07-30 06:44+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Basque\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Type"
+msgstr "Mota"
+msgid "Size"
+msgstr "Tamaina"
+msgid "General settings"
+msgstr "Ezarpen orokorrak"
+msgid "Theme"
+msgstr "Tema"
+msgid "Widget settings"
+msgstr "Widget ezarpenak"
+msgid "Secret key"
+msgstr "Giltza sekretua"

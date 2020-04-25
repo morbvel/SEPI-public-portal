@@ -1,0 +1,42 @@
+<div class="contenedor-licitaciones">
+  <div class="container">
+    <div class="module-licitaciones licitacion">
+      <div class="row">
+        <h2 class="lead-text blue col-xs-12 col-sm-10 col-md-7">{{fields.title.content}}</h2>
+        {% set modify = '4' %}
+        {% set date = "now"|date("m/d/Y") %}
+        {% set hoy = "now"|date("m/d/Y") %}
+        {% set hoy_4_dias = date|date_modify("+" ~ modify ~ " day")|date("m/d/Y") %}
+
+        {% if fields.field_fecha_expiracion.content <= hoy_4_dias %}
+          {% set restante = fields.field_fecha_expiracion.content|date('d') - hoy|date('d') %}
+          <p class="info-text default-text col-xs-12 col-sm-2 col-md-5"><span class="hidden-sm">{% trans %}Quedan{% endtrans %} </span>{{restante}} {% trans %}días{% endtrans %} <span class="hidden-sm"> {% trans %}para que expire la convocatoria{% endtrans %}</span></p>
+        {% endif %}
+        {% set descripcion_aux = fields.field_descripcion %}
+        {% set body = {
+          '#type':   'processed_text',
+          '#text':    descripcion_aux.value,
+          '#format':  descripcion_aux.format,
+        } %}
+        <div class="default-text col-xs-12">{{body}}</div>
+      </div>
+    </div>
+  </div>
+
+  {% if fields.field_documentos_empresa.content is not empty %}
+  <div class="container container-documentos">
+    <div class="row">
+    	<div class="module-descargas">
+    			<div class="background-grey">
+              <div class="row documentos-mobile">
+      					<p class="descargas-title col-xs-12 lead-text">
+      						{% trans %}Documentación y descargas{% endtrans %}
+      					</p>
+                {{fields.field_documentos_empresa.content}}
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>

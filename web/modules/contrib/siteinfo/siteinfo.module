@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * siteinfo module.
+ */
+ 
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function siteinfo_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.siteinfo':
+      $output = '';
+			$output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Siteinfo is a module which display site related 
+			 information like:- about site, drupal, php, database, etc. This module
+			 extends Drupal to provide brief inforamtion about website. That 
+			 information helpful to site admin. Site admin got site information in one page. 
+       ') . '</p>';
+    return $output;
+  }
+}

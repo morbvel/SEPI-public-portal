@@ -1,0 +1,181 @@
+<?php
+use Drupal\views\Views;
+
+function form_alter_get_view_id(){
+  $nombre_vista = '';
+
+  // Get current route object.
+  $route = \Drupal::routeMatch()->getRouteObject();
+  if ($route){
+    // Get view id and display id from route.
+    $nombre_vista = $route->getDefault('view_id');
+  }
+
+  return $nombre_vista;
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function form_alter_form_alter(&$form, &$form_state, $form_id) {
+  $vista = '';
+
+  if ($form_id == 'views_exposed_form'){
+
+    $vista = form_alter_get_view_id();
+
+    if($vista == 'empresas'){
+      $nids = \Drupal::entityQuery('node')->condition('type','empresa')->execute();
+      $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+
+      //Array de empresas
+      foreach ($nodes as $node) {
+        $empresas[$node->getTitle()] = $node->getTitle();
+      }
+      asort($empresas);
+
+      $dropdown_empresa['All'] = t('Todas');
+      $dropdown_empresa = array_merge($dropdown_empresa, $empresas);
+
+      $form['title'] = array(
+        '#type' => 'select',
+        '#default_value' => '',
+        '#validated' => TRUE,
+        '#options' => $dropdown_empresa,
+        '#weight' => '-3'
+      );
+
+      $form['#attributes']['aria-describedby'] = $form['#id'];
+    }
+    if($vista == 'busqueda_de_noticias'){
+      $nids = \Drupal::entityQuery('node')->condition('type','empresa')->execute();
+      $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+
+      //Array de empresas
+      foreach ($nodes as $node) {
+        $empresas[$node->id()] = $node->getTitle();
+      }
+      asort($empresas);
+
+      $dropdown_empresa[''] = t('Todas');
+      foreach ($empresas as $key => $value) {
+        $dropdown_empresa[$key] = $value;
+      }
+
+      $form['field_empresa_target_id'] = array(
+        '#type' => 'select',
+    	  '#default_value' => '',
+        '#validated' => TRUE,
+    	  '#options' => $dropdown_empresa,
+        '#weight' => '-3'
+      );
+
+      $form['field_fecha_noticia_value'] = array(
+        '#type' => 'date',
+        '#validated' => TRUE,
+        '#weight' => '-3'
+      );
+
+      $form['field_fecha_noticia_value_1'] = array(
+        '#type' => 'date',
+        '#validated' => TRUE,
+        '#weight' => '-3'
+      );
+
+      $form['#attributes']['aria-describedby'] = $form['#id'];
+    }
+    else if($vista == 'privatizaciones'){
+      $nids = \Drupal::entityQuery('node')->condition('type','privatizaciones')->execute();
+      $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+
+      //Array de empresas
+      foreach ($nodes as $node) {
+        $empresas[$node->getTitle()] = $node->getTitle();
+      }
+      asort($empresas);
+
+      $dropdown_empresa['All'] = t('Todas');
+      $dropdown_empresa = array_merge($dropdown_empresa, $empresas);
+
+      $form['title'] = array(
+        '#type' => 'select',
+    	  '#default_value' => 'All',
+        '#validated' => TRUE,
+    	  '#options' => $dropdown_empresa,
+        '#weight' => '-3'
+      );
+
+      $form['field_fecha_de_privatizacion_value'] = array(
+        '#type' => 'date',
+        '#validated' => TRUE,
+        '#weight' => '-3'
+      );
+
+      $form['field_fecha_de_privatizacion_value_1'] = array(
+        '#type' => 'date',
+        '#validated' => TRUE,
+        '#weight' => '-3'
+      );
+    }
+    else if($vista == 'licitaciones'){
+      $nids = \Drupal::entityQuery('node')->condition('type','licitaciones')->execute();
+      $nodes =  \Drupal\node\Entity\Node::loadMultiple($nids);
+
+      /*$dropdown_licitaciones[''] = t('Todas');
+      foreach ($nodes as $node) {
+        if ($node->get('field_fecha_resolucion')->value != '')
+          $dropdown_licitaciones[$node->get('field_fecha_resolucion')->value] = $node->get('field_fecha_resolucion')->value;
+      }*/
+
+	    //Array de empresas
+	    foreach ($nodes as $node) {
+		    if ($node->get('field_fecha_resolucion')->value != '')
+			    $fechas[$node->get('field_fecha_resolucion')->value] = $node->get('field_fecha_resolucion')->value;
+	    }
+	    arsort($fechas);
+
+	    $dropdown_licitaciones[''] = t('Todas');
+	    foreach ($fechas as $key => $value) {
+		    $dropdown_licitaciones[$key] = $value;
+	    }
+
+      $form['field_fecha_resolucion_value'] = array(
+        '#type' => 'select',
+        '#validated' => TRUE,
+        '#default_value' => '',
+    	  '#options' => $dropdown_licitaciones,
+        '#weight' => '-3'
+      );
+    }
+
+  }
+  else if($form_id == 'simplenews_subscriptions_block_035fda10-8cb4-4454-9465-9bd590c3ee3c'){
+    $form['field_email'] = array(
+      '#type' => 'textfield',
+      '#maxlength' => 255,
+      '#required' => TRUE,
+      '#attributes' => array('class' => array('form-control'), 'name' => array('email'), 'id' => array('email'))
+    );
+
+    $form['field_hidden'] = array(
+      '#type' => 'hidden',
+      '#value' => $form_id,
+      '#attributes' => array('name' => array('form_id'))
+    );
+    $form['field_grupos'] = array(
+      '#type' => 'hidden',
+      '#value' => '3',
+      '#attributes' => array('name' => array('groups[]'), 'id' => array('groups-3'))
+    );
+
+    $form['#attributes'] = array('enctype' => 'application/x-www-form-urlencoded');
+    $form['#method'] = 'post';
+    $form['#action'] = 'http://sepi.ip-zone.com/ccm/subscribe/index/form/';
+
+  }
+  else if($form_id == 'simplenews_subscriptions_block_a75421c8-cd3a-4dac-9982-2e8dfe7b8443'){
+    $form['#method'] = 'get';
+    $form['#action'] = 'http://sepi.ip-zone.com/ccm/';
+  }
+}

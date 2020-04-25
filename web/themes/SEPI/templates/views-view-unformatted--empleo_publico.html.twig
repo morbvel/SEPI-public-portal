@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  {% set aux = 0 %}
+  {% for item in rows %}
+    {% set aux = aux + 1 %}
+  {% endfor %}
+
+  <span id="empleo-publico-contador" style="display: none">{{aux}}</span>
+
+  <div class="row">
+    <div class="module module-cabecera cabecera-imagen-grande">
+      <div class="image-resizer imagen-empleo">
+        <img src="/sites/default/files/2017-11/empleo_publico.jpg" alt="{% trans %}Imagen empleo público{% endtrans %}" />
+      </div>
+    </div>
+  </div>
+</div>
+{% for item in rows %}
+  {{item.content}}
+{% endfor %}

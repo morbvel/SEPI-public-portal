@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="module module-news-form module-buscador">
+      <div class="container">
+        <div class="form-inline col-xs-12">
+          <div class="row">
+
+            <div class="form-group col-xs-12 col-sm-6 col-md-4 select-formulario">
+              <label class="buscador_label" for="edit-title" id="edit-title--description">{% trans %}Empresa{% endtrans %}</label>
+              {{form.title}}
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-3 select-formulario select-sector-empresa">
+              <label class="buscador_label" for="edit-tid">{% trans %}Sector{% endtrans %}</label>
+              {{form.tid}}
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-3 select-formulario">
+              <label class="buscador_label" for="edit-field-participacion-target-id">{% trans %}Tipo{% endtrans %}</label>
+              {{form.field_participacion_target_id}}
+            </div>
+            <button type="submit" class="btn btn-alt col-xs-12 col-sm-offset-4 col-sm-2 col-md-offset-1 col-md-1 boton-buscador-empresas">{% trans %}Buscar{% endtrans %}</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

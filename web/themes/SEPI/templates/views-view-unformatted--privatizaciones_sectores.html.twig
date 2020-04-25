@@ -1,0 +1,10 @@
+
+      {% set contador = 1 %}
+      {% for item in rows %}
+        {% set contador = contador + 1 %}
+      {% endfor %}
+      <span id="contador-privatizaciones-sectores" style="display: none;">{{contador}}</span>
+
+      {% for item in rows %}
+        {{item.content}}
+      {% endfor %}

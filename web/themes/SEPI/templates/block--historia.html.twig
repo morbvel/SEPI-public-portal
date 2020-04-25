@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="module module-historia">
+      <div class="container">
+        <div class="row">
+          <h2 class="module-title col-xs-12">
+    				{% trans %}Historia{% endtrans %}
+    			</h2>
+          <div class="col col-xs-12 col-sm-6">
+    				<div class="image-resizer zoom">
+    					<img src="{{file_url(content.field_imagen_historia.0['#item'].entity.uri.value)}}" alt="{{content['#block_content'].field_imagen_historia.alt}}" title="{{content['#block_content'].field_imagen_historia.alt}}">
+    				</div>
+    			</div>
+          <div class="col col-xs-12 col-sm-5 col-lg-4">
+            {% set descripcion_aux = content['#block_content'].field_descripcion %}
+            {% set body = {
+              '#type':   'processed_text',
+              '#text':    descripcion_aux.value,
+              '#format':  descripcion_aux.format,
+            } %}
+            <div class="default-text">{{body}}</div>
+            <ul class="historia-links">
+              {% for link in content['#block_content'].field_historia_enlaces %}
+                {% set url = link.uri|split(':') %}
+                <li><a href="/{{idioma}}{{url[1]}}">{{link.title}}</a></li>
+              {% endfor %}
+    				</ul>
+
+    			</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

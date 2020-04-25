@@ -1,0 +1,81 @@
+{% set contador = fields.counter.content|replace({' ':''}) %}
+<div class="bloque-empleo">
+<div id="empleo-{{contador}}" class="row" style="padding: 0px; margin:0px;">
+  <div class="module module-empleo">
+
+    <div class="module-licitaciones">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-2 hidden-xs licitaciones-logo">
+						<div class="row">
+							<div class="col-sm-12">
+								<img alt="{{fields.field_image_1.content}}" src="{{fields.field_image.content}}" />
+							</div>
+						</div>
+					</div>
+
+          <h2 class="lead-text blue col-sm-10 col-md-10">{{fields.title.content}}</h2>
+
+          {% set descripcion_aux = fields.field_descripcion %}
+          {% set body = {
+            '#type':   'processed_text',
+            '#text':    descripcion_aux.content,
+            '#format':  descripcion_aux.format,
+          } %}
+          <div class="default-text plazo col-sm-10">{{body}}</div>
+
+
+          <div class="col col-xs-12">
+            {% set modify = '4' %}
+            {% set date = "now"|date("m/d/Y") %}
+            {% set hoy = "now"|date("m/d/Y") %}
+            {% set hoy_4_dias = date|date_modify("+" ~ modify ~ " day")|date("m/d/Y") %}
+
+            <span id="empleo-publico-oculto-{{contador}}" style="display: none">{{fields.view_node.content}}</span>
+            <ul class="col-sm-4 col-xs-7 col-md-5 inline">
+  						<li class="default-text rrss col-sm-10">
+  							<a id="empleo-publico-fb-{{contador}}" class="icon-rrs" target="_blank"><img class="imagen-rrss-empleo" alt="{% trans %}Icono Facebook{% endtrans %}" src="/sites/default/files/2017-11/ico_facebook_noticias.png"></a>
+  						</li>
+  						<li class="default-text rrss col-sm-10">
+  							<a id="empleo-publico-tw-{{contador}}" class="icon-rrs" href="" target="_blank"><img class="imagen-rrss-empleo" alt="{% trans %}Icono Twitter{% endtrans %}" src="/sites/default/files/2017-11/ico_twitter_noticias.png"></a>
+  						</li>
+  						<li class="default-text rrss col-sm-10">
+  							<a id="empleo-publico-ln-{{contador}}" class="icon-rrs" href="" target="_blank"><img class="imagen-rrss-empleo" alt="{% trans %}Icono Linkedin{% endtrans %}" src="/sites/default/files/2017-11/ico_linkedin_noticias.png"></a>
+  						</li>
+  					</ul>
+
+            {% if fields.field_fecha_expiracion.content <= hoy_4_dias %}
+              {% set restante = fields.field_fecha_expiracion.content|date('d') - hoy|date('d') %}
+              <p class="info-text default-text col-xs-4 col-sm-offset-0 col-sm-7 col-md-offset-2 col-md-5 quedan-dias-empleo-publico">
+    						<span class="hidden-xs visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">{% trans %}Quedan{% endtrans %}</span> {{restante}} {% trans %}días{% endtrans %} <span class="hidden-xs visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">{% trans %}para que expire la convocatoria{% endtrans %}</span>
+    					</p>
+            {% endif %}
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% if fields.field_documentos_empresa.content is not empty %}
+<div class="container container-documentos">
+  <div class="row">
+    <div class="module-descargas">
+        <div class="background-grey">
+            <div class="row documentos-mobile">
+              <p class="descargas-title col-xs-12 lead-text">
+                {% trans %}Documentación y descargas{% endtrans %}
+              </p>
+              {{fields.field_documentos_empresa.content}}
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+</div>
