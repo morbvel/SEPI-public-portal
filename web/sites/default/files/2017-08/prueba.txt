@@ -1,8 +1,0 @@
-<main>
-  <DATA_RECORD>
-    <ID_LINK>242</ID_LINK>
-    <ID_CONTENT>28055</ID_CONTENT>
-    <ID_USER>rgarcia</ID_USER>
-    <ID_CONTAINER>178</ID_CONTAINER>
-  </DATA_RECORD>
-</main>
